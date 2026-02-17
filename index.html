@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Castorax - Premium Castor Oil & Derivatives Supplier</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #1a5f3f 0%, #2d8659 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #d4f1e3;
+        }
+
+        .cta-button {
+            background: #4db380;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #5fc490;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(26, 95, 63, 0.95), rgba(45, 134, 89, 0.95)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23d4f1e3" width="1200" height="600"/><circle cx="200" cy="150" r="100" fill="%23a8d5ba" opacity="0.3"/><circle cx="900" cy="400" r="150" fill="%234db380" opacity="0.2"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 8rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 1rem auto 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #4db380;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5fc490;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(77, 179, 128, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #1a5f3f;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: transparent;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Features Section */
+        .features {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border-left: 4px solid #4db380;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            color: #1a5f3f;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Products Section */
+        .products {
+            background: #f8f9fa;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1a5f3f;
+            margin-bottom: 3rem;
+            font-weight: 900;
+        }
+
+        .product-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .product-header {
+            background: linear-gradient(135deg, #1a5f3f, #2d8659);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .product-header h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .product-body {
+            padding: 1.5rem;
+        }
+
+        .product-grade {
+            display: inline-block;
+            background: #d4f1e3;
+            color: #1a5f3f;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .product-body ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .product-body li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .product-body li:before {
+            content: "✓ ";
+            color: #4db380;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .product-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #2d8659;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .product-link:hover {
+            color: #1a5f3f;
+        }
+
+        /* About Section */
+        .about {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            color: #1a5f3f;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+        }
+
+        .about-content p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            background: #d4f1e3;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #1a5f3f;
+        }
+
+        .stat-label {
+            color: #2d8659;
+            font-weight: 600;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1a5f3f, #2d8659);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 900;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #4db380;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #4db380;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #888;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">CASTORAX</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="cta-button">Request Quote</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Premium Castor Oil & Derivatives</h1>
+        <p>Your trusted B2B partner for high-purity castor oil and specialized derivatives serving pharmaceutical, cosmetic, and industrial manufacturers worldwide.</p>
+        <div class="hero-buttons">
+            <a href="#products" class="btn btn-primary">Browse Products</a>
+            <a href="#contact" class="btn btn-secondary">Get Quote</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature-card">
+            <div class="feature-icon">🏭</div>
+            <h3>Premium Sourcing</h3>
+            <p>Direct sourcing from high-quality farms ensuring 100% purity. Cold-pressed, hexane-free extraction for superior quality.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">✓</div>
+            <h3>Quality Assured</h3>
+            <p>Comprehensive COA provided with every shipment. USP/BP/IP certified products meeting international standards.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🌍</div>
+            <h3>Global Logistics</h3>
+            <p>Reliable wholesale supply for North America, Europe, and Asia via our strategic warehousing network.</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <h2 class="section-title">Our Product Range</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-header">
+                    <h3>Pharmaceutical Grade</h3>
+                </div>
+                <div class="product-body">
+                    <span class="product-grade">USP/BP/IP</span>
+                    <ul>
+                        <li>Cold-pressed, hexane-free</li>
+                        <li>Pharmaceutical excipient</li>
+                        <li>Complete documentation</li>
+                        <li>High purity (>99%)</li>
+                    </ul>
+                    <a href="#" class="product-link">Learn More →</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <h3>Cosmetic Grade</h3>
+                </div>
+                <div class="product-body">
+                    <span class="product-grade">Cold Pressed</span>
+                    <ul>
+                        <li>100% pure & natural</li>
+                        <li>Retains golden color</li>
+                        <li>Hair & skin care</li>
+                        <li>Non-comedogenic</li>
+                    </ul>
+                    <a href="#" class="product-link">Learn More →</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <h3>Industrial Grade</h3>
+                </div>
+                <div class="product-body">
+                    <span class="product-grade">PP/FSG/CGO</span>
+                    <ul>
+                        <li>Pale pressed grade</li>
+                        <li>Bulk availability</li>
+                        <li>Cost-effective</li>
+                        <li>Consistent quality</li>
+                    </ul>
+                    <a href="#" class="product-link">Learn More →</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <h3>Sebacic Acid</h3>
+                </div>
+                <div class="product-body">
+                    <span class="product-grade">Bio-Based</span>
+                    <ul>
+                        <li>C10 dicarboxylic acid</li>
+                        <li>Nylon production</li>
+                        <li>Sustainable chemistry</li>
+                        <li>High purity (>99%)</li>
+                    </ul>
+                    <a href="#" class="product-link">Learn More →</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <h3>Hydrogenated Castor Oil</h3>
+                </div>
+                <div class="product-body">
+                    <span class="product-grade">Castor Wax</span>
+                    <ul>
+                        <li>White waxy solid</li>
+                        <li>Pharmaceutical excipient</li>
+                        <li>Cosmetic thickener</li>
+                        <li>Enhanced stability</li>
+                    </ul>
+                    <a href="#" class="product-link">Learn More →</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <h3>PGPR</h3>
+                </div>
+                <div class="product-body">
+                    <span class="product-grade">Food Grade</span>
+                    <ul>
+                        <li>Chocolate emulsifier</li>
+                        <li>FDA/EU approved</li>
+                        <li>Reduces cocoa butter</li>
+                        <li>Cost optimization</li>
+                    </ul>
+                    <a href="#" class="product-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2>Why Choose Castorax?</h2>
+            <p>Castorax is a leading B2B supplier of premium castor oil and derivatives, serving manufacturers across pharmaceutical, cosmetic, and industrial sectors worldwide.</p>
+            <p>We optimize your supply chain with ethically sourced, scientifically refined products delivered with reliability and complete documentation.</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Countries Served</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Product Grades</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Quality Tested</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support</div>
+                </div>
+            </div>
+        </div>
+        <div class="about-image">
+            <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                <rect width="500" height="500" fill="#d4f1e3" rx="20"/>
+                <circle cx="250" cy="200" r="80" fill="#1a5f3f" opacity="0.2"/>
+                <circle cx="250" cy="200" r="60" fill="#2d8659" opacity="0.3"/>
+                <ellipse cx="250" cy="220" rx="30" ry="40" fill="#1a5f3f"/>
+                <ellipse cx="245" cy="210" rx="12" ry="16" fill="#4db380"/>
+                <text x="250" y="320" font-family="Arial Black" font-size="32" fill="#1a5f3f" text-anchor="middle" font-weight="900">CASTORAX</text>
+                <text x="250" y="350" font-family="Arial" font-size="14" fill="#2d8659" text-anchor="middle" font-weight="600">Premium Quality Since 2020</text>
+            </svg>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <h2>Ready to Order?</h2>
+        <p>Get competitive pricing and fast delivery for your bulk castor oil requirements. Our team is ready to assist you.</p>
+        <a href="mailto:info@castorax.com" class="btn btn-primary">Request a Quote</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#">Pharmaceutical Grade</a></li>
+                    <li><a href="#">Cosmetic Grade</a></li>
+                    <li><a href="#">Industrial Grade</a></li>
+                    <li><a href="#">Derivatives</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Quality Standards</a></li>
+                    <li><a href="#">Certifications</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Request Quote</a></li>
+                    <li><a href="#">Technical Support</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li>Email: info@castorax.com</li>
+                    <li>Phone: +1-XXX-XXX-XXXX</li>
+                    <li>Address: Your Location</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Castorax. All rights reserved. | Premium Castor Oil & Derivatives</p>
+        </div>
+    </footer>
+</body>
+</html>
