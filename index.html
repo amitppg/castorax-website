@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Castorax - Premium Castor Oil & Derivatives Supplier</title>
+    <title>Castorax - Simmi Enterprises | Premium Castor Oil Supplier Since 1998</title>
+    <meta name="description" content="Leading supplier of pharmaceutical, cosmetic and industrial grade castor oil. Trusted by Sanofi, Cadila, Piramal. 35+ years experience. Mumbai, India.">
     <style>
         * {
             margin: 0;
@@ -43,6 +44,12 @@
             letter-spacing: 2px;
         }
 
+        .company-tagline {
+            font-size: 0.75rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
         .nav-links {
             display: flex;
             list-style: none;
@@ -73,6 +80,32 @@
             transform: translateY(-2px);
         }
 
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
+        }
+
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, rgba(26, 95, 63, 0.95), rgba(45, 134, 89, 0.95)),
@@ -91,9 +124,16 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
+        .hero .subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #d4f1e3;
+        }
+
         .hero p {
             font-size: 1.3rem;
-            max-width: 800px;
+            max-width: 900px;
             margin: 1rem auto 2rem;
             line-height: 1.8;
         }
@@ -137,6 +177,37 @@
             transform: translateY(-3px);
         }
 
+        /* Trust Banner */
+        .trust-banner {
+            background: #f8f9fa;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 3px solid #4db380;
+        }
+
+        .trust-banner h3 {
+            color: #1a5f3f;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .client-logos {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .client-name {
+            background: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            color: #2d8659;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
         /* Features Section */
         .features {
             max-width: 1200px;
@@ -172,18 +243,120 @@
             font-size: 1.5rem;
         }
 
-        /* Products Section */
-        .products {
+        /* About Section */
+        .about {
             background: #f8f9fa;
             padding: 4rem 2rem;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .section-title {
             text-align: center;
             font-size: 2.5rem;
             color: #1a5f3f;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
             font-weight: 900;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #555;
+            font-size: 1.05rem;
+        }
+
+        .founder-highlight {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #2d8659;
+            margin: 1.5rem 0;
+        }
+
+        .founder-highlight strong {
+            color: #1a5f3f;
+            font-size: 1.1rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: #1a5f3f;
+            display: block;
+        }
+
+        .stat-label {
+            color: #2d8659;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        /* Certifications */
+        .certifications {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+
+        .certifications h3 {
+            color: #1a5f3f;
+            margin-bottom: 1rem;
+        }
+
+        .cert-badges {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .cert-badge {
+            background: #d4f1e3;
+            color: #1a5f3f;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 4rem 2rem;
+            background: white;
         }
 
         .product-grid {
@@ -251,87 +424,126 @@
             margin-right: 0.5rem;
         }
 
-        .product-link {
-            display: inline-block;
-            margin-top: 1rem;
-            color: #2d8659;
-            font-weight: 600;
-            text-decoration: none;
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #1a5f3f, #2d8659);
+            color: white;
+            padding: 4rem 2rem;
         }
 
-        .product-link:hover {
-            color: #1a5f3f;
-        }
-
-        /* About Section */
-        .about {
+        .contact-container {
             max-width: 1200px;
-            margin: 4rem auto;
-            padding: 2rem;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
-            align-items: center;
         }
 
-        .about-content h2 {
-            color: #1a5f3f;
+        .contact-info h2 {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
             font-weight: 900;
         }
 
-        .about-content p {
-            margin-bottom: 1rem;
+        .contact-info p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
             line-height: 1.8;
-            color: #555;
         }
 
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            margin-top: 2rem;
+        .contact-details {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
         }
 
-        .stat-item {
-            background: #d4f1e3;
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
+        .contact-item {
+            display: flex;
+            align-items: start;
+            margin-bottom: 1.5rem;
+            gap: 1rem;
         }
 
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 900;
+        .contact-icon {
+            font-size: 1.5rem;
+            min-width: 30px;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: #d4f1e3;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            color: #333;
+        }
+
+        .contact-form h3 {
+            color: #1a5f3f;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
             color: #1a5f3f;
         }
 
-        .stat-label {
-            color: #2d8659;
-            font-weight: 600;
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #d4f1e3;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
         }
 
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, #1a5f3f, #2d8659);
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #2d8659;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #1a5f3f;
             color: white;
-            padding: 4rem 2rem;
-            text-align: center;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
         }
 
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 900;
-        }
-
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+        .submit-btn:hover {
+            background: #2d8659;
+            transform: translateY(-2px);
         }
 
         /* Footer */
@@ -401,11 +613,15 @@
             }
 
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
             }
 
             .hero p {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
 
             .hero-buttons {
@@ -413,26 +629,47 @@
                 align-items: center;
             }
 
-            .about {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
                 grid-template-columns: 1fr;
             }
 
             .stats {
                 grid-template-columns: 1fr;
             }
+
+            .client-logos {
+                gap: 1rem;
+            }
+
+            .client-name {
+                font-size: 0.85rem;
+                padding: 0.6rem 1rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919320004205" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <span style="font-size: 32px;">💬</span>
+    </a>
+
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo">CASTORAX</div>
+            <div class="logo-container">
+                <div class="logo">CASTORAX</div>
+                <div class="company-tagline">by Simmi Enterprises</div>
+            </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact" class="cta-button">Request Quote</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact" class="cta-button">Contact Us</a></li>
             </ul>
             <button class="mobile-menu-btn">☰</button>
         </nav>
@@ -440,36 +677,106 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <h1>Premium Castor Oil & Derivatives</h1>
-        <p>Your trusted B2B partner for high-purity castor oil and specialized derivatives serving pharmaceutical, cosmetic, and industrial manufacturers worldwide.</p>
+        <h1>Premium Castor Oil Supplier</h1>
+        <p class="subtitle">Trusted Since 1998 | 35+ Years of Industry Excellence</p>
+        <p>Leading supplier of pharmaceutical, cosmetic and industrial grade castor oil serving major pharmaceutical companies across India and beyond.</p>
         <div class="hero-buttons">
-            <a href="#products" class="btn btn-primary">Browse Products</a>
-            <a href="#contact" class="btn btn-secondary">Get Quote</a>
+            <a href="#contact" class="btn btn-primary">Request Quote</a>
+            <a href="#about" class="btn btn-secondary">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Trust Banner -->
+    <section class="trust-banner">
+        <h3>Trusted by Leading Pharmaceutical Companies</h3>
+        <div class="client-logos">
+            <div class="client-name">Sanofi</div>
+            <div class="client-name">Cadila Healthcare</div>
+            <div class="client-name">Unilab</div>
+            <div class="client-name">Unichem</div>
+            <div class="client-name">Piramal</div>
+            <div class="client-name">Ukay Industries</div>
+            <div class="client-name">Ashwin Pharma</div>
+            <div class="client-name">& Many More</div>
         </div>
     </section>
 
     <!-- Features Section -->
     <section class="features">
         <div class="feature-card">
-            <div class="feature-icon">🏭</div>
-            <h3>Premium Sourcing</h3>
-            <p>Direct sourcing from high-quality farms ensuring 100% purity. Cold-pressed, hexane-free extraction for superior quality.</p>
+            <div class="feature-icon">🏆</div>
+            <h3>35+ Years Experience</h3>
+            <p>Founded in 1998 by Mr. Surendra Mishra with deep expertise in medicinal oils and pharmaceutical supplies.</p>
         </div>
         <div class="feature-card">
             <div class="feature-icon">✓</div>
-            <h3>Quality Assured</h3>
-            <p>Comprehensive COA provided with every shipment. USP/BP/IP certified products meeting international standards.</p>
+            <h3>Quality Certified</h3>
+            <p>Valid Drug License and Export License. All products meet pharmaceutical and international quality standards.</p>
         </div>
         <div class="feature-card">
-            <div class="feature-icon">🌍</div>
-            <h3>Global Logistics</h3>
-            <p>Reliable wholesale supply for North America, Europe, and Asia via our strategic warehousing network.</p>
+            <div class="feature-icon">🤝</div>
+            <h3>Client-Centric Approach</h3>
+            <p>We understand your needs, consumption patterns, and maintain ready supplies with competitive pricing strategies.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <h2 class="section-title">About Simmi Enterprises</h2>
+            <p class="section-subtitle">Your Trusted Partner in Castor Oil Supply Since 1998</p>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p><strong>Simmi Enterprises</strong> was founded in 1998 and has established itself as one of the leading suppliers of all kinds of castor oil in India. With over 25 years of consistent service to the pharmaceutical industry, we have built lasting relationships with major pharmaceutical companies.</p>
+                    
+                    <div class="founder-highlight">
+                        <p><strong>Founded by Mr. Surendra Mishra</strong>, who brings 35 years of invaluable experience in the pharmaceutical domain, specializing in medicinal oils and pharmaceutical-grade raw materials.</p>
+                    </div>
+
+                    <p><strong>Our Unique Approach:</strong> We work in close composition with our clients, understanding their specific needs, technical specifications, and annual consumption patterns. This allows us to maintain ready supplies and manage market price fluctuations through strategic procurement, ensuring you receive the best quality at the most competitive prices.</p>
+
+                    <p>Our commitment to quality, reliability, and customer satisfaction has made us the preferred supplier for numerous leading pharmaceutical manufacturers across India.</p>
+                </div>
+
+                <div class="about-image">
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">1998</span>
+                            <div class="stat-label">Established</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">35+</span>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <div class="stat-label">Pharma Clients</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <div class="stat-label">Quality Assured</div>
+                        </div>
+                    </div>
+
+                    <div class="certifications">
+                        <h3>Certifications & Licenses</h3>
+                        <div class="cert-badges">
+                            <span class="cert-badge">✓ Drug License</span>
+                            <span class="cert-badge">✓ Export License</span>
+                            <span class="cert-badge">✓ ISO Compliant</span>
+                            <span class="cert-badge">✓ GMP Certified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Products Section -->
     <section class="products" id="products">
         <h2 class="section-title">Our Product Range</h2>
+        <p class="section-subtitle">High-Quality Castor Oil for All Your Pharmaceutical Needs</p>
         <div class="product-grid">
             <div class="product-card">
                 <div class="product-header">
@@ -483,7 +790,6 @@
                         <li>Complete documentation</li>
                         <li>High purity (>99%)</li>
                     </ul>
-                    <a href="#" class="product-link">Learn More →</a>
                 </div>
             </div>
 
@@ -499,7 +805,6 @@
                         <li>Hair & skin care</li>
                         <li>Non-comedogenic</li>
                     </ul>
-                    <a href="#" class="product-link">Learn More →</a>
                 </div>
             </div>
 
@@ -515,23 +820,6 @@
                         <li>Cost-effective</li>
                         <li>Consistent quality</li>
                     </ul>
-                    <a href="#" class="product-link">Learn More →</a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <h3>Sebacic Acid</h3>
-                </div>
-                <div class="product-body">
-                    <span class="product-grade">Bio-Based</span>
-                    <ul>
-                        <li>C10 dicarboxylic acid</li>
-                        <li>Nylon production</li>
-                        <li>Sustainable chemistry</li>
-                        <li>High purity (>99%)</li>
-                    </ul>
-                    <a href="#" class="product-link">Learn More →</a>
                 </div>
             </div>
 
@@ -547,115 +835,194 @@
                         <li>Cosmetic thickener</li>
                         <li>Enhanced stability</li>
                     </ul>
-                    <a href="#" class="product-link">Learn More →</a>
                 </div>
             </div>
 
             <div class="product-card">
                 <div class="product-header">
-                    <h3>PGPR</h3>
+                    <h3>Dehydrated Castor Oil</h3>
                 </div>
                 <div class="product-body">
-                    <span class="product-grade">Food Grade</span>
+                    <span class="product-grade">DCO</span>
                     <ul>
-                        <li>Chocolate emulsifier</li>
-                        <li>FDA/EU approved</li>
-                        <li>Reduces cocoa butter</li>
-                        <li>Cost optimization</li>
+                        <li>Fast drying properties</li>
+                        <li>Paint & coating industry</li>
+                        <li>Superior film formation</li>
+                        <li>Bio-based alternative</li>
                     </ul>
-                    <a href="#" class="product-link">Learn More →</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <h3>Custom Formulations</h3>
+                </div>
+                <div class="product-body">
+                    <span class="product-grade">Made to Order</span>
+                    <ul>
+                        <li>Client-specific specs</li>
+                        <li>Custom blending</li>
+                        <li>Technical support</li>
+                        <li>Flexible quantities</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="about-content">
-            <h2>Why Choose Castorax?</h2>
-            <p>Castorax is a leading B2B supplier of premium castor oil and derivatives, serving manufacturers across pharmaceutical, cosmetic, and industrial sectors worldwide.</p>
-            <p>We optimize your supply chain with ethically sourced, scientifically refined products delivered with reliability and complete documentation.</p>
-            <div class="stats">
-                <div class="stat-item">
-                    <div class="stat-number">20+</div>
-                    <div class="stat-label">Countries Served</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">15+</div>
-                    <div class="stat-label">Product Grades</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Quality Tested</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Support</div>
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Get In Touch</h2>
+                <p>Ready to discuss your castor oil requirements? Our team is here to help you with competitive pricing, quality assurance, and reliable supply.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <strong>Email (General Inquiries):</strong><br>
+                            <a href="mailto:simmi.enterprises@gmail.com">simmi.enterprises@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div>
+                            <strong>Sales & Support:</strong><br>
+                            <a href="mailto:simmi.trading@gmail.com">simmi.trading@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <strong>Phone / WhatsApp:</strong><br>
+                            <a href="tel:+919320004205">+91 93200 04205</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <strong>Address:</strong><br>
+                            Shop No 5, Shish Mahal<br>
+                            RNP Park, Bhayander East<br>
+                            Mumbai, Maharashtra 401105<br>
+                            India
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="about-image">
-            <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-                <rect width="500" height="500" fill="#d4f1e3" rx="20"/>
-                <circle cx="250" cy="200" r="80" fill="#1a5f3f" opacity="0.2"/>
-                <circle cx="250" cy="200" r="60" fill="#2d8659" opacity="0.3"/>
-                <ellipse cx="250" cy="220" rx="30" ry="40" fill="#1a5f3f"/>
-                <ellipse cx="245" cy="210" rx="12" ry="16" fill="#4db380"/>
-                <text x="250" y="320" font-family="Arial Black" font-size="32" fill="#1a5f3f" text-anchor="middle" font-weight="900">CASTORAX</text>
-                <text x="250" y="350" font-family="Arial" font-size="14" fill="#2d8659" text-anchor="middle" font-weight="600">Premium Quality Since 2020</text>
-            </svg>
-        </div>
-    </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section" id="contact">
-        <h2>Ready to Order?</h2>
-        <p>Get competitive pricing and fast delivery for your bulk castor oil requirements. Our team is ready to assist you.</p>
-        <a href="mailto:info@castorax.com" class="btn btn-primary">Request a Quote</a>
+            <div class="contact-form">
+                <h3>Request a Quote</h3>
+                <form action="mailto:simmi.enterprises@gmail.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label>Your Name *</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Company Name *</label>
+                        <input type="text" name="company" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Product Interested In *</label>
+                        <select name="product" required>
+                            <option value="">Select Product</option>
+                            <option value="Pharmaceutical Grade">Pharmaceutical Grade Castor Oil</option>
+                            <option value="Cosmetic Grade">Cosmetic Grade Castor Oil</option>
+                            <option value="Industrial Grade">Industrial Grade Castor Oil</option>
+                            <option value="Hydrogenated">Hydrogenated Castor Oil</option>
+                            <option value="Dehydrated">Dehydrated Castor Oil</option>
+                            <option value="Other">Other / Custom Requirements</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Message / Requirements *</label>
+                        <textarea name="message" required placeholder="Please describe your requirements, quantity needed, and any specific specifications..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-section">
+                <h3>Simmi Enterprises</h3>
+                <p>Leading supplier of premium castor oil and derivatives since 1998. Trusted by major pharmaceutical companies across India.</p>
+                <p style="margin-top: 1rem;"><strong>CASTORAX</strong> is a brand of Simmi Enterprises.</p>
+            </div>
+            
+            <div class="footer-section">
                 <h3>Products</h3>
                 <ul>
-                    <li><a href="#">Pharmaceutical Grade</a></li>
-                    <li><a href="#">Cosmetic Grade</a></li>
-                    <li><a href="#">Industrial Grade</a></li>
-                    <li><a href="#">Derivatives</a></li>
+                    <li><a href="#products">Pharmaceutical Grade</a></li>
+                    <li><a href="#products">Cosmetic Grade</a></li>
+                    <li><a href="#products">Industrial Grade</a></li>
+                    <li><a href="#products">Hydrogenated Castor Oil</a></li>
+                    <li><a href="#products">Dehydrated Castor Oil</a></li>
                 </ul>
             </div>
+            
             <div class="footer-section">
                 <h3>Company</h3>
                 <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Quality Standards</a></li>
-                    <li><a href="#">Certifications</a></li>
-                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#about">Our Founder</a></li>
+                    <li><a href="#about">Certifications</a></li>
+                    <li><a href="#about">Our Clients</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
+            
             <div class="footer-section">
-                <h3>Support</h3>
+                <h3>Contact Us</h3>
                 <ul>
-                    <li><a href="#">Request Quote</a></li>
-                    <li><a href="#">Technical Support</a></li>
-                    <li><a href="#">Documentation</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <ul>
-                    <li>Email: info@castorax.com</li>
-                    <li>Phone: +1-XXX-XXX-XXXX</li>
-                    <li>Address: Your Location</li>
+                    <li>📧 <a href="mailto:simmi.enterprises@gmail.com">simmi.enterprises@gmail.com</a></li>
+                    <li>💼 <a href="mailto:simmi.trading@gmail.com">simmi.trading@gmail.com</a></li>
+                    <li>📱 <a href="tel:+919320004205">+91 93200 04205</a></li>
+                    <li>📍 Mumbai, Maharashtra, India</li>
                 </ul>
             </div>
         </div>
+        
         <div class="footer-bottom">
-            <p>&copy; 2024 Castorax. All rights reserved. | Premium Castor Oil & Derivatives</p>
+            <p>&copy; 2024 Simmi Enterprises. All rights reserved. | CASTORAX - Premium Castor Oil Supplier | Established 1998</p>
         </div>
     </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
