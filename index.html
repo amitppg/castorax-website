@@ -127,8 +127,8 @@
 
         /* Hero Section - Reduced Height */
         .hero {
-            background: linear-gradient(135deg, rgba(26, 95, 63, 0.95), rgba(45, 134, 89, 0.95)),
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23d4f1e3" width="1200" height="600"/><circle cx="200" cy="150" r="100" fill="%23a8d5ba" opacity="0.3"/><circle cx="900" cy="400" r="150" fill="%234db380" opacity="0.2"/></svg>');
+            background: linear-gradient(135deg, rgba(26, 95, 63, 0.9), rgba(45, 134, 89, 0.85)),
+                        url('PASTE_YOUR_IMAGE_URL_HERE');
             background-size: cover;
             background-position: center;
             color: white;
@@ -234,6 +234,7 @@
             max-width: 1200px;
             margin: 4rem auto;
             padding: 2rem;
+            padding-top: 3rem;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
@@ -266,13 +267,23 @@
 
         /* About Section */
         .about {
-            background: #f8f9fa;
+            background: linear-gradient(rgba(248, 249, 250, 0.95), rgba(248, 249, 250, 0.95)),
+                        url('PASTE_YOUR_IMAGE_URL_HERE');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             padding: 4rem 2rem;
         }
 
         .about-container {
             max-width: 1200px;
             margin: 0 auto;
+            padding-top: 1rem;
+        }
+
+        /* Section padding to account for sticky header */
+        section {
+            scroll-margin-top: 70px;
         }
 
         .section-title {
@@ -281,6 +292,7 @@
             color: #1a5f3f;
             margin-bottom: 1rem;
             font-weight: 900;
+            padding-top: 1rem;
         }
 
         .section-subtitle {
@@ -376,7 +388,11 @@
         /* Products Section */
         .products {
             padding: 4rem 2rem;
-            background: white;
+            background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
+                        url('PASTE_YOUR_IMAGE_URL_HERE');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
         .product-grid {
@@ -458,7 +474,11 @@
 
         /* Quote Section */
         .quote-section {
-            background: linear-gradient(135deg, #1a5f3f, #2d8659);
+            background: linear-gradient(135deg, rgba(26, 95, 63, 0.9), rgba(45, 134, 89, 0.85)),
+                        url('PASTE_YOUR_IMAGE_URL_HERE');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             color: white;
             padding: 4rem 2rem;
         }
