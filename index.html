@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Castorax - Simmi Enterprises | Premium Castor Oil Supplier</title>
+    <title>Castorax - Simmi Enterprises | Premium Castor Oil Supplier Since 1998</title>
     <style>
         * {
             margin: 0;
@@ -21,7 +21,7 @@
         header {
             background: linear-gradient(135deg, #1a5f3f 0%, #2d8659 100%);
             color: white;
-            padding: 1rem 0;
+            padding: 0.8rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -40,17 +40,17 @@
         .logo-container {
             display: flex;
             flex-direction: column;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 900;
-            letter-spacing: 2px;
             cursor: pointer;
         }
 
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
         .company-tagline {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             opacity: 0.9;
             font-weight: 400;
         }
@@ -58,34 +58,35 @@
         .nav-links {
             display: none;
             list-style: none;
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         .nav-links.active {
             display: flex;
             position: absolute;
-            top: 70px;
+            top: 60px;
             left: 0;
             right: 0;
             background: #1a5f3f;
             flex-direction: column;
-            padding: 2rem;
-            gap: 1rem;
+            padding: 1.5rem 2rem;
+            gap: 0.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         .nav-links a {
             color: white;
             text-decoration: none;
             font-weight: 600;
-            transition: color 0.3s;
-            padding: 0.5rem;
+            transition: all 0.3s;
+            padding: 0.5rem 0.8rem;
             display: block;
+            border-radius: 5px;
         }
 
         .nav-links a:hover {
             color: #d4f1e3;
             background: rgba(255,255,255,0.1);
-            border-radius: 5px;
         }
 
         .mobile-menu-btn {
@@ -93,50 +94,84 @@
             background: none;
             border: none;
             color: white;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             cursor: pointer;
-            padding: 0.5rem;
+            padding: 0.3rem 0.5rem;
         }
 
-        /* Page Container */
-        .page {
-            display: none;
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s;
         }
 
-        .page.active {
-            display: block;
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
         }
 
-        /* Hero Section */
+        /* Hero Section - Reduced Height */
         .hero {
             background: linear-gradient(135deg, rgba(26, 95, 63, 0.95), rgba(45, 134, 89, 0.95)),
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23d4f1e3" width="1200" height="600"/></svg>');
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23d4f1e3" width="1200" height="600"/><circle cx="200" cy="150" r="100" fill="%23a8d5ba" opacity="0.3"/><circle cx="900" cy="400" r="150" fill="%234db380" opacity="0.2"/></svg>');
             background-size: cover;
+            background-position: center;
             color: white;
-            padding: 6rem 2rem;
+            padding: 4rem 2rem 3rem;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 900;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #d4f1e3;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             max-width: 800px;
-            margin: 1rem auto;
+            margin: 0.8rem auto 1.5rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
         }
 
         .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            margin: 0.5rem;
+            padding: 0.9rem 2rem;
             border-radius: 5px;
             text-decoration: none;
             font-weight: 700;
             transition: all 0.3s;
+            display: inline-block;
         }
 
         .btn-primary {
@@ -146,29 +181,210 @@
 
         .btn-primary:hover {
             background: #5fc490;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(77, 179, 128, 0.4);
         }
 
-        /* Content Section */
-        .content-section {
+        .btn-secondary {
+            background: white;
+            color: #1a5f3f;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: transparent;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Trust Banner */
+        .trust-banner {
+            background: #f8f9fa;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 3px solid #4db380;
+        }
+
+        .trust-banner h3 {
+            color: #1a5f3f;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .client-logos {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .client-name {
+            background: white;
+            padding: 0.7rem 1.3rem;
+            border-radius: 8px;
+            font-weight: 600;
+            color: #2d8659;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            font-size: 0.95rem;
+        }
+
+        /* Features Section */
+        .features {
             max-width: 1200px;
             margin: 4rem auto;
             padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border-left: 4px solid #4db380;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            color: #1a5f3f;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* About Section */
+        .about {
+            background: #f8f9fa;
+            padding: 4rem 2rem;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .section-title {
+            text-align: center;
             font-size: 2.5rem;
             color: #1a5f3f;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             font-weight: 900;
         }
 
-        /* Product Grid */
-        .product-grid {
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+
+        .about-content {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #555;
+            font-size: 1.05rem;
+        }
+
+        .founder-highlight {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #2d8659;
+            margin: 1.5rem 0;
+        }
+
+        .founder-highlight strong {
+            color: #1a5f3f;
+            font-size: 1.1rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
             margin-top: 2rem;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: #1a5f3f;
+            display: block;
+        }
+
+        .stat-label {
+            color: #2d8659;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .certifications {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+
+        .certifications h3 {
+            color: #1a5f3f;
+            margin-bottom: 1rem;
+        }
+
+        .cert-badges {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .cert-badge {
+            background: #d4f1e3;
+            color: #1a5f3f;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .product-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
         }
 
         .product-card {
@@ -187,7 +403,7 @@
 
         .product-image {
             width: 100%;
-            height: 200px;
+            height: 180px;
             background: linear-gradient(135deg, #d4f1e3, #a8d5ba);
             display: flex;
             align-items: center;
@@ -198,8 +414,13 @@
         .product-header {
             background: linear-gradient(135deg, #1a5f3f, #2d8659);
             color: white;
-            padding: 1.5rem;
+            padding: 1.2rem;
             text-align: center;
+        }
+
+        .product-header h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
         }
 
         .product-body {
@@ -217,138 +438,91 @@
             margin-bottom: 1rem;
         }
 
-        /* Product Detail Page */
-        .product-detail {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 2rem;
-        }
-
-        .product-detail-header {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .product-detail-image {
-            width: 100%;
-            height: 400px;
-            background: linear-gradient(135deg, #d4f1e3, #a8d5ba);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 5rem;
-        }
-
-        .product-detail-info h1 {
-            color: #1a5f3f;
-            margin-bottom: 1rem;
-        }
-
-        .spec-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 2rem 0;
-        }
-
-        .spec-table th,
-        .spec-table td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .spec-table th {
-            background: #d4f1e3;
-            color: #1a5f3f;
-            font-weight: 700;
-        }
-
-        .feature-list {
+        .product-body ul {
             list-style: none;
             margin: 1rem 0;
         }
 
-        .feature-list li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
+        .product-body li {
+            padding: 0.4rem 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9rem;
         }
 
-        .feature-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
+        .product-body li:before {
+            content: "✓ ";
             color: #4db380;
             font-weight: bold;
+            margin-right: 0.5rem;
         }
 
-        /* About Section */
-        .about-grid {
+        /* Quote Section */
+        .quote-section {
+            background: linear-gradient(135deg, #1a5f3f, #2d8659);
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        .quote-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
-            margin: 2rem 0;
         }
 
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .stat-item {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-
-        .stat-number {
-            font-size: 2.8rem;
+        .quote-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
             font-weight: 900;
-            color: #1a5f3f;
         }
 
-        .stat-label {
-            color: #2d8659;
-            font-weight: 600;
-            margin-top: 0.5rem;
+        .quote-info p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
         }
 
-        /* Contact Form */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin: 2rem 0;
-        }
-
-        .contact-info {
-            background: #f8f9fa;
+        .contact-details {
+            background: rgba(255,255,255,0.1);
             padding: 2rem;
             border-radius: 10px;
+            backdrop-filter: blur(10px);
         }
 
         .contact-item {
+            display: flex;
+            align-items: start;
             margin-bottom: 1.5rem;
+            gap: 1rem;
         }
 
-        .contact-item strong {
-            color: #1a5f3f;
-            display: block;
-            margin-bottom: 0.5rem;
+        .contact-icon {
+            font-size: 1.5rem;
+            min-width: 30px;
         }
 
-        .contact-form {
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: #d4f1e3;
+        }
+
+        .quote-form {
             background: white;
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            color: #333;
+        }
+
+        .quote-form h3 {
+            color: #1a5f3f;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
         }
 
         .form-group {
@@ -370,6 +544,8 @@
             border: 2px solid #d4f1e3;
             border-radius: 5px;
             font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
         }
 
         .form-group input:focus,
@@ -379,51 +555,159 @@
             border-color: #2d8659;
         }
 
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
         .submit-btn {
             background: #1a5f3f;
             color: white;
             padding: 1rem 2rem;
             border: none;
             border-radius: 5px;
+            font-size: 1rem;
             font-weight: 700;
             cursor: pointer;
+            transition: all 0.3s;
             width: 100%;
         }
 
         .submit-btn:hover {
             background: #2d8659;
+            transform: translateY(-2px);
         }
 
         /* Footer */
         footer {
             background: #1a1a1a;
             color: #ccc;
-            padding: 3rem 2rem;
-            text-align: center;
+            padding: 3rem 2rem 1rem;
         }
 
-        /* WhatsApp Button */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #4db380;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #4db380;
+        }
+
+        .footer-bottom {
             text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-            z-index: 1000;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #888;
+        }
+
+        /* Product Detail Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 2rem;
+        }
+
+        .modal.active {
+            display: block;
+        }
+
+        .modal-content {
+            background: white;
+            max-width: 1000px;
+            margin: 2rem auto;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #1a5f3f;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .modal-close:hover {
+            background: #2d8659;
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .modal-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .modal-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #d4f1e3, #a8d5ba);
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-decoration: none;
+            font-size: 5rem;
         }
 
-        .whatsapp-float:hover {
-            background-color: #128c7e;
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        .spec-table th,
+        .spec-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .spec-table th {
+            background: #d4f1e3;
+            color: #1a5f3f;
+            font-weight: 700;
         }
 
         /* Responsive */
@@ -434,10 +718,7 @@
                 flex-direction: row;
                 background: transparent;
                 padding: 0;
-            }
-
-            .nav-links.active {
-                background: transparent;
+                box-shadow: none;
             }
 
             .mobile-menu-btn {
@@ -450,250 +731,314 @@
                 font-size: 2rem;
             }
 
-            .product-detail-header,
-            .about-grid,
-            .contact-grid {
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .about-content,
+            .quote-container,
+            .modal-header {
                 grid-template-columns: 1fr;
             }
 
-            .product-grid {
-                grid-template-columns: 1fr;
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .client-logos {
+                gap: 1rem;
+            }
+
+            .client-name {
+                font-size: 0.85rem;
+                padding: 0.6rem 1rem;
             }
         }
 
-        /* Image Upload Note */
-        .image-note {
-            background: #fff3cd;
-            border: 1px solid #ffc107;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 5px;
-            font-size: 0.9rem;
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
 <body>
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/919320004205" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/919320004205" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
         💬
     </a>
 
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo-container" onclick="showPage('home')">
+            <div class="logo-container" onclick="scrollToTop()">
                 <div class="logo">CASTORAX</div>
                 <div class="company-tagline">by Simmi Enterprises</div>
             </div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#" onclick="showPage('home')">Home</a></li>
-                <li><a href="#" onclick="showPage('about')">About Us</a></li>
-                <li><a href="#" onclick="showPage('products')">Products</a></li>
-                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                <li><a href="#about" onclick="closeMenu()">About Us</a></li>
+                <li><a href="#products" onclick="closeMenu()">Products</a></li>
+                <li><a href="#quote" onclick="closeMenu()">Request Quote</a></li>
             </ul>
             <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
         </nav>
     </header>
 
-    <!-- HOME PAGE -->
-    <div id="home" class="page active">
-        <section class="hero">
-            <h1>Premium Castor Oil Supplier</h1>
-            <p>Trusted Since 1998 | 35+ Years of Industry Excellence</p>
-            <p>Leading supplier of pharmaceutical, cosmetic and industrial grade castor oil serving major pharmaceutical companies across India</p>
-            <a href="#" onclick="showPage('products')" class="btn btn-primary">View Products</a>
-            <a href="#" onclick="showPage('contact')" class="btn btn-primary">Contact Us</a>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Premium Castor Oil Supplier</h1>
+        <p class="subtitle">Trusted Since 1998 | 35+ Years of Industry Excellence</p>
+        <p>Leading supplier of pharmaceutical, cosmetic and industrial grade castor oil serving major pharmaceutical companies across India and beyond.</p>
+        <div class="hero-buttons">
+            <a href="#products" class="btn btn-primary">Browse Products</a>
+            <a href="#quote" class="btn btn-secondary">Request Quote</a>
+        </div>
+    </section>
 
-        <section class="content-section">
-            <h2 class="section-title">Why Choose Castorax?</h2>
-            <div class="stats">
-                <div class="stat-item">
-                    <div class="stat-number">1998</div>
-                    <div class="stat-label">Established</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">35+</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Pharma Clients</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Quality Assured</div>
-                </div>
-            </div>
+    <!-- Trust Banner -->
+    <section class="trust-banner">
+        <h3>Trusted by Leading Pharmaceutical Companies</h3>
+        <div class="client-logos">
+            <div class="client-name">Sanofi</div>
+            <div class="client-name">Cadila Healthcare</div>
+            <div class="client-name">Unilab</div>
+            <div class="client-name">Unichem</div>
+            <div class="client-name">Piramal</div>
+            <div class="client-name">Ukay Industries</div>
+            <div class="client-name">Ashwin Pharma</div>
+            <div class="client-name">& Many More</div>
+        </div>
+    </section>
 
-            <div style="text-align: center; margin-top: 3rem;">
-                <h3 style="color: #1a5f3f; margin-bottom: 1.5rem;">Trusted by Leading Companies</h3>
-                <p style="color: #666;">Sanofi • Cadila Healthcare • Unilab • Unichem • Piramal • Ukay Industries • Ashwin Pharma</p>
-            </div>
-        </section>
-    </div>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature-card">
+            <div class="feature-icon">🏆</div>
+            <h3>35+ Years Experience</h3>
+            <p>Founded in 1998 by Mr. Surendra Mishra with deep expertise in medicinal oils and pharmaceutical supplies.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">✓</div>
+            <h3>Quality Certified</h3>
+            <p>Valid Drug License and Export License. All products meet pharmaceutical and international quality standards.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🤝</div>
+            <h3>Client-Centric Approach</h3>
+            <p>We understand your needs, consumption patterns, and maintain ready supplies with competitive pricing strategies.</p>
+        </div>
+    </section>
 
-    <!-- ABOUT US PAGE -->
-    <div id="about" class="page">
-        <section class="hero">
-            <h1>About Simmi Enterprises</h1>
-            <p>Your Trusted Partner Since 1998</p>
-        </section>
-
-        <section class="content-section">
-            <h2 class="section-title">Our Story</h2>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <h2 class="section-title">About Simmi Enterprises</h2>
+            <p class="section-subtitle">Your Trusted Partner in Castor Oil Supply Since 1998</p>
             
-            <div class="image-note">
-                <strong>📸 Image Placeholder:</strong> Add company photo here (1200x400px) - factory, office, or team photo
-            </div>
-
-            <div class="about-grid">
-                <div>
-                    <p style="margin-bottom: 1rem;"><strong>Simmi Enterprises</strong> was founded in 1998 and has established itself as one of the leading suppliers of all kinds of castor oil in India.</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <p><strong>Simmi Enterprises</strong> was founded in 1998 and has established itself as one of the leading suppliers of all kinds of castor oil in India. With over 25 years of consistent service to the pharmaceutical industry, we have built lasting relationships with major pharmaceutical companies.</p>
                     
-                    <p style="margin-bottom: 1rem;"><strong>Founded by Mr. Surendra Mishra</strong>, who brings 35 years of invaluable experience in the pharmaceutical domain, specializing in medicinal oils and pharmaceutical-grade raw materials.</p>
+                    <div class="founder-highlight">
+                        <p><strong>Founded by Mr. Surendra Mishra</strong>, who brings 35 years of invaluable experience in the pharmaceutical domain, specializing in medicinal oils and pharmaceutical-grade raw materials.</p>
+                    </div>
 
-                    <p style="margin-bottom: 1rem;">We work in close collaboration with our clients, understanding their specific needs, technical specifications, and annual consumption patterns. This allows us to maintain ready supplies and manage market price fluctuations through strategic procurement.</p>
+                    <p><strong>Our Unique Approach:</strong> We work in close composition with our clients, understanding their specific needs, technical specifications, and annual consumption patterns. This allows us to maintain ready supplies and manage market price fluctuations through strategic procurement, ensuring you receive the best quality at the most competitive prices.</p>
                 </div>
 
-                <div>
-                    <h3 style="color: #1a5f3f; margin-bottom: 1rem;">Our Certifications</h3>
-                    <ul class="feature-list">
-                        <li>Valid Drug License</li>
-                        <li>Export License</li>
-                        <li>ISO Compliant</li>
-                        <li>GMP Certified</li>
-                    </ul>
+                <div class="about-image">
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">1998</span>
+                            <div class="stat-label">Established</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">35+</span>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <div class="stat-label">Pharma Clients</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <div class="stat-label">Quality Assured</div>
+                        </div>
+                    </div>
 
-                    <h3 style="color: #1a5f3f; margin: 2rem 0 1rem;">Our Clients</h3>
-                    <ul class="feature-list">
-                        <li>Sanofi</li>
-                        <li>Cadila Healthcare</li>
-                        <li>Unilab</li>
-                        <li>Unichem</li>
-                        <li>Piramal</li>
-                        <li>Ukay Industries</li>
-                        <li>Ashwin Pharma</li>
-                        <li>And many more...</li>
-                    </ul>
+                    <div class="certifications">
+                        <h3>Certifications & Licenses</h3>
+                        <div class="cert-badges">
+                            <span class="cert-badge">✓ Drug License</span>
+                            <span class="cert-badge">✓ Export License</span>
+                            <span class="cert-badge">✓ ISO Compliant</span>
+                            <span class="cert-badge">✓ GMP Certified</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
-    <!-- PRODUCTS PAGE -->
-    <div id="products" class="page">
-        <section class="hero">
-            <h1>Our Product Range</h1>
-            <p>High-Quality Castor Oil & Derivatives</p>
-        </section>
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <h2 class="section-title">Our Product Range</h2>
+        <p class="section-subtitle">High-Quality Castor Oil & Derivatives for All Your Industrial Needs</p>
+        <div class="product-grid" id="productGrid"></div>
+    </section>
 
-        <section class="content-section">
-            <div class="image-note">
-                <strong>📸 Image Placeholders:</strong> Each product card needs an image (400x300px) - product bottles, drums, or technical imagery
+    <!-- Request Quote Section -->
+    <section class="quote-section" id="quote">
+        <div class="quote-container">
+            <div class="quote-info">
+                <h2>Request a Quote</h2>
+                <p>Ready to discuss your castor oil requirements? Our team is here to help you with competitive pricing, quality assurance, and reliable supply.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <strong>Email (General Inquiries):</strong><br>
+                            <a href="mailto:simmi.enterprises@gmail.com">simmi.enterprises@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div>
+                            <strong>Sales & Support:</strong><br>
+                            <a href="mailto:simmi.trading@gmail.com">simmi.trading@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <strong>Phone / WhatsApp:</strong><br>
+                            <a href="tel:+919320004205">+91 93200 04205</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <strong>Address:</strong><br>
+                            Shop No 5, Shish Mahal<br>
+                            RNP Park, Bhayander East<br>
+                            Mumbai, Maharashtra 401105, India
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="product-grid" id="productGrid"></div>
-        </section>
-    </div>
-
-    <!-- PRODUCT DETAIL PAGES (Dynamic) -->
-    <div id="productDetail" class="page">
-        <div class="product-detail" id="productDetailContent"></div>
-    </div>
-
-    <!-- CONTACT PAGE -->
-    <div id="contact" class="page">
-        <section class="hero">
-            <h1>Contact Us</h1>
-            <p>Get In Touch With Our Team</p>
-        </section>
-
-        <section class="content-section">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2 style="color: #1a5f3f; margin-bottom: 1.5rem;">Contact Information</h2>
+            <div class="quote-form">
+                <h3>Send Your Inquiry</h3>
+                <form action="mailto:simmi.enterprises@gmail.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label>Your Name *</label>
+                        <input type="text" name="name" required>
+                    </div>
                     
-                    <div class="contact-item">
-                        <strong>📧 Email (General):</strong>
-                        <a href="mailto:simmi.enterprises@gmail.com">simmi.enterprises@gmail.com</a>
+                    <div class="form-group">
+                        <label>Company Name *</label>
+                        <input type="text" name="company" required>
                     </div>
-
-                    <div class="contact-item">
-                        <strong>💼 Sales & Support:</strong>
-                        <a href="mailto:simmi.trading@gmail.com">simmi.trading@gmail.com</a>
+                    
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" name="email" required>
                     </div>
-
-                    <div class="contact-item">
-                        <strong>📱 Phone / WhatsApp:</strong>
-                        <a href="tel:+919320004205">+91 93200 04205</a>
+                    
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" name="phone">
                     </div>
-
-                    <div class="contact-item">
-                        <strong>📍 Address:</strong>
-                        Shop No 5, Shish Mahal<br>
-                        RNP Park, Bhayander East<br>
-                        Mumbai, Maharashtra 401105<br>
-                        India
+                    
+                    <div class="form-group">
+                        <label>Product Interested In *</label>
+                        <select name="product" required>
+                            <option value="">Select Product</option>
+                            <option value="Pharmaceutical Grade">Pharmaceutical Grade Castor Oil</option>
+                            <option value="Cosmetic Grade">Cosmetic Grade Castor Oil</option>
+                            <option value="Industrial Grade">Industrial Grade Castor Oil</option>
+                            <option value="Hydrogenated">Hydrogenated Castor Oil</option>
+                            <option value="Dehydrated">Dehydrated Castor Oil</option>
+                            <option value="TRO">Turkey Red Oil</option>
+                            <option value="Sebacic">Sebacic Acid</option>
+                            <option value="Heptanoic">Heptanoic Acid</option>
+                            <option value="PGPR">PGPR</option>
+                            <option value="Other">Other / Custom Requirements</option>
+                        </select>
                     </div>
-                </div>
-
-                <div class="contact-form">
-                    <h3 style="color: #1a5f3f; margin-bottom: 1.5rem;">Send us a Message</h3>
-                    <form action="mailto:simmi.enterprises@gmail.com" method="post" enctype="text/plain">
-                        <div class="form-group">
-                            <label>Your Name *</label>
-                            <input type="text" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Company Name *</label>
-                            <input type="text" name="company" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Email *</label>
-                            <input type="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Phone</label>
-                            <input type="tel" name="phone">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Product Interest</label>
-                            <select name="product">
-                                <option value="">Select Product</option>
-                                <option>Pharmaceutical Grade</option>
-                                <option>Cosmetic Grade</option>
-                                <option>Industrial Grade</option>
-                                <option>Derivatives</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Message *</label>
-                            <textarea name="message" rows="5" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
-                </div>
+                    
+                    <div class="form-group">
+                        <label>Message / Requirements *</label>
+                        <textarea name="message" required placeholder="Please describe your requirements, quantity needed, and any specific specifications..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Quote Request</button>
+                </form>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Simmi Enterprises | CASTORAX - Premium Castor Oil Supplier | Established 1998</p>
-        <p style="margin-top: 1rem;">
-            <a href="#" onclick="showPage('home')" style="color: #4db380; margin: 0 1rem;">Home</a>
-            <a href="#" onclick="showPage('about')" style="color: #4db380; margin: 0 1rem;">About</a>
-            <a href="#" onclick="showPage('products')" style="color: #4db380; margin: 0 1rem;">Products</a>
-            <a href="#" onclick="showPage('contact')" style="color: #4db380; margin: 0 1rem;">Contact</a>
-        </p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Simmi Enterprises</h3>
+                <p>Leading supplier of premium castor oil and derivatives since 1998. Trusted by major pharmaceutical companies across India.</p>
+                <p style="margin-top: 1rem;"><strong>CASTORAX</strong> is a brand of Simmi Enterprises.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#products">Pharmaceutical Grade</a></li>
+                    <li><a href="#products">Cosmetic Grade</a></li>
+                    <li><a href="#products">Industrial Grade</a></li>
+                    <li><a href="#products">Derivatives</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#about">Our Founder</a></li>
+                    <li><a href="#about">Certifications</a></li>
+                    <li><a href="#quote">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>📧 <a href="mailto:simmi.enterprises@gmail.com">simmi.enterprises@gmail.com</a></li>
+                    <li>💼 <a href="mailto:simmi.trading@gmail.com">simmi.trading@gmail.com</a></li>
+                    <li>📱 <a href="tel:+919320004205">+91 93200 04205</a></li>
+                    <li>📍 Mumbai, Maharashtra, India</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Simmi Enterprises. All rights reserved. | CASTORAX - Premium Castor Oil Supplier | Established 1998</p>
+        </div>
     </footer>
+
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
 
     <script>
         // Product Data
@@ -775,7 +1120,7 @@
                 shortDesc: 'Hard white waxy solid',
                 features: ['Melting point: 85-88°C', 'White solid', 'Non-greasy', 'Multi-functional'],
                 applications: 'Tablet coating, lipsticks, deodorants, hair waxes, pharmaceutical excipient',
-                fullDesc: 'Produced through controlled hydrogenation. Hard, white waxy solid with enhanced stability for pharmaceutical and cosmetic applications.',
+                fullDesc: 'Produced through controlled hydrogenation. Hard, white waxy solid with enhanced stability.',
                 specs: {
                     'Physical Form': 'Hard waxy solid',
                     'Color': 'White to off-white',
@@ -791,14 +1136,13 @@
                 icon: '🎨',
                 shortDesc: 'Fast-drying conjugated oil',
                 features: ['Fast drying', 'Superior film formation', 'Weather resistant', 'Alkyd compatible'],
-                applications: 'Alkyd resins, paints, varnishes, printing inks, linoleum, metal coatings',
-                fullDesc: 'Conjugated drying oil with exceptional film-forming properties. Invaluable for coatings and inks.',
+                applications: 'Alkyd resins, paints, varnishes, printing inks, linoleum',
+                fullDesc: 'Conjugated drying oil with exceptional film-forming properties.',
                 specs: {
                     'Appearance': 'Light yellow to amber',
                     'Specific Gravity': '0.960-0.975',
                     'Acid Value': 'Max 8.0 mg KOH/g',
-                    'Iodine Value': '130-150',
-                    'Moisture': 'Max 0.2%'
+                    'Iodine Value': '130-150'
                 }
             },
             {
@@ -807,14 +1151,12 @@
                 grade: 'Sulfonated',
                 icon: '🧪',
                 shortDesc: 'Water-soluble emulsifier',
-                features: ['Water miscible', 'Excellent emulsification', 'Biodegradable', 'Active matter: 70-75%'],
-                applications: 'Textile dyeing, leather processing, bath oils, metalworking fluids',
-                fullDesc: 'Unique water-soluble derivative serving as excellent emulsifier and textile auxiliary.',
+                features: ['Water miscible', 'Excellent emulsification', 'Biodegradable', 'Active: 70-75%'],
+                applications: 'Textile dyeing, leather processing, bath oils',
+                fullDesc: 'Water-soluble derivative serving as excellent emulsifier.',
                 specs: {
-                    'Appearance': 'Clear viscous liquid',
-                    'Color': 'Pale yellow to amber',
                     'Solubility': 'Water miscible',
-                    'pH (10% solution)': '6.0-8.0',
+                    'pH': '6.0-8.0',
                     'Sulfation Degree': '60-80%'
                 }
             },
@@ -824,15 +1166,13 @@
                 grade: 'Bio-Based C10',
                 icon: '⚗️',
                 shortDesc: 'Versatile dicarboxylic acid',
-                features: ['Purity >99%', 'White crystalline powder', 'CAS: 111-20-6', 'Sustainable'],
-                applications: 'Nylon production, polyurethanes, synthetic lubricants, cosmetics',
-                fullDesc: 'Bio-based dicarboxylic acid from castor oil. Cornerstone ingredient in engineering plastics and specialty chemicals.',
+                features: ['Purity >99%', 'White powder', 'CAS: 111-20-6', 'Sustainable'],
+                applications: 'Nylon, polyurethanes, lubricants, cosmetics',
+                fullDesc: 'Bio-based dicarboxylic acid for engineering plastics.',
                 specs: {
                     'CAS Number': '111-20-6',
-                    'Molecular Weight': '202.25 g/mol',
-                    'Melting Point': '131-134°C',
                     'Purity': '≥99.0%',
-                    'Acid Value': '548-558 mg KOH/g'
+                    'Melting Point': '131-134°C'
                 }
             },
             {
@@ -842,14 +1182,12 @@
                 icon: '🧬',
                 shortDesc: 'Premium medium-chain fatty acid',
                 features: ['Purity >99%', 'CAS: 111-14-8', 'Clear liquid', 'Castor-derived'],
-                applications: 'Flavor & fragrance, pharmaceutical intermediates, specialty esters',
-                fullDesc: 'Premium castor-derived C7 saturated fatty acid for specialty chemical and pharmaceutical applications.',
+                applications: 'Flavor & fragrance, pharmaceutical intermediates',
+                fullDesc: 'Premium C7 saturated fatty acid.',
                 specs: {
                     'CAS Number': '111-14-8',
-                    'Molecular Weight': '130.19 g/mol',
-                    'Boiling Point': '223°C',
                     'Purity': '≥99.0%',
-                    'Acid Value': '420-435 mg KOH/g'
+                    'Boiling Point': '223°C'
                 }
             },
             {
@@ -858,69 +1196,60 @@
                 grade: 'Food Grade E476',
                 icon: '🍫',
                 shortDesc: 'Advanced chocolate emulsifier',
-                features: ['FDA & EU approved', 'Natural origin', 'Reduces cocoa butter 2-5%', 'Kosher & Halal'],
-                applications: 'Chocolate manufacturing, compound coatings, pralines, confectionery',
-                fullDesc: 'Highly effective emulsifier from castor oil for chocolate manufacturing. Reduces viscosity and cocoa butter requirements.',
+                features: ['FDA & EU approved', 'Natural origin', 'Reduces cocoa butter', 'Kosher'],
+                applications: 'Chocolate, compound coatings, pralines',
+                fullDesc: 'Highly effective emulsifier for chocolate.',
                 specs: {
                     'E Number': 'E476',
-                    'Viscosity (40°C)': '5,000-15,000 cPs',
-                    'Acid Value': 'Max 6.0 mg KOH/g',
-                    'Saponification Value': '140-160',
-                    'Moisture': 'Max 1.0%'
+                    'Viscosity': '5,000-15,000 cPs',
+                    'Acid Value': 'Max 6.0'
                 }
             }
         ];
 
-        // Navigation Functions
-        function showPage(pageId) {
-            // Hide all pages
-            document.querySelectorAll('.page').forEach(page => {
-                page.classList.remove('active');
-            });
-            
-            // Show selected page
-            document.getElementById(pageId).classList.add('active');
-            
-            // Close mobile menu
-            document.getElementById('navLinks').classList.remove('active');
-            
-            // Scroll to top
-            window.scrollTo(0, 0);
+        // Generate Product Grid
+        function generateProductGrid() {
+            const grid = document.getElementById('productGrid');
+            grid.innerHTML = products.map(product => `
+                <div class="product-card" onclick="openModal('${product.id}')">
+                    <div class="product-image">${product.icon}</div>
+                    <div class="product-header">
+                        <h3>${product.name}</h3>
+                    </div>
+                    <div class="product-body">
+                        <span class="product-grade">${product.grade}</span>
+                        <p style="margin-bottom: 1rem; color: #666; font-size: 0.95rem;">${product.shortDesc}</p>
+                        <ul>
+                            ${product.features.slice(0, 3).map(f => `<li>${f}</li>`).join('')}
+                        </ul>
+                        <p style="margin-top: 1rem; font-weight: 600; color: #1a5f3f; text-align: center; font-size: 0.9rem;">Click for details →</p>
+                    </div>
+                </div>
+            `).join('');
         }
 
-        function toggleMenu() {
-            document.getElementById('navLinks').classList.toggle('active');
-        }
-
-        function showProductDetail(productId) {
+        // Modal Functions
+        function openModal(productId) {
             const product = products.find(p => p.id === productId);
             if (!product) return;
 
-            const content = `
-                <a href="#" onclick="showPage('products')" style="color: #1a5f3f; text-decoration: none; margin-bottom: 2rem; display: inline-block;">← Back to Products</a>
-                
-                <div class="product-detail-header">
+            const modalBody = document.getElementById('modalBody');
+            modalBody.innerHTML = `
+                <div class="modal-header">
+                    <div class="modal-image">${product.icon}</div>
                     <div>
-                        <div class="product-detail-image">${product.icon}</div>
-                        <div class="image-note" style="margin-top: 1rem;">
-                            <strong>📸 Product Image:</strong> Replace with actual product photo (800x600px)
-                        </div>
-                    </div>
-                    <div class="product-detail-info">
                         <span class="product-grade">${product.grade}</span>
-                        <h1>${product.name}</h1>
-                        <p style="font-size: 1.1rem; color: #666; margin: 1rem 0;">${product.fullDesc}</p>
-                        
-                        <h3 style="color: #1a5f3f; margin-top: 2rem;">Key Features</h3>
-                        <ul class="feature-list">
-                            ${product.features.map(f => `<li>${f}</li>`).join('')}
-                        </ul>
-
-                        <a href="#" onclick="showPage('contact')" class="btn btn-primary" style="margin-top: 2rem;">Request Quote</a>
+                        <h1 style="color: #1a5f3f; margin: 1rem 0;">${product.name}</h1>
+                        <p style="color: #666; font-size: 1.05rem;">${product.fullDesc}</p>
                     </div>
                 </div>
 
-                <h2 style="color: #1a5f3f; margin: 3rem 0 1rem;">Technical Specifications</h2>
+                <h2 style="color: #1a5f3f; margin: 2rem 0 1rem;">Key Features</h2>
+                <ul style="list-style: none; padding: 0;">
+                    ${product.features.map(f => `<li style="padding: 0.5rem 0; padding-left: 2rem; position: relative;"><span style="position: absolute; left: 0; color: #4db380; font-weight: bold;">✓</span>${f}</li>`).join('')}
+                </ul>
+
+                <h2 style="color: #1a5f3f; margin: 2rem 0 1rem;">Technical Specifications</h2>
                 <table class="spec-table">
                     <thead>
                         <tr>
@@ -938,44 +1267,61 @@
                     </tbody>
                 </table>
 
-                <h2 style="color: #1a5f3f; margin: 3rem 0 1rem;">Applications</h2>
-                <p style="font-size: 1.1rem; line-height: 1.8;">${product.applications}</p>
+                <h2 style="color: #1a5f3f; margin: 2rem 0 1rem;">Applications</h2>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #555;">${product.applications}</p>
 
-                <div style="background: #d4f1e3; padding: 2rem; border-radius: 10px; margin-top: 3rem; text-align: center;">
+                <div style="background: #d4f1e3; padding: 2rem; border-radius: 10px; margin-top: 2rem; text-align: center;">
                     <h3 style="color: #1a5f3f; margin-bottom: 1rem;">Interested in this product?</h3>
-                    <p style="margin-bottom: 1.5rem;">Contact us for pricing, samples, and technical specifications</p>
-                    <a href="#" onclick="showPage('contact')" class="btn btn-primary">Contact Us</a>
-                    <a href="tel:+919320004205" class="btn btn-primary">Call Now</a>
+                    <a href="#quote" onclick="closeModal()" class="btn btn-primary">Request Quote</a>
                 </div>
             `;
 
-            document.getElementById('productDetailContent').innerHTML = content;
-            showPage('productDetail');
+            document.getElementById('productModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
 
-        // Generate Product Grid
-        function generateProductGrid() {
-            const grid = document.getElementById('productGrid');
-            grid.innerHTML = products.map(product => `
-                <div class="product-card" onclick="showProductDetail('${product.id}')">
-                    <div class="product-image">${product.icon}</div>
-                    <div class="product-header">
-                        <h3>${product.name}</h3>
-                    </div>
-                    <div class="product-body">
-                        <span class="product-grade">${product.grade}</span>
-                        <p style="margin-bottom: 1rem; color: #666;">${product.shortDesc}</p>
-                        <ul class="feature-list">
-                            ${product.features.slice(0, 3).map(f => `<li>${f}</li>`).join('')}
-                        </ul>
-                        <p style="margin-top: 1rem; font-weight: 600; color: #1a5f3f; text-align: center;">Click for details →</p>
-                    </div>
-                </div>
-            `).join('');
+        function closeModal() {
+            document.getElementById('productModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
         }
+
+        // Navigation Functions
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        function closeMenu() {
+            document.getElementById('navLinks').classList.remove('active');
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            closeMenu();
+        }
+
+        // Close modal on outside click
+        document.getElementById('productModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
 
         // Initialize
         generateProductGrid();
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href !== '#quote') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
     </script>
 </body>
 </html>
