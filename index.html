@@ -430,6 +430,13 @@
             align-items: center;
             justify-content: center;
             font-size: 3rem;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .product-header {
@@ -719,6 +726,14 @@
             align-items: center;
             justify-content: center;
             font-size: 5rem;
+            overflow: hidden;
+        }
+
+        .modal-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
         }
 
         .spec-table {
@@ -1079,6 +1094,7 @@
                 name: 'Pharmaceutical Grade Castor Oil',
                 grade: 'USP/BP/IP Certified',
                 icon: '💊',
+                image: 'https://i.ibb.co/4RhvWW9r/Gemini-Generated-Image-710g2710g2710g27-1.png',
                 shortDesc: 'High-purity emollient for medicinal formulations',
                 features: ['Cold-pressed, hexane-free', 'Rich in ricinoleic acid (~90%)', 'Complete COA & SDS documentation', 'CAS: 8001-79-4'],
                 applications: 'Laxative formulations, topical ointments, ophthalmic solutions, injectable formulations, capsule manufacturing, medicinal supplements',
@@ -1098,6 +1114,7 @@
                 name: 'Cosmetic Grade Castor Oil',
                 grade: 'Cold Pressed',
                 icon: '💄',
+                image: 'https://i.ibb.co/JRB3mBFc/Gemini-Generated-Image-7x4ll17x4ll17x4l.png',
                 shortDesc: 'Premium natural oil for beauty applications',
                 features: ['100% pure & natural', 'Retains natural golden color', 'Non-comedogenic formula', 'Hexane-free extraction'],
                 applications: 'Hair care products, skin care formulations, lip balms, anti-aging products, massage oils, natural soap manufacturing',
@@ -1116,6 +1133,7 @@
                 name: 'Pale Pressed Grade (PPG)',
                 grade: 'Industrial Grade',
                 icon: '🏭',
+                image: 'https://i.ibb.co/4RhvWW9r/Gemini-Generated-Image-710g2710g2710g27-1.png',
                 shortDesc: 'Superior purity for industrial applications',
                 features: ['Light yellow to almost colorless', 'Low odor profile', 'Enhanced oxidative stability', 'Batch-to-batch consistency'],
                 applications: 'Lubricant manufacturing, polyurethane production, coatings & paints, plastics industry, textile processing, hydraulic fluids',
@@ -1134,6 +1152,7 @@
                 name: 'Commercial Grade (CGO/FSG)',
                 grade: 'First Special Grade',
                 icon: '📦',
+                image: 'https://i.ibb.co/DPnr22dj/Gemini-Generated-Image-vkxh8ovkxh8ovkxh.png',
                 shortDesc: 'Cost-effective industrial feedstock',
                 features: ['Quality controlled', 'Reliable bulk supply', 'Yellow to amber color', 'Large volume orders available'],
                 applications: 'Chemical synthesis, bio-diesel production, surfactant manufacturing, leather processing, agriculture, construction materials',
@@ -1152,6 +1171,7 @@
                 name: 'Hydrogenated Castor Oil',
                 grade: 'Castor Wax',
                 icon: '🕯️',
+                image: 'https://i.ibb.co/j92YwQNb/Gemini-Generated-Image-oicv1poicv1poicv.png',
                 shortDesc: 'Hard white waxy solid',
                 features: ['Melting point: 85-88°C', 'White to off-white solid', 'Non-greasy texture', 'Multi-functional ingredient'],
                 applications: 'Tablet coating and polishing, lipstick formulations, deodorant sticks, hair styling waxes, pharmaceutical excipient, suppository base',
@@ -1170,6 +1190,7 @@
                 name: 'Dehydrated Castor Oil',
                 grade: 'Drying Oil',
                 icon: '🎨',
+                image: 'https://i.ibb.co/0pnR3r0N/Gemini-Generated-Image-bppchjbppchjbppc.png',
                 shortDesc: 'Fast-drying conjugated oil',
                 features: ['Excellent oxidative drying', 'Superior film formation', 'Weather resistant', 'Alkyd resin compatible'],
                 applications: 'Alkyd resins, paint formulations, varnishes, printing inks, linoleum manufacturing, metal coatings',
@@ -1188,6 +1209,7 @@
                 name: 'Turkey Red Oil (TRO)',
                 grade: 'Sulfonated Castor Oil',
                 icon: '🧪',
+                image: 'https://i.ibb.co/wNKYJQcH/Gemini-Generated-Image-evktbaevktbaevkt.png',
                 shortDesc: 'Water-soluble emulsifier and surfactant',
                 features: ['Water miscible in all proportions', 'Excellent emulsification', 'Biodegradable surfactant', 'Active matter: 70-75%'],
                 applications: 'Textile dyeing assistant, leather fatliquoring, bath oils and salts, metalworking fluids, industrial cleaning formulations',
@@ -1206,6 +1228,7 @@
                 name: 'Neem Oil',
                 grade: 'Cold Pressed',
                 icon: '🌿',
+                image: 'https://i.ibb.co/d0RY17kp/Gemini-Generated-Image-27remm27remm27re.png',
                 shortDesc: 'Natural medicinal and cosmetic oil',
                 features: ['100% natural extraction', 'Rich in essential fatty acids', 'Antibacterial & antifungal', 'Vitamin E enriched'],
                 applications: 'Cosmetic formulations, skin care products, hair care treatments, dental care products, traditional Ayurvedic medicines, natural biopesticides',
@@ -1224,6 +1247,7 @@
                 name: 'Liquid Paraffin (White Oil)',
                 grade: 'USP/BP Pharmaceutical',
                 icon: '💧',
+                image: 'https://i.ibb.co/C5P7fXWJ/Gemini-Generated-Image-ht2ym9ht2ym9ht2y.png',
                 shortDesc: 'Highly refined mineral oil',
                 features: ['USP/BP compliant', 'Colorless & odorless', 'High purity pharmaceutical grade', 'FDA approved'],
                 applications: 'Laxative formulations, ointment bases, cosmetic creams and lotions, baby oils, pharmaceutical excipient, tablet and capsule lubricant',
@@ -1242,6 +1266,7 @@
                 name: 'Glycerin (Glycerol)',
                 grade: 'USP/EP Pharmaceutical',
                 icon: '✨',
+                image: 'https://i.ibb.co/DmQz62S/Gemini-Generated-Image-uc8ogquc8ogquc8o.png',
                 shortDesc: 'High-purity humectant and solvent',
                 features: ['99.7% purity', 'Vegetable-derived', 'Kosher & Halal certified', 'GRAS food status'],
                 applications: 'Moisturizing creams and lotions, pharmaceutical syrups, injectable medicines, toothpaste, food sweetener and preservative, suppositories',
@@ -1260,6 +1285,7 @@
                 name: 'Eucalyptus Oil',
                 grade: 'BP/USP Pharmaceutical',
                 icon: '🌲',
+                image: 'https://i.ibb.co/nsYZ8pbr/Gemini-Generated-Image-t19o4t19o4t19o4t.png',
                 shortDesc: 'Premium essential oil for respiratory care',
                 features: ['80% cineole content', 'Steam distilled', 'BP/USP certified', 'Powerful antimicrobial properties'],
                 applications: 'Flavored cough drops, decongestant formulations, mouthwash, dental care products, aromatherapy, topical pain relief, respiratory medicines',
@@ -1280,7 +1306,9 @@
             const grid = document.getElementById('productGrid');
             grid.innerHTML = products.map(product => `
                 <div class="product-card" onclick="openModal('${product.id}')">
-                    <div class="product-image">${product.icon}</div>
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${product.name}" onerror="this.parentElement.innerHTML='${product.icon}'">
+                    </div>
                     <div class="product-header">
                         <h3>${product.name}</h3>
                     </div>
@@ -1304,7 +1332,9 @@
             const modalBody = document.getElementById('modalBody');
             modalBody.innerHTML = `
                 <div class="modal-header">
-                    <div class="modal-image">${product.icon}</div>
+                    <div class="modal-image">
+                        <img src="${product.image}" alt="${product.name}" onerror="this.parentElement.innerHTML='${product.icon}'">
+                    </div>
                     <div>
                         <span class="product-grade">${product.grade}</span>
                         <h1 style="color: #1a5f3f; margin: 1rem 0;">${product.name}</h1>
