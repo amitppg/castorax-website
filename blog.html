@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Castorax | Castor Oil Insights & Industry News</title>
+    <meta name="description" content="Read expert insights on castor oil, pharmaceutical applications, industry trends, and product guides from Castorax - India's leading castor oil supplier.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a5f3f 0%, #2d8659 100%);
+            color: white;
+            padding: 0.8rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo img {
+            height: 35px;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 0.8rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Hero */
+        .blog-hero {
+            background: linear-gradient(135deg, rgba(26, 95, 63, 0.9), rgba(45, 134, 89, 0.85)),
+                        url('https://i.ibb.co/mrkGV6vx/Gemini-Generated-Image-fyhdh5fyhdh5fyhd.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .blog-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Blog Grid */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #d4f1e3, #a8d5ba);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-category {
+            display: inline-block;
+            background: #d4f1e3;
+            color: #1a5f3f;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .blog-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .blog-card h3 {
+            color: #1a5f3f;
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+        }
+
+        .blog-excerpt {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            color: #2d8659;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* Blog Post Page */
+        .blog-post {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .blog-post h1 {
+            color: #1a5f3f;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #d4f1e3;
+            flex-wrap: wrap;
+        }
+
+        .post-meta span {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .post-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .post-content h2 {
+            color: #1a5f3f;
+            margin: 2rem 0 1rem;
+            font-size: 1.8rem;
+        }
+
+        .post-content h3 {
+            color: #2d8659;
+            margin: 1.5rem 0 0.8rem;
+            font-size: 1.4rem;
+        }
+
+        .post-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .post-content ul, .post-content ol {
+            margin: 1rem 0 1.5rem 2rem;
+        }
+
+        .post-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Share Buttons */
+        .share-section {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .share-section h3 {
+            color: #1a5f3f;
+            margin-bottom: 1.5rem;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .share-btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .share-linkedin { background: #0077b5; }
+        .share-facebook { background: #1877f2; }
+        .share-twitter { background: #1da1f2; }
+        .share-whatsapp { background: #25d366; }
+        .share-email { background: #666; }
+        .copy-link { background: #1a5f3f; }
+
+        /* Back Button */
+        .back-btn {
+            display: inline-block;
+            color: #1a5f3f;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .back-btn:hover {
+            color: #2d8659;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        /* Page Toggle */
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-hero h1 {
+                font-size: 2rem;
+            }
+
+            .share-buttons {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://i.ibb.co/LXSw0KvV/brand-logo.png" alt="Castorax" onclick="window.location.href='https://castorax.com'">
+            </div>
+            <ul class="nav-links">
+                <li><a href="https://castorax.com">Home</a></li>
+                <li><a href="https://castorax.com#about">About</a></li>
+                <li><a href="https://castorax.com#products">Products</a></li>
+                <li><a href="#" onclick="showPage('blog')">Blog</a></li>
+                <li><a href="https://castorax.com#quote">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Blog List Page -->
+    <div id="blog" class="page active">
+        <section class="blog-hero">
+            <h1>Castorax Blog</h1>
+            <p>Expert insights on castor oil, pharmaceutical applications & industry trends</p>
+        </section>
+
+        <div class="container">
+            <h2 style="color: #1a5f3f; margin-bottom: 2rem; font-size: 2rem;">Latest Articles</h2>
+            <div class="blog-grid" id="blogGrid"></div>
+        </div>
+    </div>
+
+    <!-- Blog Post Page -->
+    <div id="post" class="page">
+        <div class="container">
+            <div class="blog-post" id="postContent"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Castorax - Simmi Enterprises | <a href="https://castorax.com" style="color: #4db380;">Back to Main Site</a></p>
+    </footer>
+
+    <script>
+        // Blog Posts Data
+        const blogPosts = [
+            {
+                id: 'pharma-castor-oil-guide',
+                title: 'Complete Guide to Pharmaceutical Grade Castor Oil',
+                category: 'Product Guide',
+                date: 'February 15, 2024',
+                excerpt: 'Everything you need to know about pharmaceutical grade castor oil - from USP/BP standards to applications in modern medicine.',
+                image: '📚',
+                content: `
+                    <h2>Understanding Pharmaceutical Grade Castor Oil</h2>
+                    <p>Pharmaceutical grade castor oil is a highly refined oil that meets stringent quality standards set by international pharmacopeias including USP (United States Pharmacopeia), BP (British Pharmacopeia), and IP (Indian Pharmacopeia).</p>
+
+                    <h3>What Makes It Pharmaceutical Grade?</h3>
+                    <p>The pharmaceutical grade designation requires:</p>
+                    <ul>
+                        <li>Cold-pressed extraction without chemical solvents</li>
+                        <li>Hexane-free processing for pharmaceutical compliance</li>
+                        <li>Minimum 99% purity with ricinoleic acid content around 90%</li>
+                        <li>Complete documentation including COA and SDS</li>
+                        <li>Rigorous testing for heavy metals, microbial content, and impurities</li>
+                    </ul>
+
+                    <h3>Key Applications in Pharmaceuticals</h3>
+                    <p>Pharmaceutical grade castor oil serves multiple critical functions:</p>
+                    <ul>
+                        <li><strong>Laxative Formulations:</strong> Most common use for constipation relief</li>
+                        <li><strong>Pharmaceutical Excipient:</strong> Vehicle for active ingredients</li>
+                        <li><strong>Ophthalmic Solutions:</strong> Eye drops for dry eye treatment</li>
+                        <li><strong>Injectable Formulations:</strong> Solubilizer and emulsifier</li>
+                        <li><strong>Topical Preparations:</strong> Anti-inflammatory ointments</li>
+                    </ul>
+
+                    <h3>Quality Standards & Testing</h3>
+                    <p>Every batch of pharmaceutical grade castor oil undergoes comprehensive testing including refractive index (1.477-1.481), specific gravity (0.956-0.968), acid value (max 2.0 mg KOH/g), and hydroxyl value (minimum 160).</p>
+
+                    <h2>Choosing the Right Supplier</h2>
+                    <p>When sourcing pharmaceutical grade castor oil, ensure your supplier provides complete documentation, maintains valid drug licenses, and has a proven track record with pharmaceutical companies. At Castorax, we've been supplying major pharmaceutical companies since 1998.</p>
+
+                    <p><strong>Need pharmaceutical grade castor oil?</strong> Contact our team for detailed specifications and competitive pricing.</p>
+                `
+            },
+            {
+                id: 'castor-oil-vs-other-oils',
+                title: 'Castor Oil vs Other Natural Oils: A Complete Comparison',
+                category: 'Industry Insights',
+                date: 'February 10, 2024',
+                excerpt: 'How does castor oil compare to neem oil, coconut oil, and other natural oils? Discover unique properties and applications.',
+                image: '⚖️',
+                content: `
+                    <h2>Castor Oil: The Unique Natural Oil</h2>
+                    <p>While many natural oils are used in pharmaceuticals and cosmetics, castor oil stands out due to its unique chemical composition, particularly its high ricinoleic acid content.</p>
+
+                    <h3>Castor Oil vs Neem Oil</h3>
+                    <p><strong>Castor Oil:</strong></p>
+                    <ul>
+                        <li>90% ricinoleic acid content</li>
+                        <li>Excellent emollient properties</li>
+                        <li>Pharmaceutical excipient use</li>
+                        <li>Clear to pale yellow color</li>
+                    </ul>
+                    <p><strong>Neem Oil:</strong></p>
+                    <ul>
+                        <li>Rich in azadirachtin (bioactive compound)</li>
+                        <li>Strong antimicrobial properties</li>
+                        <li>Primarily used in cosmetics and biopesticides</li>
+                        <li>Yellow-brown color with characteristic odor</li>
+                    </ul>
+
+                    <h3>Castor Oil vs Coconut Oil</h3>
+                    <p>Coconut oil is primarily composed of saturated fatty acids (lauric, myristic), making it solid at room temperature. Castor oil remains liquid and has unique hydroxyl groups that provide superior emulsifying properties.</p>
+
+                    <h3>Industrial Applications Comparison</h3>
+                    <p>Castor oil's unique chemistry makes it irreplaceable in certain applications like lubricant manufacturing, polyurethane production, and pharmaceutical formulations where its polar nature and high viscosity are essential.</p>
+
+                    <h2>Choosing the Right Oil</h2>
+                    <p>The choice depends on your specific application. For pharmaceutical excipients and industrial lubricants, castor oil is unmatched. For antimicrobial cosmetic applications, neem oil excels. Understanding these differences helps in optimal formulation.</p>
+                `
+            },
+            {
+                id: 'usp-bp-ip-standards',
+                title: 'Understanding USP, BP, and IP Standards for Castor Oil',
+                category: 'Technical',
+                date: 'February 5, 2024',
+                excerpt: 'What do USP, BP, and IP certifications mean? Learn about international pharmacopeia standards for castor oil quality.',
+                image: '✓',
+                content: `
+                    <h2>International Pharmacopeia Standards Explained</h2>
+                    <p>When sourcing pharmaceutical ingredients, you'll encounter three major pharmacopeia standards: USP, BP, and IP. Understanding these is crucial for compliance and quality assurance.</p>
+
+                    <h3>USP - United States Pharmacopeia</h3>
+                    <p>The USP is the official standard-setting organization for all prescription and over-the-counter medicines, dietary supplements, and food ingredients in the United States.</p>
+                    <p><strong>For Castor Oil, USP requires:</strong></p>
+                    <ul>
+                        <li>Specific gravity: 0.956-0.968 at 20°C</li>
+                        <li>Refractive index: 1.477-1.481</li>
+                        <li>Acid value: Maximum 2.0 mg KOH/g</li>
+                        <li>Iodine value: 82-90</li>
+                        <li>Hydroxyl value: Minimum 160</li>
+                    </ul>
+
+                    <h3>BP - British Pharmacopeia</h3>
+                    <p>The BP is the UK's official collection of quality standards for pharmaceutical substances. It's widely recognized across Europe and Commonwealth countries.</p>
+                    <p>BP standards for castor oil are very similar to USP, with minor variations in testing methodologies and acceptable ranges.</p>
+
+                    <h3>IP - Indian Pharmacopeia</h3>
+                    <p>The IP is published by the Indian Pharmacopoeia Commission and is the official standard for India. It aligns closely with international standards while considering local manufacturing conditions.</p>
+
+                    <h2>Why Multiple Standards Matter</h2>
+                    <p>If you're exporting to different countries, having castor oil certified to multiple standards (USP/BP/IP) provides flexibility and ensures acceptance in various markets. At Simmi Enterprises, all our pharmaceutical grade castor oil meets USP, BP, and IP standards.</p>
+
+                    <h3>Documentation Required</h3>
+                    <p>For pharmaceutical use, suppliers must provide:</p>
+                    <ul>
+                        <li>Certificate of Analysis (COA) for each batch</li>
+                        <li>Safety Data Sheet (SDS)</li>
+                        <li>Manufacturer's declaration of compliance</li>
+                        <li>Test reports from accredited laboratories</li>
+                    </ul>
+
+                    <p><strong>Looking for certified pharmaceutical grade castor oil?</strong> Contact us for complete documentation and competitive pricing.</p>
+                `
+            },
+            {
+                id: 'castor-oil-price-trends-2024',
+                title: 'Castor Oil Market Analysis & Price Trends 2024',
+                category: 'Market Insights',
+                date: 'January 28, 2024',
+                excerpt: 'Current market dynamics, price trends, and factors affecting castor oil supply in India and globally.',
+                image: '📊',
+                content: `
+                    <h2>Castor Oil Market Overview 2024</h2>
+                    <p>The global castor oil market continues to grow, driven by increasing demand from pharmaceutical, cosmetic, and industrial sectors. Understanding market dynamics helps in strategic procurement.</p>
+
+                    <h3>Key Market Drivers</h3>
+                    <ul>
+                        <li><strong>Pharmaceutical Demand:</strong> Growing use in drug formulations and excipients</li>
+                        <li><strong>Bio-based Chemicals:</strong> Shift towards renewable materials in industry</li>
+                        <li><strong>Cosmetic Industry Growth:</strong> Natural ingredients demand</li>
+                        <li><strong>Industrial Applications:</strong> Lubricants and polyurethanes</li>
+                    </ul>
+
+                    <h3>Price Influencing Factors</h3>
+                    <p>Several factors affect castor oil pricing:</p>
+                    <ul>
+                        <li>Monsoon patterns affecting crop yields in India (80% of global production)</li>
+                        <li>International demand fluctuations</li>
+                        <li>Crude oil prices (affects bio-diesel demand)</li>
+                        <li>Currency exchange rates for exports</li>
+                        <li>Quality grade and certification requirements</li>
+                    </ul>
+
+                    <h3>Strategic Procurement Tips</h3>
+                    <p>At Simmi Enterprises, we help clients navigate price fluctuations through:</p>
+                    <ul>
+                        <li>Understanding annual consumption patterns</li>
+                        <li>Strategic inventory management</li>
+                        <li>Forward planning and contracts</li>
+                        <li>Quality-price optimization</li>
+                    </ul>
+
+                    <h2>2024 Outlook</h2>
+                    <p>The market is expected to remain stable with moderate growth. Pharmaceutical and cosmetic grades continue to command premium pricing due to stringent quality requirements.</p>
+
+                    <p><strong>Need market insights for your procurement?</strong> Our team with 35+ years experience can help you optimize your castor oil supply chain.</p>
+                `
+            },
+            {
+                id: 'quality-testing-castor-oil',
+                title: 'How to Verify Quality of Castor Oil: Testing Methods',
+                category: 'Quality Assurance',
+                date: 'January 20, 2024',
+                excerpt: 'Essential quality tests and parameters to verify when purchasing castor oil for pharmaceutical or industrial use.',
+                image: '🔬',
+                content: `
+                    <h2>Quality Testing: The Critical Parameters</h2>
+                    <p>Quality assurance is paramount when sourcing castor oil, especially for pharmaceutical applications. Here's what you need to know about testing and verification.</p>
+
+                    <h3>Essential Physical Tests</h3>
+                    <p><strong>1. Specific Gravity (25°C):</strong></p>
+                    <p>Should be 0.956-0.968 for pharmaceutical grade. This basic test indicates purity and helps identify adulteration.</p>
+
+                    <p><strong>2. Refractive Index:</strong></p>
+                    <p>Range: 1.477-1.481 at 20°C. Measures how light bends through the oil, indicating purity.</p>
+
+                    <p><strong>3. Viscosity:</strong></p>
+                    <p>Castor oil is notably more viscous than other oils. Testing ensures consistency batch-to-batch.</p>
+
+                    <h3>Chemical Tests</h3>
+                    <p><strong>4. Acid Value:</strong></p>
+                    <p>Maximum 2.0 mg KOH/g for pharmaceutical grade. High acid value indicates degradation or poor quality.</p>
+
+                    <p><strong>5. Iodine Value:</strong></p>
+                    <p>Should be 82-90. Measures degree of unsaturation, indicating fatty acid composition.</p>
+
+                    <p><strong>6. Hydroxyl Value:</strong></p>
+                    <p>Minimum 160 for pharmaceutical grade. Unique to castor oil due to ricinoleic acid content.</p>
+
+                    <p><strong>7. Saponification Value:</strong></p>
+                    <p>Range: 176-187 mg KOH/g. Indicates average molecular weight of fatty acids.</p>
+
+                    <h3>Purity Tests</h3>
+                    <ul>
+                        <li><strong>Moisture Content:</strong> Maximum 0.5% for pharmaceutical grade</li>
+                        <li><strong>Heavy Metals:</strong> Must be within permissible limits</li>
+                        <li><strong>Microbial Testing:</strong> Total plate count, yeast, mold</li>
+                        <li><strong>Pesticide Residue:</strong> Should be below detection limits</li>
+                    </ul>
+
+                    <h3>Certificate of Analysis (COA)</h3>
+                    <p>A reliable supplier should provide a COA with every batch containing all test results. This document is essential for regulatory compliance and quality assurance.</p>
+
+                    <h2>Red Flags to Watch For</h2>
+                    <ul>
+                        <li>Supplier cannot provide COA</li>
+                        <li>Unusually low prices (might indicate adulteration)</li>
+                        <li>Inconsistent batch quality</li>
+                        <li>Missing certifications or licenses</li>
+                        <li>No traceability to source</li>
+                    </ul>
+
+                    <p><strong>At Simmi Enterprises,</strong> we provide complete documentation with every shipment and maintain the highest quality standards since 1998. Our pharmaceutical grade castor oil is trusted by leading pharmaceutical companies including Sanofi, Cadila Healthcare, and Piramal.</p>
+                `
+            }
+        ];
+
+        // Generate Blog Grid
+        function generateBlogGrid() {
+            const grid = document.getElementById('blogGrid');
+            grid.innerHTML = blogPosts.map(post => `
+                <div class="blog-card" onclick="showPost('${post.id}')">
+                    <div class="blog-image">${post.image}</div>
+                    <div class="blog-content">
+                        <span class="blog-category">${post.category}</span>
+                        <div class="blog-date">📅 ${post.date}</div>
+                        <h3>${post.title}</h3>
+                        <p class="blog-excerpt">${post.excerpt}</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Show Blog Post
+        function showPost(postId) {
+            const post = blogPosts.find(p => p.id === postId);
+            if (!post) return;
+
+            const currentUrl = window.location.origin + window.location.pathname + '?post=' + postId;
+            const shareText = encodeURIComponent(post.title);
+            const shareUrl = encodeURIComponent(currentUrl);
+
+            document.getElementById('postContent').innerHTML = `
+                <a href="#" onclick="showPage('blog')" class="back-btn">← Back to Blog</a>
+                
+                <span class="blog-category">${post.category}</span>
+                <h1>${post.title}</h1>
+                
+                <div class="post-meta">
+                    <span>📅 ${post.date}</span>
+                    <span>✍️ Castorax Team</span>
+                    <span>⏱️ 5 min read</span>
+                </div>
+
+                <div class="post-content">
+                    ${post.content}
+                </div>
+
+                <div class="share-section">
+                    <h3>Share This Article</h3>
+                    <div class="share-buttons">
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}" target="_blank" class="share-btn share-linkedin">
+                            📘 Share on LinkedIn
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=${shareUrl}" target="_blank" class="share-btn share-facebook">
+                            📱 Share on Facebook
+                        </a>
+                        <a href="https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}" target="_blank" class="share-btn share-twitter">
+                            🐦 Share on Twitter
+                        </a>
+                        <a href="https://wa.me/?text=${shareText}%20${shareUrl}" target="_blank" class="share-btn share-whatsapp">
+                            💬 Share on WhatsApp
+                        </a>
+                        <a href="mailto:?subject=${shareText}&body=Check out this article: ${shareUrl}" class="share-btn share-email">
+                            📧 Share via Email
+                        </a>
+                        <a href="#" onclick="copyLink('${currentUrl}')" class="share-btn copy-link">
+                            🔗 Copy Link
+                        </a>
+                    </div>
+                    <p style="margin-top: 1.5rem; color: #666; font-size: 0.9rem;" id="copyMessage"></p>
+                </div>
+
+                <div style="background: #d4f1e3; padding: 2rem; border-radius: 10px; margin-top: 3rem; text-align: center;">
+                    <h3 style="color: #1a5f3f; margin-bottom: 1rem;">Interested in Our Products?</h3>
+                    <p style="margin-bottom: 1.5rem;">Contact us for pricing, samples, and technical specifications</p>
+                    <a href="https://castorax.com#quote" class="share-btn" style="background: #1a5f3f; display: inline-block;">Request Quote</a>
+                </div>
+            `;
+
+            showPage('post');
+            window.scrollTo(0, 0);
+            
+            // Update URL without reload
+            if (history.pushState) {
+                history.pushState(null, null, '?post=' + postId);
+            }
+        }
+
+        // Page Navigation
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+        }
+
+        // Copy Link Function
+        function copyLink(url) {
+            navigator.clipboard.writeText(url).then(() => {
+                document.getElementById('copyMessage').textContent = '✓ Link copied to clipboard!';
+                setTimeout(() => {
+                    document.getElementById('copyMessage').textContent = '';
+                }, 3000);
+            });
+        }
+
+        // Check URL parameter on load
+        window.addEventListener('load', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const postId = urlParams.get('post');
+            if (postId) {
+                showPost(postId);
+            }
+        });
+
+        // Initialize
+        generateBlogGrid();
+    </script>
+</body>
+</html>
