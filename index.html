@@ -99,6 +99,11 @@
             padding: 0.3rem 0.5rem;
         }
 
+        /* Section padding to account for sticky header */
+        section {
+            scroll-margin-top: 70px;
+        }
+
         /* WhatsApp Button */
         .whatsapp-float {
             position: fixed;
@@ -125,7 +130,7 @@
             transform: scale(1.1);
         }
 
-        /* Hero Section - Reduced Height */
+        /* Hero Section */
         .hero {
             background: url('https://i.ibb.co/mrkGV6vx/Gemini-Generated-Image-fyhdh5fyhdh5fyhd.png');
             background-size: cover;
@@ -287,11 +292,6 @@
             border-radius: 10px;
         }
 
-        /* Section padding to account for sticky header */
-        section {
-            scroll-margin-top: 70px;
-        }
-
         .section-title {
             text-align: center;
             font-size: 2.5rem;
@@ -306,10 +306,6 @@
             font-size: 1.2rem;
             color: #666;
             margin-bottom: 3rem;
-            background: rgba(255, 255, 255, 0.9);
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
-            border-radius: 8px;
         }
 
         .about-content {
@@ -398,8 +394,7 @@
         /* Products Section */
         .products {
             padding: 4rem 2rem;
-            background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
-                        url('https://i.ibb.co/mrkGV6vx/Gemini-Generated-Image-fyhdh5fyhdh5fyhd.png');
+            background: url('https://i.ibb.co/mrkGV6vx/Gemini-Generated-Image-fyhdh5fyhdh5fyhd.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -795,7 +790,6 @@
             }
         }
 
-        /* Smooth Scroll */
         html {
             scroll-behavior: smooth;
         }
@@ -803,9 +797,7 @@
 </head>
 <body>
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/919320004205" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
-        💬
-    </a>
+    <a href="https://wa.me/919320004205" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">💬</a>
 
     <!-- Header -->
     <header>
@@ -922,8 +914,8 @@
 
     <!-- Products Section -->
     <section class="products" id="products">
-        <h2 class="section-title">Our Product Range</h2>
-        <p class="section-subtitle">High-Quality Castor Oil & Derivatives for All Your Industrial Needs</p>
+        <h2 class="section-title" style="background: rgba(255,255,255,0.95); display: inline-block; padding: 1rem 2rem; border-radius: 10px;">Our Product Range</h2>
+        <p class="section-subtitle" style="background: rgba(255,255,255,0.9); display: inline-block; padding: 0.5rem 1.5rem; border-radius: 8px; margin-top: 1rem;">Premium Oils for Pharmaceutical, Cosmetic & Industrial Applications</p>
         <div class="product-grid" id="productGrid"></div>
     </section>
 
@@ -932,13 +924,13 @@
         <div class="quote-container">
             <div class="quote-info">
                 <h2>Request a Quote</h2>
-                <p>Ready to discuss your castor oil requirements? Our team is here to help you with competitive pricing, quality assurance, and reliable supply.</p>
+                <p>Ready to discuss your requirements? Our team is here to help you with competitive pricing, quality assurance, and reliable supply.</p>
                 
                 <div class="contact-details">
                     <div class="contact-item">
                         <div class="contact-icon">📧</div>
                         <div>
-                            <strong>Email (General Inquiries):</strong><br>
+                            <strong>Email (General):</strong><br>
                             <a href="mailto:simmi.enterprises@gmail.com">simmi.enterprises@gmail.com</a>
                         </div>
                     </div>
@@ -998,15 +990,16 @@
                         <label>Product Interested In *</label>
                         <select name="product" required>
                             <option value="">Select Product</option>
-                            <option value="Pharmaceutical Grade">Pharmaceutical Grade Castor Oil</option>
-                            <option value="Cosmetic Grade">Cosmetic Grade Castor Oil</option>
-                            <option value="Industrial Grade">Industrial Grade Castor Oil</option>
-                            <option value="Hydrogenated">Hydrogenated Castor Oil</option>
-                            <option value="Dehydrated">Dehydrated Castor Oil</option>
-                            <option value="TRO">Turkey Red Oil</option>
-                            <option value="Sebacic">Sebacic Acid</option>
-                            <option value="Heptanoic">Heptanoic Acid</option>
-                            <option value="PGPR">PGPR</option>
+                            <option value="Pharmaceutical Castor Oil">Pharmaceutical Grade Castor Oil</option>
+                            <option value="Cosmetic Castor Oil">Cosmetic Grade Castor Oil</option>
+                            <option value="Industrial Castor Oil">Industrial Grade Castor Oil</option>
+                            <option value="Hydrogenated Castor Oil">Hydrogenated Castor Oil</option>
+                            <option value="Dehydrated Castor Oil">Dehydrated Castor Oil</option>
+                            <option value="Turkey Red Oil">Turkey Red Oil</option>
+                            <option value="Neem Oil">Neem Oil</option>
+                            <option value="Liquid Paraffin">Liquid Paraffin</option>
+                            <option value="Glycerin">Glycerin</option>
+                            <option value="Eucalyptus Oil">Eucalyptus Oil</option>
                             <option value="Other">Other / Custom Requirements</option>
                         </select>
                     </div>
@@ -1034,10 +1027,13 @@
             <div class="footer-section">
                 <h3>Products</h3>
                 <ul>
-                    <li><a href="#products">Pharmaceutical Grade</a></li>
-                    <li><a href="#products">Cosmetic Grade</a></li>
-                    <li><a href="#products">Industrial Grade</a></li>
-                    <li><a href="#products">Derivatives</a></li>
+                    <li><a href="#products">Pharmaceutical Grade Castor Oil</a></li>
+                    <li><a href="#products">Cosmetic Grade Castor Oil</a></li>
+                    <li><a href="#products">Industrial Grade Castor Oil</a></li>
+                    <li><a href="#products">Neem Oil</a></li>
+                    <li><a href="#products">Liquid Paraffin</a></li>
+                    <li><a href="#products">Glycerin</a></li>
+                    <li><a href="#products">Eucalyptus Oil</a></li>
                 </ul>
             </div>
             
@@ -1063,7 +1059,7 @@
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2024 Simmi Enterprises. All rights reserved. | CASTORAX - Premium Castor Oil Supplier | Established 1998</p>
+            <p>&copy; 2024 Simmi Enterprises. All rights reserved. | CASTORAX - Premium Oils Supplier | Established 1998</p>
         </div>
     </footer>
 
@@ -1076,7 +1072,7 @@
     </div>
 
     <script>
-        // Product Data
+        // UPDATED PRODUCT DATA - 11 Products Total
         const products = [
             {
                 id: 'pharmaceutical',
@@ -1084,16 +1080,17 @@
                 grade: 'USP/BP/IP Certified',
                 icon: '💊',
                 shortDesc: 'High-purity emollient for medicinal formulations',
-                features: ['Cold-pressed, hexane-free', 'Rich in ricinoleic acid (~90%)', 'Complete COA & SDS', 'CAS: 8001-79-4'],
-                applications: 'Laxative formulations, topical ointments, ophthalmic solutions, injectable formulations',
-                fullDesc: 'Our Pharmaceutical Grade Castor Oil is a high-purity, rigorously tested emollient and excipient meticulously extracted from premium Ricinus communis seeds. Meets USP, BP, and IP standards.',
+                features: ['Cold-pressed, hexane-free', 'Rich in ricinoleic acid (~90%)', 'Complete COA & SDS documentation', 'CAS: 8001-79-4'],
+                applications: 'Laxative formulations, topical ointments, ophthalmic solutions, injectable formulations, capsule manufacturing, medicinal supplements',
+                fullDesc: 'High-purity, rigorously tested emollient and excipient meticulously extracted from premium Ricinus communis seeds. Meets USP, BP, and IP standards for medicinal formulations and healthcare applications.',
                 specs: {
                     'CAS Number': '8001-79-4',
                     'Molecular Formula': 'C₅₇H₁₀₄O₉',
                     'Refractive Index': '1.477-1.481',
                     'Specific Gravity': '0.956-0.968',
                     'Hydroxyl Value': '≥ 160',
-                    'Acid Value': 'Max 2.0 mg KOH/g'
+                    'Acid Value': 'Max 2.0 mg KOH/g',
+                    'Iodine Value': '82-90'
                 }
             },
             {
@@ -1102,15 +1099,16 @@
                 grade: 'Cold Pressed',
                 icon: '💄',
                 shortDesc: 'Premium natural oil for beauty applications',
-                features: ['100% pure & natural', 'Natural golden color', 'Non-comedogenic', 'Hexane-free extraction'],
-                applications: 'Hair care, skin care, lip balms, anti-aging products, massage oils, soap manufacturing',
-                fullDesc: 'Premium cold-pressed natural oil for personal care and beauty applications. Retains rich nutrient profile and natural golden color.',
+                features: ['100% pure & natural', 'Retains natural golden color', 'Non-comedogenic formula', 'Hexane-free extraction'],
+                applications: 'Hair care products, skin care formulations, lip balms, anti-aging products, massage oils, natural soap manufacturing',
+                fullDesc: 'Premium cold-pressed natural oil specifically processed for personal care and beauty applications. Retains rich nutrient profile and natural golden color for maximum effectiveness.',
                 specs: {
-                    'Appearance': 'Golden to pale yellow',
+                    'Appearance': 'Golden to pale yellow viscous liquid',
                     'Moisture Content': 'Max 0.25%',
                     'Free Fatty Acids': 'Max 2.0%',
                     'Saponification Value': '176-187 mg KOH/g',
-                    'Peroxide Value': 'Max 10 meq/kg'
+                    'Peroxide Value': 'Max 10 meq/kg',
+                    'Unsaponifiable Matter': 'Max 1.0%'
                 }
             },
             {
@@ -1119,14 +1117,15 @@
                 grade: 'Industrial Grade',
                 icon: '🏭',
                 shortDesc: 'Superior purity for industrial applications',
-                features: ['Light yellow to colorless', 'Low odor profile', 'Enhanced stability', 'Batch consistency'],
-                applications: 'Lubricants, polyurethane, coatings & paints, plastics, textile processing',
-                fullDesc: 'Superior purity and exceptional performance for demanding industrial applications. Advanced refining for lighter color and reduced odor.',
+                features: ['Light yellow to almost colorless', 'Low odor profile', 'Enhanced oxidative stability', 'Batch-to-batch consistency'],
+                applications: 'Lubricant manufacturing, polyurethane production, coatings & paints, plastics industry, textile processing, hydraulic fluids',
+                fullDesc: 'Superior purity and exceptional performance for demanding industrial applications. Advanced refining techniques offer lighter color, reduced odor, and enhanced stability.',
                 specs: {
                     'Color (Lovibond)': '3R max / 30Y max',
                     'Acid Value': 'Max 1.5 mg KOH/g',
-                    'Moisture': 'Max 0.15%',
-                    'Specific Gravity': '0.957-0.965',
+                    'Moisture Content': 'Max 0.15%',
+                    'Specific Gravity (25°C)': '0.957-0.965',
+                    'Iodine Value': '83-88',
                     'Viscosity (40°C)': '220-300 cSt'
                 }
             },
@@ -1136,14 +1135,15 @@
                 grade: 'First Special Grade',
                 icon: '📦',
                 shortDesc: 'Cost-effective industrial feedstock',
-                features: ['Quality controlled', 'Reliable bulk supply', 'Yellow to amber', 'Large volumes available'],
-                applications: 'Chemical synthesis, bio-diesel, surfactants, leather processing, agriculture',
-                fullDesc: 'Robust and cost-effective industrial feedstock for high-volume applications. Balances quality and economy.',
+                features: ['Quality controlled', 'Reliable bulk supply', 'Yellow to amber color', 'Large volume orders available'],
+                applications: 'Chemical synthesis, bio-diesel production, surfactant manufacturing, leather processing, agriculture, construction materials',
+                fullDesc: 'Robust and cost-effective industrial feedstock engineered for diverse manufacturing sectors. Balances quality and economy for high-volume applications.',
                 specs: {
                     'Color': 'Yellow to amber',
                     'Acid Value': 'Max 2.5 mg KOH/g',
-                    'Moisture': 'Max 0.5%',
+                    'Moisture & Volatile Matter': 'Max 0.5%',
                     'Free Fatty Acids': 'Max 3.0%',
+                    'Specific Gravity (25°C)': '0.955-0.970',
                     'Flash Point': 'Min 260°C'
                 }
             },
@@ -1153,14 +1153,15 @@
                 grade: 'Castor Wax',
                 icon: '🕯️',
                 shortDesc: 'Hard white waxy solid',
-                features: ['Melting point: 85-88°C', 'White solid', 'Non-greasy', 'Multi-functional'],
-                applications: 'Tablet coating, lipsticks, deodorants, hair waxes, pharmaceutical excipient',
-                fullDesc: 'Produced through controlled hydrogenation. Hard, white waxy solid with enhanced stability.',
+                features: ['Melting point: 85-88°C', 'White to off-white solid', 'Non-greasy texture', 'Multi-functional ingredient'],
+                applications: 'Tablet coating and polishing, lipstick formulations, deodorant sticks, hair styling waxes, pharmaceutical excipient, suppository base',
+                fullDesc: 'Produced through controlled hydrogenation of refined castor oil. Hard, white waxy solid with enhanced stability ideal for pharmaceutical and cosmetic applications.',
                 specs: {
                     'Physical Form': 'Hard waxy solid',
                     'Color': 'White to off-white',
                     'Melting Point': '85-88°C',
                     'Iodine Value': 'Max 5',
+                    'Acid Value': 'Max 2.0 mg KOH/g',
                     'Hydroxyl Value': '155-165'
                 }
             },
@@ -1170,74 +1171,106 @@
                 grade: 'Drying Oil',
                 icon: '🎨',
                 shortDesc: 'Fast-drying conjugated oil',
-                features: ['Fast drying', 'Superior film formation', 'Weather resistant', 'Alkyd compatible'],
-                applications: 'Alkyd resins, paints, varnishes, printing inks, linoleum',
-                fullDesc: 'Conjugated drying oil with exceptional film-forming properties.',
+                features: ['Excellent oxidative drying', 'Superior film formation', 'Weather resistant', 'Alkyd resin compatible'],
+                applications: 'Alkyd resins, paint formulations, varnishes, printing inks, linoleum manufacturing, metal coatings',
+                fullDesc: 'Conjugated drying oil with exceptional film-forming properties. Invaluable ingredient in coatings, paints, and printing inks requiring rapid drying.',
                 specs: {
-                    'Appearance': 'Light yellow to amber',
-                    'Specific Gravity': '0.960-0.975',
+                    'Appearance': 'Light yellow to amber viscous liquid',
+                    'Specific Gravity (25°C)': '0.960-0.975',
                     'Acid Value': 'Max 8.0 mg KOH/g',
-                    'Iodine Value': '130-150'
+                    'Iodine Value': '130-150',
+                    'Viscosity (25°C)': 'Z3-Z6 Gardner-Holdt',
+                    'Moisture Content': 'Max 0.2%'
                 }
             },
             {
                 id: 'tro',
-                name: 'Turkey Red Oil',
-                grade: 'Sulfonated',
+                name: 'Turkey Red Oil (TRO)',
+                grade: 'Sulfonated Castor Oil',
                 icon: '🧪',
-                shortDesc: 'Water-soluble emulsifier',
-                features: ['Water miscible', 'Excellent emulsification', 'Biodegradable', 'Active: 70-75%'],
-                applications: 'Textile dyeing, leather processing, bath oils',
-                fullDesc: 'Water-soluble derivative serving as excellent emulsifier.',
+                shortDesc: 'Water-soluble emulsifier and surfactant',
+                features: ['Water miscible in all proportions', 'Excellent emulsification', 'Biodegradable surfactant', 'Active matter: 70-75%'],
+                applications: 'Textile dyeing assistant, leather fatliquoring, bath oils and salts, metalworking fluids, industrial cleaning formulations',
+                fullDesc: 'Unique water-soluble derivative produced by treating castor oil with sulfuric acid. Excellent emulsifier, wetting agent, and textile auxiliary.',
                 specs: {
-                    'Solubility': 'Water miscible',
-                    'pH': '6.0-8.0',
-                    'Sulfation Degree': '60-80%'
+                    'Appearance': 'Clear to slightly hazy liquid',
+                    'Color': 'Pale yellow to amber',
+                    'Solubility': 'Miscible with water',
+                    'pH (10% solution)': '6.0-8.0',
+                    'Sulfation Degree': '60-80%',
+                    'Active Matter': '70-75%'
                 }
             },
             {
-                id: 'sebacic',
-                name: 'Sebacic Acid',
-                grade: 'Bio-Based C10',
-                icon: '⚗️',
-                shortDesc: 'Versatile dicarboxylic acid',
-                features: ['Purity >99%', 'White powder', 'CAS: 111-20-6', 'Sustainable'],
-                applications: 'Nylon, polyurethanes, lubricants, cosmetics',
-                fullDesc: 'Bio-based dicarboxylic acid for engineering plastics.',
+                id: 'neem',
+                name: 'Neem Oil',
+                grade: 'Cold Pressed',
+                icon: '🌿',
+                shortDesc: 'Natural medicinal and cosmetic oil',
+                features: ['100% natural extraction', 'Rich in essential fatty acids', 'Antibacterial & antifungal', 'Vitamin E enriched'],
+                applications: 'Cosmetic formulations, skin care products, hair care treatments, dental care products, traditional Ayurvedic medicines, natural biopesticides',
+                fullDesc: 'Extracted from neem tree seeds (Azadirachta indica) through cold pressing. Rich in essential fatty acids, vitamin E and bioactive compounds including azadirachtin. Widely used in cosmetics, pharmaceuticals and traditional medicine for its antimicrobial properties.',
                 specs: {
-                    'CAS Number': '111-20-6',
-                    'Purity': '≥99.0%',
-                    'Melting Point': '131-134°C'
+                    'Botanical Name': 'Azadirachta indica',
+                    'Extraction Method': 'Cold pressed',
+                    'Appearance': 'Yellow-brown liquid',
+                    'Active Compounds': 'Azadirachtin, nimbin, salannin',
+                    'Oil Content': '30-50% from kernels',
+                    'Fatty Acids': 'Oleic, linoleic, palmitic, stearic'
                 }
             },
             {
-                id: 'heptanoic',
-                name: 'Heptanoic Acid',
-                grade: 'C7 Fatty Acid',
-                icon: '🧬',
-                shortDesc: 'Premium medium-chain fatty acid',
-                features: ['Purity >99%', 'CAS: 111-14-8', 'Clear liquid', 'Castor-derived'],
-                applications: 'Flavor & fragrance, pharmaceutical intermediates',
-                fullDesc: 'Premium C7 saturated fatty acid.',
+                id: 'liquid-paraffin',
+                name: 'Liquid Paraffin (White Oil)',
+                grade: 'USP/BP Pharmaceutical',
+                icon: '💧',
+                shortDesc: 'Highly refined mineral oil',
+                features: ['USP/BP compliant', 'Colorless & odorless', 'High purity pharmaceutical grade', 'FDA approved'],
+                applications: 'Laxative formulations, ointment bases, cosmetic creams and lotions, baby oils, pharmaceutical excipient, tablet and capsule lubricant',
+                fullDesc: 'Highly refined white mineral oil meeting pharmaceutical standards (USP/BP). Colorless, odorless, and tasteless. Ideal for internal medicinal use, topical applications, and cosmetic formulations.',
                 specs: {
-                    'CAS Number': '111-14-8',
-                    'Purity': '≥99.0%',
-                    'Boiling Point': '223°C'
+                    'CAS Number': '8012-95-1',
+                    'Appearance': 'Colorless transparent liquid',
+                    'Odor': 'Odorless',
+                    'Taste': 'Tasteless',
+                    'Viscosity Range': '55-550 SUS@40°C',
+                    'Purity': 'Pharmaceutical USP/BP Grade'
                 }
             },
             {
-                id: 'pgpr',
-                name: 'PGPR',
-                grade: 'Food Grade E476',
-                icon: '🍫',
-                shortDesc: 'Advanced chocolate emulsifier',
-                features: ['FDA & EU approved', 'Natural origin', 'Reduces cocoa butter', 'Kosher'],
-                applications: 'Chocolate, compound coatings, pralines',
-                fullDesc: 'Highly effective emulsifier for chocolate.',
+                id: 'glycerin',
+                name: 'Glycerin (Glycerol)',
+                grade: 'USP/EP Pharmaceutical',
+                icon: '✨',
+                shortDesc: 'High-purity humectant and solvent',
+                features: ['99.7% purity', 'Vegetable-derived', 'Kosher & Halal certified', 'GRAS food status'],
+                applications: 'Moisturizing creams and lotions, pharmaceutical syrups, injectable medicines, toothpaste, food sweetener and preservative, suppositories',
+                fullDesc: 'Clear, odorless, viscous liquid meeting USP/EP pharmacopeia standards. Excellent humectant that draws and retains moisture from air to skin. Used extensively in pharmaceuticals, cosmetics and food products.',
                 specs: {
-                    'E Number': 'E476',
-                    'Viscosity': '5,000-15,000 cPs',
-                    'Acid Value': 'Max 6.0'
+                    'Chemical Formula': 'C₃H₈O₃ (Propane-1,2,3-triol)',
+                    'CAS Number': '56-81-5',
+                    'Purity': '≥99.5% (USP)',
+                    'Appearance': 'Clear colorless viscous liquid',
+                    'Specific Gravity': '1.255-1.265',
+                    'Moisture Content': 'Max 0.5%'
+                }
+            },
+            {
+                id: 'eucalyptus',
+                name: 'Eucalyptus Oil',
+                grade: 'BP/USP Pharmaceutical',
+                icon: '🌲',
+                shortDesc: 'Premium essential oil for respiratory care',
+                features: ['80% cineole content', 'Steam distilled', 'BP/USP certified', 'Powerful antimicrobial properties'],
+                applications: 'Flavored cough drops, decongestant formulations, mouthwash, dental care products, aromatherapy, topical pain relief, respiratory medicines',
+                fullDesc: 'Steam distilled from Eucalyptus globulus leaves. Minimum 70-80% cineole (eucalyptol) content meeting British and US Pharmacopeia standards. Powerful respiratory support with proven antimicrobial and anti-inflammatory properties.',
+                specs: {
+                    'CAS Number': '8000-48-4',
+                    'Main Component': '1,8-Cineole (Eucalyptol)',
+                    'Cineole Content': '≥70% (BP), ≥80% (Premium)',
+                    'Appearance': 'Colorless to pale yellow liquid',
+                    'Specific Gravity (20°C)': '0.905-0.925',
+                    'Refractive Index (20°C)': '1.458-1.470'
                 }
             }
         ];
@@ -1255,9 +1288,9 @@
                         <span class="product-grade">${product.grade}</span>
                         <p style="margin-bottom: 1rem; color: #666; font-size: 0.95rem;">${product.shortDesc}</p>
                         <ul>
-                            ${product.features.slice(0, 3).map(f => `<li>${f}</li>`).join('')}
+                            ${product.features.slice(0, 4).map(f => `<li>${f}</li>`).join('')}
                         </ul>
-                        <p style="margin-top: 1rem; font-weight: 600; color: #1a5f3f; text-align: center; font-size: 0.9rem;">Click for details →</p>
+                        <p style="margin-top: 1rem; font-weight: 600; color: #1a5f3f; text-align: center; font-size: 0.9rem;">Click for full details →</p>
                     </div>
                 </div>
             `).join('');
@@ -1306,8 +1339,10 @@
                 <p style="font-size: 1.05rem; line-height: 1.8; color: #555;">${product.applications}</p>
 
                 <div style="background: #d4f1e3; padding: 2rem; border-radius: 10px; margin-top: 2rem; text-align: center;">
-                    <h3 style="color: #1a5f3f; margin-bottom: 1rem;">Interested in this product?</h3>
+                    <h3 style="color: #1a5f3f; margin-bottom: 1rem;">Interested in ${product.name}?</h3>
+                    <p style="color: #555; margin-bottom: 1.5rem;">Contact us for pricing, samples, and technical specifications</p>
                     <a href="#quote" onclick="closeModal()" class="btn btn-primary">Request Quote</a>
+                    <a href="tel:+919320004205" class="btn btn-primary" style="margin-left: 1rem;">Call Now</a>
                 </div>
             `;
 
