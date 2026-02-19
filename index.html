@@ -21,7 +21,7 @@
         header {
             background: linear-gradient(135deg, #1a5f3f 0%, #2d8659 100%);
             color: white;
-            padding: 0.7rem 0;
+            padding: 0.8rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -35,18 +35,20 @@
             justify-content: space-between;
             align-items: center;
             padding: 0 2rem;
+            min-height: 50px;
         }
 
         .logo-container {
             display: flex;
             align-items: center;
             cursor: pointer;
+            flex-shrink: 0;
         }
 
         .logo-container img {
-            width: 400px !important;
-            height: 55px !important;
-            object-fit: contain;
+            width: 450px;
+            height: auto;
+            display: block;
         }
 
         .nav-links {
@@ -812,7 +814,7 @@
     <header>
         <nav>
             <div class="logo-container" onclick="scrollToTop()">
-                <img src="https://i.ibb.co/dsbLSKrN/castorax-brand-logo.png" alt="Castorax - Medicinal Oils">
+                <img src="https://i.ibb.co/LXSw0KvV/brand-logo.png" alt="Castorax - Medicinal Oils" style="height: 35px !important; width: auto !important;">
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" onclick="closeMenu()">Home</a></li>
