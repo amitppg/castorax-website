@@ -793,6 +793,74 @@
             color: #888;
         }
 
+        /* FAQ Section */
+        .faq-section {
+            background: #f8f9fa;
+            padding: 4rem 2rem;
+        }
+
+        .faq-container {
+            margin-top: 2rem;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background: #f8f9fa;
+        }
+
+        .faq-question h3 {
+            color: #1a5f3f;
+            font-size: 1.1rem;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            color: #4db380;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 1.5rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .faq-answer p {
+            color: #555;
+            line-height: 1.8;
+            margin: 0;
+        }
+
         /* Product Detail Modal */
         .modal {
             display: none;
@@ -1151,6 +1219,136 @@
         <h2 class="section-title" style="background: rgba(255,255,255,0.95); display: inline-block; padding: 1rem 2rem; border-radius: 10px;">Our Product Range</h2>
         <p class="section-subtitle" style="background: rgba(255,255,255,0.9); display: inline-block; padding: 0.5rem 1.5rem; border-radius: 8px; margin-top: 1rem;">Premium Oils for Pharmaceutical, Cosmetic & Industrial Applications</p>
         <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 4rem 2rem;">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know about our products and services</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What is pharmaceutical grade castor oil?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Pharmaceutical grade castor oil is a highly purified oil that meets USP (United States Pharmacopeia), BP (British Pharmacopeia), and IP (Indian Pharmacopeia) standards. It is cold-pressed, hexane-free, and contains approximately 90% ricinoleic acid. Used as an excipient in drug formulations, laxatives, and topical preparations. We provide complete COA and SDS documentation with every batch.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Who is the best castor oil supplier in Mumbai?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Simmi Enterprises (Castorax) has been a leading castor oil supplier in Mumbai since 1998, with 35+ years of industry experience. We supply pharmaceutical, cosmetic, and industrial grade castor oil to major companies including Sanofi, Cadila Healthcare, Piramal, Unichem, and Unilab. We hold valid Drug License and Export License with complete quality certifications.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What is the difference between USP, BP, and IP castor oil?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>USP (United States Pharmacopeia), BP (British Pharmacopeia), and IP (Indian Pharmacopeia) are international quality standards for pharmaceutical ingredients. All three have similar specifications for castor oil including purity, refractive index, specific gravity, and acid value. The main difference is the regulatory body - USP for USA, BP for UK/Europe, and IP for India. Our pharmaceutical grade castor oil meets all three standards, making it suitable for export to any market.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What certifications does Castorax have?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Simmi Enterprises (Castorax) holds valid Drug License and Export License issued by Indian regulatory authorities. Our products meet ISO quality management standards and GMP (Good Manufacturing Practices) certification. We provide complete documentation including Certificate of Analysis (COA), Safety Data Sheet (SDS), and compliance certificates with every shipment.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What products does Castorax supply?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We supply 11 premium products: (1) Pharmaceutical Grade Castor Oil (USP/BP/IP), (2) Cosmetic Grade Castor Oil (cold-pressed), (3) Pale Pressed Grade (PPG), (4) Commercial Grade (CGO/FSG), (5) Hydrogenated Castor Oil (castor wax), (6) Dehydrated Castor Oil (DCO), (7) Turkey Red Oil (sulfonated), (8) Neem Oil, (9) Liquid Paraffin (pharmaceutical grade), (10) Glycerin (USP grade), and (11) Eucalyptus Oil (BP/USP). All products include complete certifications and technical documentation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What is the minimum order quantity for castor oil?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Minimum order quantities vary by product and grade. We offer flexible packaging from 25kg HDPE drums to bulk ISO tank containers (20-25 MT). For pharmaceutical grade, typical MOQ is 100-200 kg. For industrial grades, we can supply from 500 kg upwards. Contact us at +91 93200 04205 or simmi.enterprises@gmail.com for specific MOQ requirements for your application.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Does Castorax export castor oil internationally?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we hold a valid Export License and have extensive experience in international shipments. We export castor oil and derivatives to various countries with complete export documentation, certificates of origin, phytosanitary certificates, and all necessary compliance paperwork. Our products meet international quality standards (USP/BP/EP) suitable for any market.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What is the shelf life of castor oil?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Pharmaceutical and cosmetic grade castor oil typically has a shelf life of 18-24 months when stored properly in sealed containers at temperatures below 25°C, away from direct sunlight and moisture. Industrial grades may have longer shelf life. We provide specific shelf life information, manufacturing date, and storage recommendations with each product shipment.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What is hydrogenated castor oil used for?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Hydrogenated castor oil (also called castor wax) is a hard, white waxy solid with a melting point of 85-88°C. It is used in pharmaceutical applications as a tablet coating agent, controlled-release agent, and tablet lubricant. In cosmetics, it's used in lipsticks, lip balms, deodorant sticks, hair pomades, and styling waxes. It provides excellent stability, non-greasy texture, and is a vegetable-based alternative to petroleum waxes.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>How do I verify castor oil quality?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Verify castor oil quality through: (1) Request Certificate of Analysis (COA) showing test results for specific gravity (0.956-0.968), refractive index (1.477-1.481), acid value (max 2.0), and iodine value (82-90). (2) Check supplier credentials - Drug License, Export License, GMP certification. (3) Request sample for independent testing. (4) Verify batch-to-batch consistency. (5) Ensure complete traceability from source. We provide complete testing reports and third-party verification available upon request.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What documentation do you provide with shipments?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide comprehensive documentation with every shipment: Certificate of Analysis (COA) with complete test results, Safety Data Sheet (SDS/MSDS), Certificate of Compliance, batch manufacturing records, traceability documentation from seed to product, and for exports - all necessary export documents, certificates of origin, and regulatory compliance paperwork. All documents are provided in English and can be customized based on destination country requirements.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>How quickly can you supply castor oil?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For stock products and standard quantities, we typically ship within 7-14 days from order confirmation. For custom formulations or large bulk orders, lead time is 3-4 weeks. We maintain strategic inventory to ensure quick supply to our regular clients. Understanding your annual consumption patterns, we can maintain ready stock for just-in-time delivery. Contact us to discuss your specific timeline requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Request Quote Section -->
@@ -1624,6 +1822,22 @@
 
         // Initialize
         generateProductGrid();
+
+        // FAQ Toggle Function
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all FAQs
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked FAQ if it wasn't already open
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
 
         // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
