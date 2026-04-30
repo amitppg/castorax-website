@@ -3,685 +3,486 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Castorax | Castor Oil Insights & Industry News</title>
-    <meta name="description" content="Read expert insights on castor oil, pharmaceutical applications, industry trends, and product guides from Castorax - India's leading castor oil supplier.">
+
+    <!-- ══ SEO META — Updated dynamically per post ══ -->
+    <title id="page-title">Castorax Blog | Castor Oil Insights & Industry News | Simmi Enterprises</title>
+    <meta name="description" id="page-desc" content="Expert insights on pharmaceutical grade castor oil, BSS/IP/FSG grades, neem oil, and industry trends. Trusted supplier since 1998 — Simmi Enterprises, Mumbai.">
+    <meta name="keywords" id="page-keywords" content="castor oil supplier Mumbai, pharmaceutical grade castor oil India, castor oil IP grade, BSS grade castor oil, neem oil supplier, Simmi Enterprises, Castorax">
+    <meta name="author" content="Simmi Enterprises (Castorax)">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" id="page-canonical" href="https://castorax.com/blog.html">
+
+    <!-- ══ Open Graph — LinkedIn / WhatsApp / Facebook previews ══ -->
+    <meta property="og:type" id="og-type" content="website">
+    <meta property="og:title" id="og-title" content="Castorax Blog | Castor Oil Insights">
+    <meta property="og:description" id="og-desc" content="Expert insights on pharmaceutical grade castor oil from Simmi Enterprises, Mumbai's trusted supplier since 1998.">
+    <meta property="og:url" id="og-url" content="https://castorax.com/blog.html">
+    <meta property="og:image" content="https://i.ibb.co/LXSw0KvV/brand-logo.png">
+    <meta property="og:site_name" content="Castorax - Simmi Enterprises">
+
+    <!-- ══ Twitter Card ══ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" id="tw-title" content="Castorax Blog | Castor Oil Insights">
+    <meta name="twitter:description" id="tw-desc" content="Expert insights on pharmaceutical grade castor oil from Simmi Enterprises, Mumbai.">
+    <meta name="twitter:image" content="https://i.ibb.co/LXSw0KvV/brand-logo.png">
+
+    <!-- ══ Schema.org — Blog structured data ══ -->
+    <script type="application/ld+json" id="schema-org">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Castorax Blog",
+      "url": "https://castorax.com/blog.html",
+      "description": "Expert insights on pharmaceutical grade castor oil, medicinal oils, and industry trends.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Simmi Enterprises",
+        "alternateName": "Castorax",
+        "url": "https://castorax.com",
+        "logo": { "@type": "ImageObject", "url": "https://i.ibb.co/LXSw0KvV/brand-logo.png" },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Shop No 15, Shish Mahal, RNP Park, Bhayander East",
+          "addressLocality": "Mumbai",
+          "addressRegion": "Maharashtra",
+          "postalCode": "401105",
+          "addressCountry": "IN"
+        },
+        "telephone": "+919320004205",
+        "email": "simmi.enterprises@gmail.com"
+      }
+    }
+    </script>
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:#333;background:#f9f9f9;}
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
+        /* ── HEADER ── */
+        header{background:linear-gradient(135deg,#1a5f3f 0%,#2d8659 100%);color:white;padding:.8rem 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.1);}
+        nav{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 2rem;}
+        .logo img{height:35px;cursor:pointer;}
+        .nav-links{display:flex;list-style:none;gap:1.5rem;}
+        .nav-links a{color:white;text-decoration:none;font-weight:600;padding:.5rem .8rem;border-radius:5px;transition:all .3s;}
+        .nav-links a:hover{background:rgba(255,255,255,.1);}
 
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #1a5f3f 0%, #2d8659 100%);
-            color: white;
-            padding: 0.8rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+        /* ── HERO ── */
+        .blog-hero{background:linear-gradient(135deg,rgba(26,95,63,.9),rgba(45,134,89,.85)),url('https://i.ibb.co/mrkGV6vx/Gemini-Generated-Image-fyhdh5fyhdh5fyhd.png');background-size:cover;background-position:center;color:white;padding:4rem 2rem;text-align:center;}
+        .blog-hero h1{font-size:2.5rem;font-weight:900;margin-bottom:1rem;text-shadow:2px 2px 4px rgba(0,0,0,.5);}
+        .blog-hero p{font-size:1.1rem;opacity:.9;}
 
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
+        /* ── CONTAINER ── */
+        .container{max-width:1200px;margin:0 auto;padding:3rem 2rem;}
 
-        .logo img {
-            height: 35px;
-            cursor: pointer;
-        }
+        /* ── BLOG GRID ── */
+        .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:2rem;margin-top:2rem;}
+        .blog-card{background:white;border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.1);transition:all .3s;cursor:pointer;}
+        .blog-card:hover{transform:translateY(-5px);box-shadow:0 10px 30px rgba(0,0,0,.2);}
+        .blog-image{width:100%;height:200px;background:linear-gradient(135deg,#d4f1e3,#a8d5ba);display:flex;align-items:center;justify-content:center;font-size:3rem;}
+        .blog-content{padding:1.5rem;}
+        .blog-category{display:inline-block;background:#d4f1e3;color:#1a5f3f;padding:.3rem .8rem;border-radius:20px;font-size:.8rem;font-weight:600;margin-bottom:.8rem;}
+        .blog-date{color:#666;font-size:.9rem;margin-bottom:.8rem;}
+        .blog-card h3{color:#1a5f3f;margin-bottom:.8rem;font-size:1.3rem;line-height:1.4;}
+        .blog-excerpt{color:#666;line-height:1.6;margin-bottom:1rem;}
+        .read-more{color:#2d8659;font-weight:600;text-decoration:none;}
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 1.5rem;
-        }
+        /* ── POST PAGE ── */
+        .blog-post{max-width:800px;margin:0 auto;padding:2rem;}
+        .blog-post h1{color:#1a5f3f;font-size:2.2rem;margin-bottom:1rem;line-height:1.3;}
+        .post-meta{display:flex;gap:2rem;margin-bottom:2rem;padding-bottom:1rem;border-bottom:2px solid #d4f1e3;flex-wrap:wrap;}
+        .post-meta span{color:#666;font-size:.95rem;}
+        .post-content{font-size:1.05rem;line-height:1.85;color:#444;}
+        .post-content h2{color:#1a5f3f;margin:2rem 0 1rem;font-size:1.7rem;}
+        .post-content h3{color:#2d8659;margin:1.5rem 0 .8rem;font-size:1.3rem;}
+        .post-content p{margin-bottom:1.5rem;}
+        .post-content ul,.post-content ol{margin:1rem 0 1.5rem 2rem;}
+        .post-content li{margin-bottom:.5rem;}
+        .post-content table{width:100%;border-collapse:collapse;margin:16px 0;}
+        .post-content table th{background:#d4f1e3;padding:8px 12px;text-align:left;color:#1a5f3f;}
+        .post-content table td{padding:8px 12px;border-bottom:1px solid #eee;}
+        .post-content .highlight-box{background:#E8F5E9;border-left:4px solid #2d8659;padding:14px 18px;margin:20px 0;color:#1a5f3f;}
 
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 0.5rem 0.8rem;
-            border-radius: 5px;
-            transition: all 0.3s;
-        }
+        /* ── SHARE ── */
+        .share-section{background:#f8f9fa;padding:2rem;border-radius:10px;margin:3rem 0;text-align:center;}
+        .share-section h3{color:#1a5f3f;margin-bottom:1.5rem;}
+        .share-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+        .share-btn{padding:.8rem 1.5rem;border-radius:5px;text-decoration:none;color:white;font-weight:600;transition:all .3s;display:flex;align-items:center;gap:.5rem;border:none;cursor:pointer;font-size:14px;}
+        .share-btn:hover{transform:translateY(-2px);box-shadow:0 5px 15px rgba(0,0,0,.2);}
+        .share-linkedin{background:#0077b5;}
+        .share-whatsapp{background:#25d366;}
+        .share-email{background:#666;}
+        .copy-link{background:#1a5f3f;}
 
-        .nav-links a:hover {
-            background: rgba(255,255,255,0.1);
-        }
+        /* ── CTA BOX ── */
+        .cta-box{background:#d4f1e3;padding:2rem;border-radius:10px;margin-top:3rem;text-align:center;}
+        .cta-box h3{color:#1a5f3f;margin-bottom:1rem;}
+        .cta-box p{margin-bottom:1.5rem;}
+        .cta-box a{background:#1a5f3f;color:white;padding:.8rem 1.5rem;border-radius:5px;text-decoration:none;font-weight:600;}
 
-        /* Hero */
-        .blog-hero {
-            background: linear-gradient(135deg, rgba(26, 95, 63, 0.9), rgba(45, 134, 89, 0.85)),
-                        url('https://i.ibb.co/mrkGV6vx/Gemini-Generated-Image-fyhdh5fyhdh5fyhd.png');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
+        /* ── BREADCRUMB ── */
+        .breadcrumb{padding:12px 2rem;max-width:1200px;margin:0 auto;font-size:.9rem;color:#666;}
+        .breadcrumb a{color:#2d8659;text-decoration:none;}
+        .breadcrumb span{margin:0 6px;}
 
-        .blog-hero h1 {
-            font-size: 2.5rem;
-            font-weight: 900;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
+        /* ── BACK BTN ── */
+        .back-btn{display:inline-block;color:#1a5f3f;text-decoration:none;margin-bottom:2rem;font-weight:600;cursor:pointer;}
+        .back-btn:hover{color:#2d8659;}
 
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
+        /* ── PAGE TOGGLE ── */
+        .page{display:none;}
+        .page.active{display:block;}
 
-        /* Blog Grid */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+        /* ── FOOTER ── */
+        footer{background:#1a1a1a;color:#ccc;padding:2rem;text-align:center;margin-top:4rem;}
+        footer a{color:#4db380;}
 
-        .blog-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .blog-image {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, #d4f1e3, #a8d5ba);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-        }
-
-        .blog-content {
-            padding: 1.5rem;
-        }
-
-        .blog-category {
-            display: inline-block;
-            background: #d4f1e3;
-            color: #1a5f3f;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-bottom: 0.8rem;
-        }
-
-        .blog-date {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .blog-card h3 {
-            color: #1a5f3f;
-            margin-bottom: 0.8rem;
-            font-size: 1.3rem;
-        }
-
-        .blog-excerpt {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        .read-more {
-            color: #2d8659;
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        /* Blog Post Page */
-        .blog-post {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .blog-post h1 {
-            color: #1a5f3f;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            line-height: 1.3;
-        }
-
-        .post-meta {
-            display: flex;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid #d4f1e3;
-            flex-wrap: wrap;
-        }
-
-        .post-meta span {
-            color: #666;
-            font-size: 0.95rem;
-        }
-
-        .post-content {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #444;
-        }
-
-        .post-content h2 {
-            color: #1a5f3f;
-            margin: 2rem 0 1rem;
-            font-size: 1.8rem;
-        }
-
-        .post-content h3 {
-            color: #2d8659;
-            margin: 1.5rem 0 0.8rem;
-            font-size: 1.4rem;
-        }
-
-        .post-content p {
-            margin-bottom: 1.5rem;
-        }
-
-        .post-content ul, .post-content ol {
-            margin: 1rem 0 1.5rem 2rem;
-        }
-
-        .post-content li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Share Buttons */
-        .share-section {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 10px;
-            margin: 3rem 0;
-            text-align: center;
-        }
-
-        .share-section h3 {
-            color: #1a5f3f;
-            margin-bottom: 1.5rem;
-        }
-
-        .share-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .share-btn {
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            text-decoration: none;
-            color: white;
-            font-weight: 600;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .share-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .share-linkedin { background: #0077b5; }
-        .share-facebook { background: #1877f2; }
-        .share-twitter { background: #1da1f2; }
-        .share-whatsapp { background: #25d366; }
-        .share-email { background: #666; }
-        .copy-link { background: #1a5f3f; }
-
-        /* Back Button */
-        .back-btn {
-            display: inline-block;
-            color: #1a5f3f;
-            text-decoration: none;
-            margin-bottom: 2rem;
-            font-weight: 600;
-        }
-
-        .back-btn:hover {
-            color: #2d8659;
-        }
-
-        /* Footer */
-        footer {
-            background: #1a1a1a;
-            color: #ccc;
-            padding: 2rem;
-            text-align: center;
-            margin-top: 4rem;
-        }
-
-        /* Page Toggle */
-        .page {
-            display: none;
-        }
-
-        .page.active {
-            display: block;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .blog-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .blog-hero h1 {
-                font-size: 2rem;
-            }
-
-            .share-buttons {
-                flex-direction: column;
-            }
-
-            .nav-links {
-                display: none;
-            }
+        /* ── RESPONSIVE ── */
+        @media(max-width:768px){
+            .blog-grid{grid-template-columns:1fr;}
+            .blog-hero h1{font-size:2rem;}
+            .share-buttons{flex-direction:column;}
+            .nav-links{display:none;}
+            .blog-post h1{font-size:1.7rem;}
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="https://i.ibb.co/LXSw0KvV/brand-logo.png" alt="Castorax" onclick="window.location.href='https://castorax.com'">
-            </div>
-            <ul class="nav-links">
-                <li><a href="https://castorax.com">Home</a></li>
-                <li><a href="https://castorax.com#about">About</a></li>
-                <li><a href="https://castorax.com#products">Products</a></li>
-                <li><a href="#" onclick="showPage('blog')">Blog</a></li>
-                <li><a href="https://castorax.com#quote">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Blog List Page -->
-    <div id="blog" class="page active">
-        <section class="blog-hero">
-            <h1>Castorax Blog</h1>
-            <p>Expert insights on castor oil, pharmaceutical applications & industry trends</p>
-        </section>
-
-        <div class="container">
-            <h2 style="color: #1a5f3f; margin-bottom: 2rem; font-size: 2rem;">Latest Articles</h2>
-            <div class="blog-grid" id="blogGrid"></div>
+<header>
+    <nav>
+        <div class="logo">
+            <img src="https://i.ibb.co/LXSw0KvV/brand-logo.png" alt="Castorax - Simmi Enterprises" onclick="window.location.href='https://castorax.com'">
         </div>
+        <ul class="nav-links">
+            <li><a href="https://castorax.com">Home</a></li>
+            <li><a href="https://castorax.com#about">About</a></li>
+            <li><a href="https://castorax.com#products">Products</a></li>
+            <li><a href="#" onclick="showPage('blog');return false;">Blog</a></li>
+            <li><a href="https://castorax.com#quote">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ══ BLOG LIST PAGE ══ -->
+<div id="blog" class="page active">
+    <section class="blog-hero">
+        <h1>Castorax Blog</h1>
+        <p>Expert insights on castor oil, pharmaceutical applications &amp; industry trends</p>
+    </section>
+    <div class="container">
+        <h2 style="color:#1a5f3f;margin-bottom:2rem;font-size:2rem;">Latest Articles</h2>
+        <div class="blog-grid" id="blogGrid"></div>
     </div>
+</div>
 
-    <!-- Blog Post Page -->
-    <div id="post" class="page">
-        <div class="container">
-            <div class="blog-post" id="postContent"></div>
-        </div>
+<!-- ══ POST PAGE ══ -->
+<div id="post" class="page">
+    <div class="breadcrumb" id="breadcrumb-bar">
+        <a href="https://castorax.com">Home</a><span>›</span>
+        <a href="#" onclick="showPage('blog');return false;">Blog</a><span>›</span>
+        <span id="breadcrumb-title">Article</span>
     </div>
+    <div class="container">
+        <div class="blog-post" id="postContent"></div>
+    </div>
+</div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Castorax - Simmi Enterprises | <a href="https://castorax.com" style="color: #4db380;">Back to Main Site</a></p>
-    </footer>
+<footer>
+    <p>&copy; 2024 Castorax - Simmi Enterprises | <a href="https://castorax.com">Back to Main Site</a></p>
+</footer>
 
-    <script>
-        // Blog Posts Data - Latest posts appear first
-        const blogPosts = [
+<script>
+// ══════════════════════════════════════════════════════════════════════
+// BLOG POSTS DATA — Add new posts at the TOP of this array
+// Each post needs: id, title, category, date, excerpt, image, keywords,
+//                  metaDescription, content
+// ══════════════════════════════════════════════════════════════════════
+const blogPosts = [
+// ↓↓↓ PASTE NEW POSTS HERE — newest first ↓↓↓
+
 {
-    id: 'neem-oil-pharmaceutical-ayurvedic-use-complete-guide',
-    title: 'Neem Oil for Pharmaceutical and Ayurvedic Use: A Complete Guide for Manufacturers',
-    category: 'Pharmaceutical Ingredients',
-    date: '30 April 2026',
-    excerpt: 'A complete guide to pharmaceutical-grade neem oil for Ayurvedic and herbal manufacturers — specifications, uses, quality standards, and sourcing in India.',
-    image: '🌿',
-    content: `
-<h2>Why Neem Oil Deserves a Central Place in Your Formulation Strategy</h2><p>If you are an Ayurvedic or herbal product manufacturer in India, you already know that the quality of your raw materials defines the safety and efficacy of your finished product. Neem oil — cold-pressed from the seeds of <strong>Azadirachta indica</strong> — is one of the most therapeutically rich botanical oils available to formulators. Yet it remains underspecified, poorly sourced, and inconsistently graded across much of the domestic supply chain.</p><p>This guide is written for procurement managers, R&D teams, and quality assurance professionals who need clear, technical guidance on what pharmaceutical and Ayurvedic-grade neem oil actually looks like, how it differs from commercial-grade material, and what to demand from a supplier before it enters your manufacturing line. Given that neem oil is frequently used alongside other fixed oils — particularly castor oil — understanding the full landscape of oleochemical sourcing in India is equally valuable, and we address that here too.</p><h2>What Makes Neem Oil Therapeutically Significant</h2><p>Neem oil's bioactive profile is unusually dense for a fixed oil. The primary active compound is <strong>azadirachtin</strong>, a limonoid that accounts for much of the oil's pesticidal and anti-inflammatory activity. But for pharmaceutical and Ayurvedic use, the broader fatty acid composition and the presence of tetranortriterpenoids, sterols, and tocopherols matter just as much.</p><p>The typical fatty acid composition of cold-pressed neem oil looks like this:</p><table><thead><tr><th>Fatty Acid</th><th>IUPAC Name</th><th>Typical Range (%)</th></tr></thead><tbody><tr><td>Oleic Acid (C18:1)</td><td>9-Octadecenoic acid</td><td>25–45%</td></tr><tr><td>Stearic Acid (C18:0)</td><td>Octadecanoic acid</td><td>14–24%</td></tr><tr><td>Palmitic Acid (C16:0)</td><td>Hexadecanoic acid</td><td>13–21%</td></tr><tr><td>Linoleic Acid (C18:2)</td><td>9,12-Octadecadienoic acid</td><td>8–20%</td></tr><tr><td>Arachidic Acid (C20:0)</td><td>Eicosanoic acid</td><td>1–3%</td></tr></tbody></table><p>This composition gives neem oil excellent emollient and occlusive properties while its minor constituents — particularly nimbidin and nimbin — contribute demonstrable antimicrobial, antifungal, and wound-healing activity cited in peer-reviewed Ayurvedic pharmacology literature. For formulators developing anti-acne creams, medicated scalp oils, antifungal ointments, or traditional Ayurvedic preparations like <strong>Nimbaadi Taila</strong>, this bioactivity is not incidental — it is the entire reason you are using this oil.</p><h2>Pharmaceutical Grade vs. Commercial Grade: Why the Distinction Matters</h2><p>One of the most consequential decisions a manufacturer makes is whether to source pharmaceutical-grade or commercial-grade neem oil. The difference is not merely cosmetic or regulatory — it has direct implications for batch consistency, shelf life, and regulatory audit outcomes.</p><p>Commercial-grade neem oil is typically expeller-pressed or solvent-extracted, resulting in a darker colour, higher free fatty acid (FFA) content, and residual solvent traces. It is entirely appropriate for agricultural and industrial applications. For topical pharmaceutical or Ayurvedic use, however, it introduces unnecessary risk.</p><p>Pharmaceutical-grade and Ayurvedic-grade neem oil, by contrast, should meet the following minimum specifications:</p><ul><li><strong>Appearance:</strong> Clear to slightly turbid, yellow to brownish-yellow liquid with characteristic odour</li><li><strong>Specific Gravity (at 25°C):</strong> 0.910 – 0.925</li><li><strong>Refractive Index (at 40°C):</strong> 1.460 – 1.470</li><li><strong>Acid Value:</strong> Not more than 20 mg KOH/g (pharmaceutical); not more than 10 mg KOH/g (premium grade)</li><li><strong>Saponification Value:</strong> 170 – 200 mg KOH/g</li><li><strong>Iodine Value:</strong> 65 – 95 g I₂/100g</li><li><strong>Peroxide Value:</strong> Not more than 10 meq O₂/kg</li><li><strong>Moisture and Volatile Matter:</strong> Not more than 0.5%</li><li><strong>Heavy Metals:</strong> Tested and within pharmacopoeial limits</li><li><strong>Pesticide Residues:</strong> Tested per IP/WHO guidelines</li><li><strong>Microbial Limits:</strong> Per topical pharmaceutical standards (TVC, yeast, mould, absence of specified pathogens)</li></ul><p>Any supplier providing neem oil for pharmaceutical or Ayurvedic use should furnish a <strong>Certificate of Analysis (COA)</strong> for every batch, with all of the above parameters tested by an accredited laboratory. If a supplier cannot provide a batch-specific COA, that is a non-negotiable disqualifier for regulated manufacturing.</p><h2>Regulatory and Pharmacopoeial Framework in India</h2><p>India does not currently have a dedicated neem oil monograph in the Indian Pharmacopoeia (IP), but the oil is referenced in the <strong>Ayurvedic Pharmacopoeia of India (API)</strong> and the <strong>Indian Herbal Pharmacopoeia (IHP)</strong>. For topical pharmaceutical use, most manufacturers align their internal specifications with the API monograph and apply IP-equivalent testing methodology for parameters such as heavy metals, microbial limits, and residual solvents.</p><p>From a licensing standpoint, any supplier selling neem oil for pharmaceutical or Ayurvedic manufacturing should hold a valid <strong>Drug License</strong> under the Drugs and Cosmetics Act, 1940. This is not optional — it is a statutory requirement for the supply of oils used in licensed pharmaceutical manufacturing. Verify this before onboarding any new supplier. Similarly, if you are exporting finished Ayurvedic products, your raw material supplier's <strong>Export License</strong> status becomes relevant for documentation during inspections.</p><p>Manufacturers supplying to clients in regulated markets — the United States, Europe, or Southeast Asia — should also ensure their neem oil suppliers can support documentation requirements under WHO-GMP, EU-GMP, or relevant import regulations of the destination country. This is an area where domestic supply chains in India have historically been inconsistent.</p><h2>Formulation Applications Across Ayurvedic and Pharmaceutical Categories</h2><p>Neem oil appears across a remarkably wide range of product categories in both traditional and modern herbal manufacturing. Understanding where it works best — and where it needs to be combined with other carrier oils — helps procurement teams make better sourcing decisions.</p><p>In classical Ayurvedic preparations, neem oil is a primary ingredient in formulations targeting <em>Kushtha</em> (skin disorders), <em>Kandu</em> (pruritus), and <em>Vrana</em> (wound healing). Modern Ayurvedic manufacturers have extended these applications into standardised topical products including anti-dandruff hair oils, medicated soaps, antifungal creams, and insect-repellent formulations.</p><p>In pharmaceutical topical development, neem oil is increasingly used as a functional excipient in semi-solid dosage forms — ointments, creams, and gels — where its natural antimicrobial activity complements the active pharmaceutical ingredient. Dermatology brands and contract manufacturers working on over-the-counter antifungal and anti-acne product lines have shown growing demand for consistent, well-documented neem oil supply.</p><p>An important formulation consideration: neem oil has a relatively strong and distinctive odour, which can be challenging in finished product development. Blending with other fixed oils — refined castor oil being a common choice given its excellent emulsification properties and skin compatibility — helps manage this while maintaining bioactivity. This is one reason many Ayurvedic manufacturers source both neem oil and castor oil from the same supplier; batch documentation, quality standards, and supply reliability are easier to manage from a single, audited source.</p><div class="highlight-box"><strong>Key Takeaways for Procurement and Quality Teams</strong><ul><li>Always require a batch-specific Certificate of Analysis (COA) with acid value, peroxide value, specific gravity, refractive index, and microbial limits before accepting any neem oil shipment.</li><li>Pharmaceutical and Ayurvedic-grade neem oil must come from a supplier holding a valid Drug License — verify this on CDSCO records if in doubt.</li><li>Cold-pressed neem oil retains higher levels of azadirachtin and other bioactives compared to expeller-pressed or solvent-extracted grades; specify the extraction method in your purchase order.</li><li>Storage matters: neem oil should be stored in HDPE or lined steel drums, away from direct sunlight, at temperatures below 30°C, with a shelf life of 12–18 months from date of manufacture when stored correctly.</li><li>If you are formulating for export, ensure your supplier can provide additional documentation including country-of-origin certificates and technical data sheets aligned with destination-market regulatory requirements.</li></ul></div><h2>Choosing the Right Supplier: What to Evaluate Beyond Price</h2><p>Price-per-litre is rarely the right primary criterion when sourcing neem oil for pharmaceutical or Ayurvedic manufacturing. A batch that fails a peroxide value test, carries inconsistent azadirachtin levels, or lacks traceable documentation can cost far more in rejected batches, regulatory findings, and brand liability than any per-unit saving on raw material.</p><p>Here is a practical evaluation framework for neem oil supplier qualification:</p><ul><li><strong>Licensing:</strong> Confirm Drug License and, if relevant to your business, Export License. Ask for copies, not just verbal confirmation.</li><li><strong>Documentation:</strong> Does the supplier issue batch-specific COAs, or generic product specifications? The former is the only acceptable standard for pharmaceutical procurement.</li><li><strong>Testing Infrastructure:</strong> Is testing done in-house with calibrated equipment, or is every batch sent to a third-party accredited laboratory? Both are acceptable — what matters is traceability and consistency.</li><li><strong>Supply History:</strong> A supplier with a verified track record of supplying to regulated pharmaceutical companies demonstrates that their quality systems have been audited and validated by sophisticated buyers. Ask for client references in the pharma or Ayurvedic space specifically.</li><li><strong>Complementary Product Range:</strong> If you are also sourcing castor oil — whether IP grade, BSS grade, or FSG grade — liquid paraffin, or other fixed oils, a supplier who can consolidate these across a single, licensed, documented supply relationship reduces your supplier qualification burden significantly.</li></ul><p>Simmi Enterprises, operating under the brand <strong>Castorax</strong> and based in Bhayander East, Thane (Mumbai), has been supplying pharmaceutical-grade oils to the Indian and export market since 1998 — over 35 years of continuous operation in this space. Their client roster includes Sanofi, Piramal Pharma, Bliss GVS, Unilab, and Unichem, which speaks directly to the level of documentation, consistency, and regulatory compliance their supply chain supports.</p><p>As a licensed <strong>castor oil supplier in Mumbai</strong> holding both a Drug License and an Export License, Castorax supplies Castor Oil in IP, BSS, FSG, and commercial grades, alongside Neem Oil and Liquid Paraffin — making them a practical single-source option for Ayurvedic and pharmaceutical manufacturers who want to consolidate their oleochemical procurement without sacrificing quality standards. For manufacturers who regularly require <strong>pharmaceutical grade castor oil in India</strong> alongside neem oil, this kind of supplier consolidation meaningfully simplifies QA workflows, from vendor qualification audits to documentation management.</p><p>Every batch supplied by Castorax comes with a full Certificate of Analysis — <strong>castor oil with COA</strong> and neem oil with COA both included as standard, not as an optional extra. For manufacturers operating under GMP environments, this is the baseline expectation, and it should be non-negotiable when evaluating any supplier.</p><h2>Ready to Qualify a Reliable Neem Oil Supplier?</h2><p>If your manufacturing operation depends on consistent, well-documented neem oil — whether for Ayurvedic taila preparations, topical pharmaceutical products, or herbal cosmeceuticals — the sourcing decision deserves the same rigour you apply to any other critical raw material.</p><p>Simmi Enterprises (Castorax) has been a trusted supply partner to some of India's most demanding pharmaceutical manufacturers for over three decades. Their team understands the documentation requirements, batch consistency expectations, and regulatory compliance standards that licensed Ayurvedic and pharmaceutical manufacturers operate under.</p><p>To discuss your neem oil or castor oil requirements, request a sample, or obtain product specifications and COA documentation, reach out directly:</p><ul><li><strong>Phone:</strong> +91 93200 04205</li><li><strong>Website:</strong> castorax.com</li><li><strong>Location:</strong> Bhayander East, Thane, Mumbai, Maharashtra</li></ul><p>Whether you are qualifying a new supplier, seeking a second source for supply security, or simply looking for more consistent documentation from your current raw material supply chain, a conversation with Castorax is a practical next step.</p>
-    `
-},
-      /////   new one -date 30th April   
-        {
     id: 'castor-oil-industrial-use-case-ex-foam-industries-lubricant-etc',
-    title: 'Castor oil  industrial use case ex foam industries, Lubricant,etc',
+    title: 'Castor Oil Industrial Use Case: Foam Industries, Lubricants and More',
     category: 'Market Insights',
     date: 'February 26, 2026',
     excerpt: 'Castor oil drives innovation across foam manufacturing, lubricants, and industrial applications through its unique hydroxyl-rich chemical structure.',
-    image: '🌿',
+    image: '🏭',
+    keywords: 'castor oil industrial use, castor oil foam manufacturing, castor oil lubricants India, industrial castor oil supplier, castor oil polyurethane',
+    metaDescription: 'Explore how castor oil is used across foam manufacturing, lubricants, plastics, and industrial chemicals. Trusted supply from Simmi Enterprises, Mumbai since 1998.',
     content: `
-<p>Castor oil has emerged as an indispensable raw material across multiple industrial sectors, transforming manufacturing processes in foam production, lubricants, plastics, and specialty chemicals. As a leading castor oil supplier and exporter, Simmi Enterprises has witnessed the exponential growth of industrial castor oil consumption in India's domestic market, which currently stands at approximately 250,000-270,000 metric tonnes annually, with industrial applications accounting for nearly 60% of total demand.</p><h2>Castor Oil in Foam Manufacturing: A Growing Market</h2><p>The polyurethane foam industry represents one of the largest consumers of castor oil derivatives, particularly in India where the flexible and rigid foam market is estimated at ₹12,000-15,000 crores. Castor oil serves as a crucial polyol component in polyurethane production, offering superior properties compared to petroleum-based alternatives. The hydroxyl-rich ricinoleic acid (comprising 90% of castor oil's fatty acid profile) enables exceptional cross-linking in foam formulations.</p><p>Manufacturers utilize castor oil polyols in flexible foam for mattresses, automotive seating, and furniture applications, where the market size has grown at a CAGR of 8-10% over the past five years. Rigid foam applications in construction, refrigeration, and insulation panels have witnessed even stronger growth at 12-14% annually. As a trusted castor oil supplier, Simmi Enterprises provides pharmaceutical-grade and industrial-grade variants that meet stringent specifications required for foam manufacturing, ensuring consistent hydroxyl values and low moisture content.</p><h2>Industrial Lubricants: High-Performance Applications</h2><p>The Indian lubricant industry, valued at approximately $4.5-5 billion, increasingly incorporates castor oil derivatives for specialized applications. Castor oil's unique molecular structure provides exceptional lubricity, high viscosity index, and thermal stability, making it ideal for aviation lubricants, hydraulic fluids, greases, and metalworking applications.</p><p>Hydrogenated castor oil and castor oil esters serve critical functions in automotive lubricants, where biodegradability requirements are becoming mandatory. The racing and aviation sectors particularly value castor-based lubricants for their ability to maintain film strength under extreme temperatures and pressures. Market estimation suggests that specialty lubricant applications consume approximately 25,000-30,000 tonnes of castor oil annually in India, with exports adding another significant volume.</p><h2>Diverse Industrial Applications and Market Dynamics</h2><p>Beyond foam and lubricants, castor oil penetrates numerous industrial segments:</p><ul><li><strong>Plastics and Polymers:</strong> Nylon-11 production, plasticizers, and polymer additives consume roughly 15-20% of industrial castor oil</li><li><strong>Coatings and Paints:</strong> Dehydrated castor oil serves as a vital alkyd resin component in protective coatings</li><li><strong>Textile Industry:</strong> Sulphonated castor oil (Turkey Red Oil) remains essential for dyeing and finishing processes</li><li><strong>Adhesives and Sealants:</strong> Modified castor oils provide flexibility and adhesion in construction chemicals</li></ul><p>The total addressable market for industrial castor oil in India is projected to reach 320,000-350,000 metric tonnes by 2028, driven by government initiatives promoting bio-based materials, Make in India programs, and increasing export opportunities. The global castor oil market, currently valued at $1.2-1.4 billion, presents substantial growth potential for Indian exporters.</p><h2>Quality Standards and Supply Chain Excellence</h2><p>Industrial applications demand precise specifications—moisture content below 0.1%, specific gravity within tight tolerances, and minimal free fatty acid content. As a castor oil exporter with over 35 years of experience, Simmi Enterprises maintains rigorous quality protocols, supplying pharmaceutical-grade and industrial-grade castor oil that meets international standards including USP, BP, and IP specifications.</p><p>Our client portfolio includes leading pharmaceutical and industrial manufacturers such as Sanofi, Cadila Healthcare, Piramal, and Unichem, reflecting our commitment to quality and reliability in supply chain management.</p><p>For industrial-grade castor oil, hydrogenated castor oil, and customized specifications tailored to your manufacturing requirements, contact Simmi Enterprises at <strong>simmi.enterprises@gmail.com</strong> or call <strong>+91 93200 04205</strong>. As Mumbai's trusted castor oil supplier and exporter, we ensure consistent quality, competitive pricing, and timely delivery for your industrial applications.</p>
+<p>Castor oil has emerged as an indispensable raw material across multiple industrial sectors, transforming manufacturing processes in foam production, lubricants, plastics, and specialty chemicals. As a leading castor oil supplier and exporter, Simmi Enterprises has witnessed the exponential growth of industrial castor oil consumption in India's domestic market, which currently stands at approximately 250,000–270,000 metric tonnes annually, with industrial applications accounting for nearly 60% of total demand.</p>
+<h2>Castor Oil in Foam Manufacturing: A Growing Market</h2>
+<p>The polyurethane foam industry represents one of the largest consumers of castor oil derivatives, particularly in India where the flexible and rigid foam market is estimated at ₹12,000–15,000 crores. Castor oil serves as a crucial polyol component in polyurethane production, offering superior properties compared to petroleum-based alternatives. The hydroxyl-rich ricinoleic acid (comprising 90% of castor oil's fatty acid profile) enables exceptional cross-linking in foam formulations.</p>
+<p>Manufacturers utilize castor oil polyols in flexible foam for mattresses, automotive seating, and furniture applications, where the market size has grown at a CAGR of 8–10% over the past five years. Rigid foam applications in construction, refrigeration, and insulation panels have witnessed even stronger growth at 12–14% annually.</p>
+<h2>Industrial Lubricants: High-Performance Applications</h2>
+<p>The Indian lubricant industry, valued at approximately $4.5–5 billion, increasingly incorporates castor oil derivatives for specialized applications. Castor oil's unique molecular structure provides exceptional lubricity, high viscosity index, and thermal stability, making it ideal for aviation lubricants, hydraulic fluids, greases, and metalworking applications.</p>
+<p>Hydrogenated castor oil and castor oil esters serve critical functions in automotive lubricants, where biodegradability requirements are becoming mandatory. Market estimation suggests that specialty lubricant applications consume approximately 25,000–30,000 tonnes of castor oil annually in India.</p>
+<h2>Diverse Industrial Applications</h2>
+<ul>
+<li><strong>Plastics and Polymers:</strong> Nylon-11 production, plasticizers, and polymer additives consume roughly 15–20% of industrial castor oil</li>
+<li><strong>Coatings and Paints:</strong> Dehydrated castor oil serves as a vital alkyd resin component in protective coatings</li>
+<li><strong>Textile Industry:</strong> Sulphonated castor oil (Turkey Red Oil) remains essential for dyeing and finishing processes</li>
+<li><strong>Adhesives and Sealants:</strong> Modified castor oils provide flexibility and adhesion in construction chemicals</li>
+</ul>
+<h2>Quality Standards and Supply Chain Excellence</h2>
+<p>Industrial applications demand precise specifications — moisture content below 0.1%, specific gravity within tight tolerances, and minimal free fatty acid content. As a castor oil supplier with over 35 years of experience, Simmi Enterprises maintains rigorous quality protocols, supplying pharmaceutical-grade and industrial-grade castor oil that meets international standards including USP, BP, and IP specifications.</p>
+<p>Our client portfolio includes leading pharmaceutical and industrial manufacturers such as Sanofi, Cadila Healthcare, Piramal, and Unichem, reflecting our commitment to quality and reliability.</p>
+<p>For industrial-grade castor oil, hydrogenated castor oil, and customised specifications, contact Simmi Enterprises at <strong>simmi.enterprises@gmail.com</strong> or call <strong>+91 93200 04205</strong>.</p>
     `
-},  
-            {
-                
-                id: 'usp-bp-ip-standards-pharmaceutical-certification-guide',
-                title: 'USP vs BP vs IP Standards: A Complete Guide for Buyers',
-                category: 'Product Guide',
-                date: 'February 23, 2026',
-                excerpt: 'Understand the critical differences between USP, BP, and IP pharmaceutical standards to make informed decisions when sourcing medicinal oils.',
-                image: '📰',
-                content: `
-                    <p>When sourcing pharmaceutical-grade castor oil and medicinal oils, you'll frequently encounter certifications like USP, BP, and IP. These acronyms represent different pharmacopoeial standards that ensure product quality, purity, and safety. For businesses in pharmaceuticals, cosmetics, and industrial applications, understanding these standards isn't just beneficial—it's essential for compliance, quality assurance, and building trust with your end customers.</p>
-                    
-                    <p>At Simmi Enterprises (Castorax), we've been supplying certified castor oil and medicinal oils since 1998, and we understand that navigating pharmaceutical standards can be complex. This comprehensive guide will help you understand the key differences between USP, BP, and IP standards, their applications, and how to choose the right certification for your specific needs.</p>
-                    
-                    <p>Whether you're a pharmaceutical manufacturer, cosmetic formulator, or industrial buyer, this knowledge will empower you to make informed procurement decisions and ensure regulatory compliance across different markets.</p>
-                    
-                    <h2>What Are Pharmacopoeial Standards?</h2>
-                    <p>Pharmacopoeias are official compendia that establish quality standards for pharmaceutical ingredients, excipients, and finished products. These standards define the acceptable limits for purity, strength, quality, and consistency of medicinal substances. Compliance with pharmacopoeial standards is mandatory in most regulated markets and serves as a benchmark for product quality worldwide.</p>
-                    
-                    <p>The three major pharmacopoeial standards you'll encounter when sourcing medicinal oils are:</p>
-                    <ul>
-                        <li><strong>USP (United States Pharmacopeia):</strong> The official standard in the United States</li>
-                        <li><strong>BP (British Pharmacopoeia):</strong> The official standard in the United Kingdom and many Commonwealth countries</li>
-                        <li><strong>IP (Indian Pharmacopoeia):</strong> The official standard in India</li>
-                    </ul>
-                    
-                    <p>Each pharmacopoeia is developed and maintained by a regulatory authority that continuously updates specifications based on scientific advances, analytical methods, and safety data. Understanding these standards helps ensure your products meet regional regulatory requirements and maintain consistent quality.</p>
-                    
-                    <h2>USP (United States Pharmacopeia) Standards</h2>
-                    
-                    <h3>Overview and Authority</h3>
-                    <p>The United States Pharmacopeia is published by the USP Convention, a non-governmental organization established in 1820. USP standards are recognized and enforced by the U.S. Food and Drug Administration (FDA) and are considered among the most stringent pharmaceutical standards globally. Products labeled as "USP grade" must meet specific criteria for identity, strength, quality, purity, packaging, and labeling.</p>
-                    
-                    <h3>Key Characteristics</h3>
-                    <ul>
-                        <li><strong>Stringent Testing:</strong> USP specifications typically require extensive testing for heavy metals, residual solvents, microbial contamination, and specific impurities</li>
-                        <li><strong>Global Recognition:</strong> Accepted in over 140 countries, making USP-certified products highly marketable internationally</li>
-                        <li><strong>Detailed Monographs:</strong> Provides comprehensive testing procedures and acceptance criteria for each substance</li>
-                        <li><strong>Regular Updates:</strong> Published annually with continuous revisions to reflect current scientific knowledge</li>
-                    </ul>
-                    
-                    <h3>Applications for Castor Oil and Medicinal Oils</h3>
-                    <p>For castor oil and medicinal oils, USP standards specify rigorous testing for parameters including acid value, hydroxyl value, iodine value, saponification value, specific gravity, and absence of foreign oils. USP-grade oils are essential for pharmaceutical formulations, FDA-regulated products, and export to North American markets.</p>
-                    
-                    <h2>BP (British Pharmacopoeia) Standards</h2>
-                    
-                    <h3>Overview and Authority</h3>
-                    <p>The British Pharmacopoeia is published by the British Pharmacopoeia Commission under the Medicines and Healthcare products Regulatory Agency (MHRA). First published in 1864, BP standards are mandatory in the UK and widely recognized across Europe, Commonwealth countries, and many international markets. The BP works closely with the European Pharmacopoeia (Ph.Eur.) to harmonize standards.</p>
-                    
-                    <h3>Key Characteristics</h3>
-                    <ul>
-                        <li><strong>European Harmonization:</strong> Many BP monographs are aligned with European Pharmacopoeia standards, facilitating trade within the EU and EEA</li>
-                        <li><strong>Comprehensive Scope:</strong> Covers not only active ingredients but also excipients, formulated preparations, and surgical materials</li>
-                        <li><strong>Quality Focus:</strong> Emphasizes chemical and physical testing alongside microbiological standards</li>
-                        <li><strong>International Acceptance:</strong> Recognized in Commonwealth countries including Australia, Canada, and many African and Asian nations</li>
-                    </ul>
-                    
-                    <h3>Comparison with USP</h3>
-                    <p>While BP and USP standards are often similar, they may differ in specific test methods, acceptance criteria, and analytical procedures. For instance, BP may specify different limits for residual solvents or use alternative analytical techniques. Many pharmaceutical-grade oils meet both USP and BP standards simultaneously, though certification for each requires separate testing and verification.</p>
-                    
-                    <h2>IP (Indian Pharmacopoeia) Standards</h2>
-                    
-                    <h3>Overview and Authority</h3>
-                    <p>The Indian Pharmacopoeia is published by the Indian Pharmacopoeia Commission under the Ministry of Health and Family Welfare, Government of India. Established in 1955, the IP has evolved to become a comprehensive standard that governs pharmaceutical quality in India, one of the world's largest pharmaceutical markets and manufacturing hubs.</p>
-                    
-                    <h3>Key Characteristics</h3>
-                    <ul>
-                        <li><strong>Local Relevance:</strong> Tailored to Indian manufacturing practices, raw material sources, and regulatory requirements</li>
-                        <li><strong>Mandatory Compliance:</strong> Required for all pharmaceutical products manufactured, sold, or distributed in India under the Drugs and Cosmetics Act, 1940</li>
-                        <li><strong>Growing Recognition:</strong> Increasingly accepted in neighboring countries and emerging markets</li>
-                        <li><strong>Cost-Effective Testing:</strong> Generally involves testing procedures that are accessible to Indian manufacturers while maintaining quality standards</li>
-                    </ul>
-                    
-                    <h3>Applications in the Indian Market</h3>
-                    <p>For businesses operating in India or sourcing from Indian suppliers like Simmi Enterprises, IP certification is essential. IP-grade castor oil and medicinal oils meet the specifications required for domestic pharmaceutical manufacturing, Ayurvedic formulations, and products intended for the Indian market. At Castorax, we maintain rigorous IP compliance while also offering USP and BP certified products for our international clients.</p>
-                    
-                    <h2>Choosing the Right Standard for Your Business</h2>
-                    
-                    <h3>Market-Based Considerations</h3>
-                    <p>Your choice of pharmaceutical standard should primarily depend on your target market:</p>
-                    <ul>
-                        <li><strong>United States and North America:</strong> USP certification is mandatory</li>
-                        <li><strong>United Kingdom and Europe:</strong> BP or Ph.Eur. standards are required</li>
-                        <li><strong>India and South Asia:</strong> IP certification is necessary</li>
-                        <li><strong>Global/Multi-Market:</strong> Consider dual or triple certification (USP/BP/IP)</li>
-                    </ul>
-                    
-                    <h3>Product Application</h3>
-                    <p>Different applications may require specific standards. Pharmaceutical-grade formulations typically demand USP or BP certification, while industrial applications may accept IP or even lower-grade specifications. Cosmetic applications often require USP or BP standards for premium products, particularly in regulated markets.</p>
-                    
-                    <h3>Quality and Compliance</h3>
-                    <p>While all three standards ensure quality, USP and BP are generally perceived as more stringent and are preferred for high-value applications. However, IP standards are perfectly adequate for many applications and offer the advantage of local testing and certification infrastructure in India.</p>
-                    
-                    <h2>Simmi Enterprises: Your Partner in Certified Quality</h2>
-                    <p>Since 1998, Simmi Enterprises (Castorax) has been at the forefront of supplying pharmaceutical-grade castor oil and medicinal oils in Mumbai, India. We understand that certification is more than just a label—it's a commitment to quality, safety, and regulatory compliance.</p>
-                    
-                    <p>Our products are available with USP, BP, and IP certifications, allowing you to choose the standard that best fits your market requirements. We maintain state-of-the-art testing facilities and work with accredited laboratories to ensure every batch meets the specified pharmacopoeial standards. Our experience spanning over two decades has made us a trusted supplier to pharmaceutical companies, cosmetic manufacturers, and industrial clients across India and internationally.</p>
-                    
-                    <p>We provide complete documentation including Certificates of Analysis (CoA), Material Safety Data Sheets (MSDS), and compliance certificates to support your regulatory submissions and quality assurance processes.</p>
-                    
-                    <h2>Conclusion</h2>
-                    <p>Understanding the differences between USP, BP, and IP standards is crucial for making informed sourcing decisions in the pharmaceutical and medicinal oils industry. While all three standards ensure product quality and safety, they differ in their geographical scope, testing requirements, and market acceptance. USP standards dominate North American markets, BP standards are essential for UK and European trade, and IP standards govern the Indian pharmaceutical industry.</p>
-                    
-                    <p>For businesses operating across multiple markets, working with suppliers who can provide products certified to multiple pharmacopoeial standards offers flexibility and market access. Whether you need USP-grade castor oil for pharmaceutical export, BP-certified medicinal oils for European cosmetics, or IP-grade products for domestic Indian manufacturing, choosing the right certification ensures compliance and customer confidence.</p>
-                    
-                    <p><strong>Contact Simmi Enterprises (Castorax) today to discuss your specific requirements and learn how our certified castor oil and medicinal oils can support your business goals. With over 25 years of expertise in pharmaceutical-grade oils, we're ready to be your trusted partner in quality and compliance.</strong></p>
-                    
-                    <p><strong>Simmi Enterprises</strong><br>
-                    Shop No 15, Shish Mahal, RNP Park, Bhayander East<br>
-                    Mumbai, Maharashtra 401105, India<br>
-                    Email: simmi.enterprises@gmail.com<br>
-                    Phone: +91 93200 04205 / +91 93242 17982<br>
-                    Website: www.castorax.com</p>
-                `
-            },
-            {
-                id: 'neem-oil-uses-in-farming',
-                title: 'Neem Oil and Its Uses in Farming',
-                category: 'Product Guide',
-                date: 'February 19, 2026',
-                excerpt: 'A Natural Solution for Sustainable Agriculture - Discover how neem oil supports eco-friendly farming and pest control.',
-                image: '🌿',
-                content: `
-                    <h2>Neem Oil and Its Uses in Farming</h2>
-                    <p>In today's agriculture, farmers are increasingly looking for safe, sustainable, and cost-effective alternatives to chemical pesticides. One of the most powerful natural solutions available is Neem Oil — a plant-based bio-pesticide derived from the seeds of the neem tree (Azadirachta indica).</p>
-                    
-                    <p>Used for centuries in traditional farming, neem oil is now globally recognized as an eco-friendly crop protection tool that improves plant health while protecting the environment.</p>
-                    
-                    <h2>What is Neem Oil?</h2>
-                    <p>Neem oil is extracted from the seeds of the neem tree, native to India and widely grown in tropical regions. It contains active compounds such as Azadirachtin, which acts as a natural insect repellent, growth regulator, and anti-feedant.</p>
-                    
-                    <p>Unlike synthetic chemicals, neem oil works biologically — disrupting pest life cycles without harming beneficial organisms when used properly. Neem oil supports sustainable agriculture without compromising crop productivity.</p>
+},
 
-                    <h3>Why Farmers Prefer Neem Oil</h3>
-                    <p>Modern farmers choose neem oil because it is:</p>
-                    <ul>
-                        <li>🌱 Eco-friendly and biodegradable</li>
-                        <li>🐝 Safer for beneficial insects like bees (when applied correctly)</li>
-                        <li>🌾 Compatible with organic farming systems</li>
-                        <li>💧 Non-toxic to soil health</li>
-                        <li>💰 Cost-effective compared to repeated chemical spraying</li>
-                    </ul>
+{
+    id: 'usp-bp-ip-standards-pharmaceutical-certification-guide',
+    title: 'USP vs BP vs IP Standards: A Complete Guide for Pharmaceutical Buyers',
+    category: 'Quality & Standards',
+    date: 'February 23, 2026',
+    excerpt: 'Understand the critical differences between USP, BP, and IP pharmaceutical standards to make informed decisions when sourcing medicinal oils.',
+    image: '🧪',
+    keywords: 'USP BP IP castor oil, pharmaceutical grade castor oil standards, castor oil certification India, IP grade castor oil Mumbai, USP grade castor oil supplier',
+    metaDescription: 'Complete guide to USP, BP and IP pharmaceutical standards for castor oil buyers. Know which grade to specify for your market. Simmi Enterprises, Mumbai.',
+    content: `
+<p>When sourcing pharmaceutical-grade castor oil and medicinal oils, you will frequently encounter certifications like USP, BP, and IP. These acronyms represent different pharmacopoeial standards that ensure product quality, purity, and safety. For businesses in pharmaceuticals, cosmetics, and industrial applications, understanding these standards is essential for compliance and regulatory confidence.</p>
+<p>At Simmi Enterprises (Castorax), we have been supplying certified castor oil and medicinal oils since 1998. This guide will help you understand the key differences between USP, BP, and IP standards and how to choose the right certification for your needs.</p>
+<h2>What Are Pharmacopoeial Standards?</h2>
+<p>Pharmacopoeias are official compendia that establish quality standards for pharmaceutical ingredients, excipients, and finished products. The three major standards you will encounter when sourcing medicinal oils are:</p>
+<ul>
+<li><strong>USP (United States Pharmacopeia):</strong> The official standard in the United States</li>
+<li><strong>BP (British Pharmacopoeia):</strong> The official standard in the UK and Commonwealth countries</li>
+<li><strong>IP (Indian Pharmacopoeia):</strong> The official standard in India</li>
+</ul>
+<h2>USP (United States Pharmacopeia) Standards</h2>
+<p>The United States Pharmacopeia is published by the USP Convention, a non-governmental organization established in 1820. USP standards are recognised and enforced by the U.S. Food and Drug Administration (FDA) and are considered among the most stringent pharmaceutical standards globally.</p>
+<ul>
+<li><strong>Stringent Testing:</strong> Extensive testing for heavy metals, residual solvents, microbial contamination</li>
+<li><strong>Global Recognition:</strong> Accepted in over 140 countries</li>
+<li><strong>Regular Updates:</strong> Published annually with continuous revisions</li>
+</ul>
+<h2>BP (British Pharmacopoeia) Standards</h2>
+<p>The British Pharmacopoeia is published under the Medicines and Healthcare products Regulatory Agency (MHRA). The BP works closely with the European Pharmacopoeia (Ph.Eur.) to harmonise standards, making it essential for UK, European, and Commonwealth market access.</p>
+<h2>IP (Indian Pharmacopoeia) Standards</h2>
+<p>The Indian Pharmacopoeia is published by the Indian Pharmacopoeia Commission under the Ministry of Health and Family Welfare. It is mandatory for all pharmaceutical products manufactured, sold, or distributed in India under the Drugs and Cosmetics Act, 1940.</p>
+<h2>Choosing the Right Standard</h2>
+<table>
+<thead><tr><th>Target Market</th><th>Required Standard</th></tr></thead>
+<tbody>
+<tr><td>United States / North America</td><td>USP mandatory</td></tr>
+<tr><td>United Kingdom / Europe</td><td>BP or Ph.Eur. required</td></tr>
+<tr><td>India / South Asia</td><td>IP mandatory</td></tr>
+<tr><td>Global / Multi-Market</td><td>USP/BP/IP triple certified</td></tr>
+</tbody>
+</table>
+<div class="highlight-box">
+<strong>Key Takeaway:</strong> Many pharmaceutical-grade oils meet USP, BP, and IP standards simultaneously. Simmi Enterprises supplies castor oil certified to all three standards with complete COA documentation.
+</div>
+<h2>Simmi Enterprises: Certified Quality Since 1998</h2>
+<p>Our products are available with USP, BP, and IP certifications, allowing you to choose the standard that best fits your market requirements. We provide complete documentation including Certificates of Analysis (COA), Material Safety Data Sheets (MSDS), and compliance certificates with every shipment.</p>
+<p><strong>Contact Simmi Enterprises:</strong> simmi.enterprises@gmail.com | +91 93200 04205 | castorax.com</p>
+    `
+},
 
-                    <h3>Major Uses of Neem Oil in Farming</h3>
-                    
-                    <h3>1. Natural Insecticide</h3>
-                    <p>Neem oil controls over 200 types of insects including:</p>
-                    <ul>
-                        <li>Aphids</li>
-                        <li>Whiteflies</li>
-                        <li>Thrips</li>
-                        <li>Mealybugs</li>
-                        <li>Caterpillars</li>
-                        <li>Leaf miners</li>
-                        <li>Mites</li>
-                    </ul>
-                    
-                    <p>It works by:</p>
-                    <ul>
-                        <li>Repelling insects</li>
-                        <li>Preventing feeding</li>
-                        <li>Interrupting reproduction</li>
-                        <li>Inhibiting larval development</li>
-                    </ul>
-                    
-                    <p>Unlike chemical pesticides that kill instantly, neem oil gradually disrupts pest growth cycles, reducing future infestations.</p>
+{
+    id: 'neem-oil-uses-in-farming',
+    title: 'Neem Oil and Its Uses in Farming — A Natural Solution for Sustainable Agriculture',
+    category: 'Agriculture',
+    date: 'February 19, 2026',
+    excerpt: 'Discover how neem oil supports eco-friendly farming and sustainable pest control — a natural bio-pesticide trusted by farmers across India.',
+    image: '🌿',
+    keywords: 'neem oil farming India, neem oil pesticide, neem oil supplier Mumbai, neem oil agricultural grade, organic farming neem oil',
+    metaDescription: 'Complete guide to neem oil uses in farming — natural pesticide, fungal control, soil health. Pharmaceutical and agricultural grade neem oil supplier in Mumbai.',
+    content: `
+<p>In today's agriculture, farmers are increasingly looking for safe, sustainable, and cost-effective alternatives to chemical pesticides. One of the most powerful natural solutions available is Neem Oil — a plant-based bio-pesticide derived from the seeds of the neem tree (Azadirachta indica).</p>
+<p>Used for centuries in traditional farming, neem oil is now globally recognised as an eco-friendly crop protection tool that improves plant health while protecting the environment.</p>
+<h2>What is Neem Oil?</h2>
+<p>Neem oil is extracted from the seeds of the neem tree, native to India and widely grown in tropical regions. It contains active compounds such as Azadirachtin, which acts as a natural insect repellent, growth regulator, and anti-feedant. Unlike synthetic chemicals, neem oil works biologically — disrupting pest life cycles without harming beneficial organisms when used properly.</p>
+<h2>Why Farmers Prefer Neem Oil</h2>
+<ul>
+<li>Eco-friendly and biodegradable</li>
+<li>Safer for beneficial insects like bees when applied correctly</li>
+<li>Compatible with organic farming systems</li>
+<li>Non-toxic to soil health</li>
+<li>Cost-effective compared to repeated chemical spraying</li>
+</ul>
+<h2>Major Uses of Neem Oil in Farming</h2>
+<h3>1. Natural Insecticide</h3>
+<p>Neem oil controls over 200 types of insects including aphids, whiteflies, thrips, mealybugs, caterpillars, leaf miners, and mites. It works by repelling insects, preventing feeding, interrupting reproduction, and inhibiting larval development.</p>
+<h3>2. Fungal Disease Control</h3>
+<p>Neem oil is effective against common plant diseases including powdery mildew, black spot, rust, and anthracnose. Its antifungal properties make it a valuable tool in organic farming systems.</p>
+<h3>3. Soil Health Improvement</h3>
+<p>When used as a soil drench, neem oil helps control soil-borne pests and improves beneficial microbial activity in the soil ecosystem, contributing to long-term farm productivity.</p>
+<h2>Application Methods</h2>
+<ul>
+<li><strong>Foliar Spray:</strong> Mixed with water and sprayed on leaves — most common method</li>
+<li><strong>Soil Drench:</strong> Applied to soil around plant roots for root pest control</li>
+<li><strong>Seed Treatment:</strong> Seeds coated before planting for early protection</li>
+</ul>
+<div class="highlight-box">
+<strong>Recommended Dosage:</strong> 2–5ml of neem oil per litre of water for foliar spray. Always add an emulsifier (like liquid soap) to mix properly with water.
+</div>
+<h2>Simmi Enterprises — Your Neem Oil Supplier in Mumbai</h2>
+<p>Simmi Enterprises (Castorax) supplies premium quality neem oil in both pharmaceutical and agricultural grades from Bhayander East, Mumbai. We supply 200 Kg HDPE drums with COA (Certificate of Analysis) for every batch.</p>
+<p>Contact us at <strong>+91 93200 04205</strong> or <strong>simmi.enterprises@gmail.com</strong> for pricing and specifications.</p>
+    `
+}
 
-                    <h3>2. Fungal Disease Control</h3>
-                    <p>Neem oil is effective against common plant diseases including powdery mildew, black spot, rust, and anthracnose. Its antifungal properties make it valuable for organic farming.</p>
+// ↑↑↑ END OF POSTS ARRAY ↑↑↑
+];
 
-                    <h3>3. Soil Health Improvement</h3>
-                    <p>When used as a soil drench, neem oil helps control soil-borne pests and improves beneficial microbial activity in the soil ecosystem.</p>
+// ══════════════════════════════════════════════════════════════════════
+// SEO — Update page meta tags dynamically for each post
+// ══════════════════════════════════════════════════════════════════════
+function updateSEO(post) {
+    const baseUrl = 'https://castorax.com/blog.html';
+    const postUrl = baseUrl + '?post=' + post.id;
 
-                    <h2>Application Methods</h2>
-                    <p>Neem oil can be applied through:</p>
-                    <ul>
-                        <li><strong>Foliar Spray:</strong> Mixed with water and sprayed on leaves</li>
-                        <li><strong>Soil Drench:</strong> Applied to soil around plant roots</li>
-                        <li><strong>Seed Treatment:</strong> Seeds coated before planting</li>
-                    </ul>
+    document.getElementById('page-title').textContent = post.title + ' | Castorax Blog | Simmi Enterprises';
+    document.getElementById('page-desc').setAttribute('content', post.metaDescription || post.excerpt);
+    document.getElementById('page-keywords').setAttribute('content', post.keywords || 'castor oil supplier Mumbai, pharmaceutical castor oil India, Simmi Enterprises, Castorax');
+    document.getElementById('page-canonical').setAttribute('href', postUrl);
 
-                    <h2>Conclusion</h2>
-                    <p>Neem oil is more than just a traditional remedy — it is a scientifically supported, sustainable agricultural input that protects crops, improves soil health, and promotes long-term farm productivity.</p>
-                    
-                    <p>As farming moves toward eco-conscious methods, neem oil stands out as a reliable, natural solution for modern agriculture.</p>
-                    
-                    <p><strong>Contact us for premium quality neem oil at +91 93200 04205 / +91 93242 17982 or email simmi.enterprises@gmail.com</strong></p>
-                `
-            }
-        ];
+    document.getElementById('og-type').setAttribute('content', 'article');
+    document.getElementById('og-title').setAttribute('content', post.title + ' | Castorax');
+    document.getElementById('og-desc').setAttribute('content', post.metaDescription || post.excerpt);
+    document.getElementById('og-url').setAttribute('content', postUrl);
 
-        // Generate Blog Grid
-        function generateBlogGrid() {
-            const grid = document.getElementById('blogGrid');
-            grid.innerHTML = blogPosts.map(post => `
-                <div class="blog-card" onclick="showPost('${post.id}')">
-                    <div class="blog-image">${post.image}</div>
-                    <div class="blog-content">
-                        <span class="blog-category">${post.category}</span>
-                        <div class="blog-date">📅 ${post.date}</div>
-                        <h3>${post.title}</h3>
-                        <p class="blog-excerpt">${post.excerpt}</p>
-                        <a href="#" class="read-more">Read More →</a>
-                    </div>
-                </div>
-            `).join('');
-        }
+    document.getElementById('tw-title').setAttribute('content', post.title + ' | Castorax');
+    document.getElementById('tw-desc').setAttribute('content', post.metaDescription || post.excerpt);
 
-        // Show Blog Post
-        function showPost(postId) {
-            const post = blogPosts.find(p => p.id === postId);
-            if (!post) return;
+    // Article schema for individual post
+    const articleSchema = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": post.title,
+        "description": post.metaDescription || post.excerpt,
+        "url": postUrl,
+        "datePublished": post.date,
+        "dateModified": post.date,
+        "author": {
+            "@type": "Organization",
+            "name": "Simmi Enterprises (Castorax)",
+            "url": "https://castorax.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Simmi Enterprises",
+            "logo": { "@type": "ImageObject", "url": "https://i.ibb.co/LXSw0KvV/brand-logo.png" }
+        },
+        "keywords": post.keywords,
+        "articleSection": post.category,
+        "mainEntityOfPage": { "@type": "WebPage", "@id": postUrl }
+    };
+    document.getElementById('schema-org').textContent = JSON.stringify(articleSchema, null, 2);
+}
 
-            const currentUrl = window.location.origin + window.location.pathname + '?post=' + postId;
-            const shareText = encodeURIComponent(post.title);
-            const shareUrl = encodeURIComponent(currentUrl);
+function resetSEO() {
+    const baseUrl = 'https://castorax.com/blog.html';
+    document.getElementById('page-title').textContent = 'Castorax Blog | Castor Oil Insights & Industry News | Simmi Enterprises';
+    document.getElementById('page-desc').setAttribute('content', 'Expert insights on pharmaceutical grade castor oil, BSS/IP/FSG grades, neem oil, and industry trends. Trusted supplier since 1998 — Simmi Enterprises, Mumbai.');
+    document.getElementById('page-keywords').setAttribute('content', 'castor oil supplier Mumbai, pharmaceutical grade castor oil India, castor oil IP grade, BSS grade castor oil, neem oil supplier, Simmi Enterprises, Castorax');
+    document.getElementById('page-canonical').setAttribute('href', baseUrl);
+    document.getElementById('og-type').setAttribute('content', 'website');
+    document.getElementById('og-title').setAttribute('content', 'Castorax Blog | Castor Oil Insights');
+    document.getElementById('og-url').setAttribute('content', baseUrl);
+    const blogSchema = {
+        "@context": "https://schema.org", "@type": "Blog",
+        "name": "Castorax Blog", "url": baseUrl,
+        "description": "Expert insights on pharmaceutical grade castor oil, medicinal oils, and industry trends.",
+        "publisher": { "@type": "Organization", "name": "Simmi Enterprises", "url": "https://castorax.com" }
+    };
+    document.getElementById('schema-org').textContent = JSON.stringify(blogSchema, null, 2);
+}
 
-            document.getElementById('postContent').innerHTML = `
-                <a href="#" onclick="showPage('blog')" class="back-btn">← Back to Blog</a>
-                
+// ══════════════════════════════════════════════════════════════════════
+// UI FUNCTIONS
+// ══════════════════════════════════════════════════════════════════════
+function generateBlogGrid() {
+    const grid = document.getElementById('blogGrid');
+    grid.innerHTML = blogPosts.map(post => `
+        <div class="blog-card" onclick="showPost('${post.id}')">
+            <div class="blog-image">${post.image}</div>
+            <div class="blog-content">
                 <span class="blog-category">${post.category}</span>
-                <h1>${post.title}</h1>
-                
-                <div class="post-meta">
-                    <span>📅 ${post.date}</span>
-                    <span>✍️ Castorax Team</span>
-                    <span>⏱️ 5 min read</span>
-                </div>
+                <div class="blog-date">📅 ${post.date}</div>
+                <h3>${post.title}</h3>
+                <p class="blog-excerpt">${post.excerpt}</p>
+                <a href="#" class="read-more" onclick="showPost('${post.id}');return false;">Read More →</a>
+            </div>
+        </div>
+    `).join('');
+}
 
-                <div class="post-content">
-                    ${post.content}
-                </div>
+function showPost(postId) {
+    const post = blogPosts.find(p => p.id === postId);
+    if (!post) return;
 
-                <div class="share-section">
-                    <h3>Share This Article</h3>
-                    <div class="share-buttons">
-                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}" target="_blank" class="share-btn share-linkedin">
-                            📘 Share on LinkedIn
-                        </a>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=${shareUrl}" target="_blank" class="share-btn share-facebook">
-                            📱 Share on Facebook
-                        </a>
-                        <a href="https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}" target="_blank" class="share-btn share-twitter">
-                            🐦 Share on Twitter
-                        </a>
-                        <a href="https://wa.me/?text=${shareText}%20${shareUrl}" target="_blank" class="share-btn share-whatsapp">
-                            💬 Share on WhatsApp
-                        </a>
-                        <a href="mailto:?subject=${shareText}&body=Check out this article: ${shareUrl}" class="share-btn share-email">
-                            📧 Share via Email
-                        </a>
-                        <a href="#" onclick="copyLink('${currentUrl}')" class="share-btn copy-link">
-                            🔗 Copy Link
-                        </a>
-                    </div>
-                    <p style="margin-top: 1.5rem; color: #666; font-size: 0.9rem;" id="copyMessage"></p>
-                </div>
+    updateSEO(post);
 
-                <div style="background: #d4f1e3; padding: 2rem; border-radius: 10px; margin-top: 3rem; text-align: center;">
-                    <h3 style="color: #1a5f3f; margin-bottom: 1rem;">Interested in Our Products?</h3>
-                    <p style="margin-bottom: 1.5rem;">Contact us for pricing, samples, and technical specifications</p>
-                    <a href="https://castorax.com#quote" class="share-btn" style="background: #1a5f3f; display: inline-block;">Request Quote</a>
-                </div>
-            `;
+    const postUrl = 'https://castorax.com/blog.html?post=' + postId;
+    const shareText = encodeURIComponent(post.title + ' | Castorax Blog');
+    const shareUrl = encodeURIComponent(postUrl);
 
-            showPage('post');
-            window.scrollTo(0, 0);
-            
-            // Update URL without reload
-            if (history.pushState) {
-                history.pushState(null, null, '?post=' + postId);
-            }
-        }
+    document.getElementById('breadcrumb-title').textContent = post.title.substring(0, 50) + '...';
 
-        // Page Navigation
-        function showPage(pageId) {
-            document.querySelectorAll('.page').forEach(page => {
-                page.classList.remove('active');
-            });
-            document.getElementById(pageId).classList.add('active');
-        }
+    document.getElementById('postContent').innerHTML = `
+        <a href="#" onclick="showPage('blog');return false;" class="back-btn">← Back to Blog</a>
+        <span class="blog-category">${post.category}</span>
+        <h1>${post.title}</h1>
+        <div class="post-meta">
+            <span>📅 ${post.date}</span>
+            <span>✍️ Simmi Enterprises (Castorax)</span>
+            <span>⏱️ 5 min read</span>
+        </div>
+        <div class="post-content">${post.content}</div>
+        <div class="share-section">
+            <h3>Found This Useful? Share It</h3>
+            <div class="share-buttons">
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}" target="_blank" rel="noopener" class="share-btn share-linkedin">📘 LinkedIn</a>
+                <a href="https://wa.me/?text=${shareText}%20${shareUrl}" target="_blank" rel="noopener" class="share-btn share-whatsapp">💬 WhatsApp</a>
+                <a href="mailto:?subject=${shareText}&body=Check out this article: ${postUrl}" class="share-btn share-email">📧 Email</a>
+                <button onclick="copyLink('${postUrl}')" class="share-btn copy-link">🔗 Copy Link</button>
+            </div>
+            <p style="margin-top:1.5rem;color:#666;font-size:.9rem;" id="copyMessage"></p>
+        </div>
+        <div class="cta-box">
+            <h3>Need Pharmaceutical Grade Castor Oil?</h3>
+            <p>Contact Simmi Enterprises (Castorax) — trusted supplier since 1998. COA with every batch.</p>
+            <a href="https://castorax.com#quote">Request Quote →</a>
+        </div>
+    `;
 
-        // Copy Link Function
-        function copyLink(url) {
-            navigator.clipboard.writeText(url).then(() => {
-                document.getElementById('copyMessage').textContent = '✓ Link copied to clipboard!';
-                setTimeout(() => {
-                    document.getElementById('copyMessage').textContent = '';
-                }, 3000);
-            });
-        }
+    showPage('post');
+    window.scrollTo(0, 0);
+    if (history.pushState) history.pushState(null, null, '?post=' + postId);
+}
 
-        // Check URL parameter on load
-        window.addEventListener('load', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const postId = urlParams.get('post');
-            if (postId) {
-                showPost(postId);
-            }
-        });
+function showPage(pageId) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById(pageId).classList.add('active');
+    if (pageId === 'blog') {
+        resetSEO();
+        if (history.pushState) history.pushState(null, null, 'blog.html');
+    }
+}
 
-        // Initialize
-        generateBlogGrid();
-    </script>
+function copyLink(url) {
+    navigator.clipboard.writeText(url).then(() => {
+        document.getElementById('copyMessage').textContent = '✓ Link copied to clipboard!';
+        setTimeout(() => { document.getElementById('copyMessage').textContent = ''; }, 3000);
+    });
+}
+
+window.addEventListener('load', function() {
+    generateBlogGrid();
+    const urlParams = new URLSearchParams(window.location.search);
+    const postId = urlParams.get('post');
+    if (postId) showPost(postId);
+});
+
+window.addEventListener('popstate', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const postId = urlParams.get('post');
+    if (postId) { showPost(postId); }
+    else { showPage('blog'); }
+});
+</script>
 </body>
 </html>
