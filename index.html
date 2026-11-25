@@ -1199,7 +1199,7 @@
     <section class="products" id="products">
         <h2 class="section-title" style="background: rgba(255,255,255,0.95); display: inline-block; padding: 1rem 2rem; border-radius: 10px;">Our Product Range</h2>
         <p class="section-subtitle" style="background: rgba(255,255,255,0.9); display: inline-block; padding: 0.5rem 1.5rem; border-radius: 8px; margin-top: 1rem;">Premium Oils for Pharmaceutical, Cosmetic & Industrial Applications</p>
-        <p style="margin: 1rem auto 2rem; text-align: center;"><a href="/products/pharmaceutical-grade-castor-oil.html" style="color: #1a5f3f; font-weight: 700;">Pharmaceutical grade castor oil — product details →</a></p>
+        <p style="margin: 1rem auto 2rem; text-align: center;"><a href="/products/pharmaceutical-grade-castor-oil.html" style="color: #1a5f3f; font-weight: 700;">View all product pages →</a></p>
         <div class="product-grid" id="productGrid"></div>
     </section>
 
@@ -1412,9 +1412,12 @@
                         <label>Product Interested In *</label>
                         <select name="product" required>
                             <option value="">Select Product</option>
-                            <option value="Pharmaceutical Castor Oil">Pharmaceutical Grade Castor Oil</option>
-                            <option value="Cosmetic Castor Oil">Cosmetic Grade Castor Oil</option>
-                            <option value="Industrial Castor Oil">Industrial Grade Castor Oil</option>
+                            <option value="Castor Oil IP Grade">Castor Oil IP Grade</option>
+                            <option value="Castor Oil BSS Grade">Castor Oil BSS Grade</option>
+                            <option value="Commercial Grade Castor Oil">Commercial Grade Castor Oil</option>
+                            <option value="Castor Oil FSG">Castor Oil FSG</option>
+                            <option value="Cosmetic Grade Castor Oil">Cosmetic Grade Castor Oil</option>
+                            <option value="Pale Pressed Grade (PPG)">Pale Pressed Grade (PPG)</option>
                             <option value="Hydrogenated Castor Oil">Hydrogenated Castor Oil</option>
                             <option value="Dehydrated Castor Oil">Dehydrated Castor Oil</option>
                             <option value="Turkey Red Oil">Turkey Red Oil</option>
@@ -1449,7 +1452,7 @@
             <div class="footer-section">
                 <h3>Products</h3>
                 <ul>
-                    <li><a href="#products">Pharmaceutical Grade</a></li>
+                    <li><a href="/products.html">All Product Pages</a></li>
                     <li><a href="#products">Cosmetic Grade</a></li>
                     <li><a href="#products">Industrial Grade</a></li>
                     <li><a href="blog.html">Blog & Resources</a></li>
@@ -1497,8 +1500,8 @@
             {
                 id: 'pharmaceutical',
                 detailUrl: '/products/pharmaceutical-grade-castor-oil.html',
-                name: 'Pharmaceutical Grade Castor Oil',
-                grade: 'USP/BP/IP Certified',
+                name: 'Castor Oil IP Grade',
+                grade: 'I.P. Grade',
                 icon: '💊',
                 image: 'https://raw.githubusercontent.com/amitppg/castorax-website/main/image/product_01.png',
                 shortDesc: 'High-purity emollient for medicinal formulations',
@@ -1517,6 +1520,7 @@
             },
             {
                 id: 'cosmetic',
+                detailUrl: '/products/cosmetic-castor-oil.html',
                 name: 'Cosmetic Grade Castor Oil',
                 grade: 'Cold Pressed',
                 icon: '💄',
@@ -1536,6 +1540,7 @@
             },
             {
                 id: 'ppg',
+                detailUrl: '/products/pale-pressed-grade-castor-oil.html',
                 name: 'Pale Pressed Grade (PPG)',
                 grade: 'Industrial Grade',
                 icon: '🏭',
@@ -1555,8 +1560,9 @@
             },
             {
                 id: 'commercial',
-                name: 'Commercial Grade (CGO/FSG)',
-                grade: 'First Special Grade',
+                detailUrl: '/products/commercial-grade-castor-oil.html',
+                name: 'Commercial Grade Castor Oil',
+                grade: 'Commercial Grade (CGO)',
                 icon: '📦',
                 image: 'https://raw.githubusercontent.com/amitppg/castorax-website/main/image/product4.png',
                 shortDesc: 'Cost-effective industrial feedstock',
@@ -1573,7 +1579,34 @@
                 }
             },
             {
+                id: 'bss',
+                detailUrl: '/products/bss-castor-oil.html',
+                name: 'Castor Oil BSS Grade',
+                grade: 'BSS Grade',
+                icon: '🫒',
+                image: 'https://raw.githubusercontent.com/amitppg/castorax-website/main/image/product4.png',
+                shortDesc: 'BSS grade supply enquiries',
+                features: [],
+                applications: '',
+                fullDesc: '',
+                specs: {}
+            },
+            {
+                id: 'fsg',
+                detailUrl: '/products/fsg-castor-oil.html',
+                name: 'Castor Oil FSG',
+                grade: 'First Special Grade',
+                icon: '🫒',
+                image: 'https://raw.githubusercontent.com/amitppg/castorax-website/main/image/product4.png',
+                shortDesc: 'First Special Grade supply enquiries',
+                features: [],
+                applications: '',
+                fullDesc: '',
+                specs: {}
+            },
+            {
                 id: 'hco',
+                detailUrl: '/products/hydrogenated-castor-oil.html',
                 name: 'Hydrogenated Castor Oil',
                 grade: 'Castor Wax',
                 icon: '🕯️',
@@ -1593,6 +1626,7 @@
             },
             {
                 id: 'dco',
+                detailUrl: '/products/dehydrated-castor-oil.html',
                 name: 'Dehydrated Castor Oil',
                 grade: 'Drying Oil',
                 icon: '🎨',
@@ -1612,6 +1646,7 @@
             },
             {
                 id: 'tro',
+                detailUrl: '/products/turkey-red-oil.html',
                 name: 'Turkey Red Oil (TRO)',
                 grade: 'Sulfonated Castor Oil',
                 icon: '🧪',
@@ -1631,6 +1666,7 @@
             },
             {
                 id: 'neem',
+                detailUrl: '/products/neem-oil.html',
                 name: 'Neem Oil',
                 grade: 'Cold Pressed',
                 icon: '🌿',
@@ -1650,6 +1686,7 @@
             },
             {
                 id: 'liquid-paraffin',
+                detailUrl: '/products/liquid-paraffin.html',
                 name: 'Liquid Paraffin (White Oil)',
                 grade: 'USP/BP Pharmaceutical',
                 icon: '💧',
@@ -1669,6 +1706,7 @@
             },
             {
                 id: 'glycerin',
+                detailUrl: '/products/glycerin.html',
                 name: 'Glycerin (Glycerol)',
                 grade: 'USP/EP Pharmaceutical',
                 icon: '✨',
@@ -1688,6 +1726,7 @@
             },
             {
                 id: 'eucalyptus',
+                detailUrl: '/products/eucalyptus-oil.html',
                 name: 'Eucalyptus Oil',
                 grade: 'BP/USP Pharmaceutical',
                 icon: '🌲',
@@ -1711,22 +1750,16 @@
         function generateProductGrid() {
             const grid = document.getElementById('productGrid');
             grid.innerHTML = products.map(product => `
-                <div class="product-card" onclick="openModal('${product.id}')">
+                <a class="product-card" href="${product.detailUrl}" style="display:block;color:inherit;text-decoration:none;">
                     <div class="product-image">
                         <img src="${product.image}" alt="${product.name}" loading="lazy" onerror="this.parentElement.innerHTML='${product.icon}'">
                     </div>
-                    <div class="product-header">
-                        <h3>${product.name}</h3>
-                    </div>
+                    <div class="product-header"><h3>${product.name}</h3></div>
                     <div class="product-body">
-                        <span class="product-grade">${product.grade}</span>
-                        <p style="margin-bottom: 1rem; color: #666; font-size: 0.95rem;">${product.shortDesc}</p>
-                        <ul>
-                            ${product.features.slice(0, 4).map(f => `<li>${f}</li>`).join('')}
-                        </ul>
-                        ${product.detailUrl ? `<a href="${product.detailUrl}" onclick="event.stopPropagation()" style="display: block; margin-top: 1rem; font-weight: 700; color: #1a5f3f; text-align: center; font-size: 0.95rem;">View product details →</a>` : `<p style="margin-top: 1rem; font-weight: 600; color: #1a5f3f; text-align: center; font-size: 0.9rem;">Click for full details →</p>`}
+                        <p style="margin-bottom:1rem;color:#666;font-size:.95rem;">View product information and request a quotation.</p>
+                        <span style="display:block;margin-top:1rem;font-weight:700;color:#1a5f3f;text-align:center;">View product details →</span>
                     </div>
-                </div>
+                </a>
             `).join('');
         }
 
@@ -1814,6 +1847,9 @@
 
         // Initialize
         generateProductGrid();
+        const requestedProduct = new URLSearchParams(window.location.search).get('product');
+        const productSelect = document.querySelector('select[name="product"]');
+        if (requestedProduct && productSelect) productSelect.value = requestedProduct;
 
         // FAQ Toggle Function
         function toggleFAQ(element) {
