@@ -1199,6 +1199,7 @@
     <section class="products" id="products">
         <h2 class="section-title" style="background: rgba(255,255,255,0.95); display: inline-block; padding: 1rem 2rem; border-radius: 10px;">Our Product Range</h2>
         <p class="section-subtitle" style="background: rgba(255,255,255,0.9); display: inline-block; padding: 0.5rem 1.5rem; border-radius: 8px; margin-top: 1rem;">Premium Oils for Pharmaceutical, Cosmetic & Industrial Applications</p>
+        <p style="margin: 1rem auto 2rem; text-align: center;"><a href="/products/pharmaceutical-grade-castor-oil.html" style="color: #1a5f3f; font-weight: 700;">Pharmaceutical grade castor oil — product details →</a></p>
         <div class="product-grid" id="productGrid"></div>
     </section>
 
@@ -1495,6 +1496,7 @@
         const products = [
             {
                 id: 'pharmaceutical',
+                detailUrl: '/products/pharmaceutical-grade-castor-oil.html',
                 name: 'Pharmaceutical Grade Castor Oil',
                 grade: 'USP/BP/IP Certified',
                 icon: '💊',
@@ -1722,7 +1724,7 @@
                         <ul>
                             ${product.features.slice(0, 4).map(f => `<li>${f}</li>`).join('')}
                         </ul>
-                        <p style="margin-top: 1rem; font-weight: 600; color: #1a5f3f; text-align: center; font-size: 0.9rem;">Click for full details →</p>
+                        ${product.detailUrl ? `<a href="${product.detailUrl}" onclick="event.stopPropagation()" style="display: block; margin-top: 1rem; font-weight: 700; color: #1a5f3f; text-align: center; font-size: 0.95rem;">View product details →</a>` : `<p style="margin-top: 1rem; font-weight: 600; color: #1a5f3f; text-align: center; font-size: 0.9rem;">Click for full details →</p>`}
                     </div>
                 </div>
             `).join('');
