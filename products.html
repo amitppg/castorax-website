@@ -63,8 +63,27 @@ header nav .logo-container img {
   }
 }
 
+/* Header refinement: centered navigation and clearer brand mark */
+header nav { position: relative; }
+header nav ul { justify-content: center; }
+@media (min-width: 901px) {
+  header nav { justify-content: center; }
+  header nav > .brand,
+  header nav > .logo,
+  header nav > .logo-container {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+@media (max-width: 900px) {
+  header nav ul { justify-content: center; }
+}
+header nav .brand img { display:block; height:56px; width:auto; max-width:150px; object-fit:contain; }
+@media (max-width: 900px) { header nav .brand img { height:54px; } }
 </style></head>
-<body><header><nav aria-label="Main navigation"><a class="brand" href="/">CASTORAX</a><ul><li><a href="/">Home</a></li><li><a href="/#about">About</a></li><li><a href="/products.html">Products</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/#quote">Request quote</a></li></ul></nav></header>
+<body><header><nav aria-label="Main navigation"><a class="brand" href="/" aria-label="Castorax home"><img src="/image/brand_logo.png" alt="Castorax - Medicinal Oils"></a><ul><li><a href="/">Home</a></li><li><a href="/#about">About</a></li><li><a href="/products.html">Products</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/#quote">Request quote</a></li></ul></nav></header>
 <main><p><a href="/">Home</a> / Products</p><h1>Castor Oil Grades and Specialty Oils</h1><p class="intro">Browse product pages from Castorax, the oils supply brand of Simmi Enterprises. For a quote, share the grade or specification you require, quantity, packaging, and delivery destination.</p>
 <div class="catalog">
 <a class="card" href="/products/pharmaceutical-grade-castor-oil.html"><strong>Castor Oil IP Grade</strong><span>Castor Oil IP Grade supply enquiries.</span></a>

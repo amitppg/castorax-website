@@ -68,8 +68,27 @@ header nav .logo-container img {
   }
 }
 
+/* Header refinement: centered navigation and clearer brand mark */
+header nav { position: relative; }
+header nav ul { justify-content: center; }
+@media (min-width: 901px) {
+  header nav { justify-content: center; }
+  header nav > .brand,
+  header nav > .logo,
+  header nav > .logo-container {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+@media (max-width: 900px) {
+  header nav ul { justify-content: center; }
+}
+header nav .brand img { display:block; height:56px; width:auto; max-width:150px; object-fit:contain; }
+@media (max-width: 900px) { header nav .brand img { height:54px; } }
 </style></head>
-<body><header><nav aria-label="Main navigation"><a class="brand" href="/">CASTORAX</a><ul><li><a href="/">Home</a></li><li><a href="/#about">About</a></li><li><a href="/products.html">Products</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/?product=Dehydrated%20Castor%20Oil#quote">Request quote</a></li></ul></nav></header>
+<body><header><nav aria-label="Main navigation"><a class="brand" href="/" aria-label="Castorax home"><img src="/image/brand_logo.png" alt="Castorax - Medicinal Oils"></a><ul><li><a href="/">Home</a></li><li><a href="/#about">About</a></li><li><a href="/products.html">Products</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/?product=Dehydrated%20Castor%20Oil#quote">Request quote</a></li></ul></nav></header>
 <main><p class="crumb"><a href="/">Home</a> / <a href="/products.html">Products</a> / Dehydrated Castor Oil (DCO)</p>
 <section class="hero"><h1>Dehydrated Castor Oil (DCO)</h1><p class="lead">Dehydrated Castor Oil (DCO) for B2B procurement enquiries. Include your process specification, quantity, packaging, delivery location, and supporting documents needed.</p><p><strong>Castorax</strong> is the oils supply brand of <strong>Simmi Enterprises</strong>, Mumbai, India.</p>
 <div class="actions"><a class="button" href="/?product=Dehydrated%20Castor%20Oil#quote">Request a quote</a><a class="button secondary" href="mailto:sales@castorax.com?subject=Dehydrated%20Castor%20Oil%20(DCO)%20Enquiry">Email sales</a></div></section>
