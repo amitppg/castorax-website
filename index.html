@@ -1074,6 +1074,23 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* Feature cards: four across on desktop, responsive below */
+        .features {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        @media (max-width: 900px) {
+            .features {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 560px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
     
 /* Shared navigation alignment */
 header nav {
